@@ -1,7 +1,6 @@
 package com.eidith.studiochendraapp.adapter;
 
 import android.content.Context;
-import android.graphics.Path;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,9 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
-import androidx.annotation.StringDef;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.eidith.studiochendraapp.R;
@@ -21,15 +18,13 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-import static com.eidith.studiochendraapp.R.drawable.gambar_workshop1;
-
 public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
 
-    private Context ctx;
+    private Context context;
     private List<WorkshopModel> listWorkshop;
 
-    public AdapterData(Context ctx, List<WorkshopModel> listWorkshop) {
-        this.ctx = ctx;
+    public AdapterData(Context context, List<WorkshopModel> listWorkshop) {
+        this.context = context;
         this.listWorkshop = listWorkshop;
     }
 
@@ -43,11 +38,15 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
 
     @Override
     public void onBindViewHolder(@NonNull AdapterData.HolderData holder, int position) {
-        WorkshopModel dm = listWorkshop.get(position);
+        WorkshopModel workshopModel = listWorkshop.get(position);
+        String imgPath = "@drawable/"+workshopModel.getGambar_workshop();
+        int imgResource = context.getResources().getIdentifier(imgPath, null, context.getPackageName());
+        Drawable res = context.getResources().getDrawable(imgResource);
 
-        holder.tvId.setText(String.valueOf(dm.getId_workshop()));
-        holder.tvJudul.setText(dm.getJudul_workshop());
-//        holder.imgGambar.setImageResource();
+        holder.tvId.setText(String.valueOf(workshopModel.getId_workshop()));
+        holder.tvJudul.setText(workshopModel.getJudul_workshop());
+        holder.imgGambar.setImageDrawable(res);
+
 
 
     }
