@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/akunUser"
+        android:title="Akun" />
+
+    <item android:id="@+id/Workshop"
+        android:title="Workshop" />
+
+    <item android:id="@+id/artikelFotografi"
+        android:title="Artikel Fotografi" />
+
+    <item android:id="@+id/layananJasaFotografi"
+        android:title="Layanan Jasa Fotografi" />
+
+    <item android:id="@+id/fotoPortofolio"
+        android:title="Portofolio" />
+
+    <item android:id="@+id/registrasiOrder"
+        android:title="Registrasi Order" />
+
+    <item android:id="@+id/customerService"
+        android:title="Chat Customer Service" />
+
+    <item android:id="@+id/logout"
+        android:title="Logout" />
+</menu>

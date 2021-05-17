@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/akunAdmin"
+        android:title="Akun" />
+
+    <item android:id="@+id/tambahWorkshop"
+        android:title="Tambah Data Workshop"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/tambahArtikelFotografi"
+        android:title="Tambah Data Artikel Fotografi" />
+
+    <item android:id="@+id/tambahLayananJasaFotografi"
+        android:title="Tambah Data Layanan Jasa Fotografi" />
+
+    <item android:id="@+id/tambahFotoPortofolio"
+        android:title="Tambah Data Foto Portofolio" />
+
+    <item android:id="@+id/registrasiOrderAdmin"
+        android:title="List Registrasi Order" />
+
+    <item android:id="@+id/respondCustomer"
+        android:title="Respond Customer" />
+
+    <item android:id="@+id/logout"
+        android:title="Logout" />
+
+
+
+</menu>

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">StudioChendraApp</string>
     <!-- Strings used for fragments for navigation -->
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 
 </resources>
