@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:layout_margin="20dp"
     app:cardElevation="10dp"
     android:clickable="true">
 
@@ -26,9 +26,8 @@
         <ImageView
             android:id="@+id/imgGambar"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:scaleType="fitXY"
-            tools:ignore="VectorDrawableCompat" />
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY" />
 
         <TextView
             android:id="@+id/textJudul"

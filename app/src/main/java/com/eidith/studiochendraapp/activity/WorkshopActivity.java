@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.adapter.AdapterData;
+import com.eidith.studiochendraapp.adapter.WorkshopAdapter;
 import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.api.RetrofitServer;
 import com.eidith.studiochendraapp.model.WorkshopModel;
@@ -146,7 +146,7 @@ public class WorkshopActivity extends AppCompatActivity {
 
                 listData = response.body().getData_workshop();
 
-                adapter = new AdapterData(WorkshopActivity.this, listData);
+                adapter = new WorkshopAdapter(WorkshopActivity.this, listData);
                 recyclerView.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
 

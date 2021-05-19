@@ -7,7 +7,7 @@ import retrofit2.http.GET;
 
 public interface APIRequestData {
 
-    @GET("workshop_api.php")
+    @GET("get_workshop.php")
     Call<WorkshopModel> ardRetrieveData();
 
 }

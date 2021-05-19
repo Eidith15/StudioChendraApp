@@ -11,19 +11,22 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.eidith.studiochendraapp.R;
+import com.eidith.studiochendraapp.api.RetrofitServer;
 import com.eidith.studiochendraapp.model.WorkshopModel;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
+public class WorkshopAdapter extends RecyclerView.Adapter<WorkshopAdapter.HolderData>{
 
     private Context context;
     private List<WorkshopModel> listWorkshop;
 
-    public AdapterData(Context context, List<WorkshopModel> listWorkshop) {
+    public WorkshopAdapter(Context context, List<WorkshopModel> listWorkshop) {
         this.context = context;
         this.listWorkshop = listWorkshop;
     }
@@ -37,15 +40,17 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AdapterData.HolderData holder, int position) {
+    public void onBindViewHolder(@NonNull WorkshopAdapter.HolderData holder, int position) {
         WorkshopModel workshopModel = listWorkshop.get(position);
-        String imgPath = "@drawable/"+workshopModel.getGambar_workshop();
-        int imgResource = context.getResources().getIdentifier(imgPath, null, context.getPackageName());
-        Drawable res = context.getResources().getDrawable(imgResource);
 
         holder.tvId.setText(String.valueOf(workshopModel.getId_workshop()));
         holder.tvJudul.setText(workshopModel.getJudul_workshop());
-        holder.imgGambar.setImageDrawable(res);
+        Glide.with(holder.itemView.getContext())
+                .load(RetrofitServer.imagesURL + listWorkshop.get(position).getGambar_workshop())
+                .apply(new RequestOptions().override(1000, 400))
+                .into(holder.imgGambar);
+
+//        holder.imgGambar.setImageDrawable(res);
 
 
 
