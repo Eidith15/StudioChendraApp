@@ -48,6 +48,8 @@ public class WorkshopActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workshop);
 
+        setTitle("Workshop");
+
         recyclerView = findViewById(R.id.rvWorkshop);
         swipeRefreshLayout = findViewById(R.id.refreshWorkshop);
         progressBar = findViewById(R.id.pbarWorkshop);
@@ -135,14 +137,14 @@ public class WorkshopActivity extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
 
         APIRequestData ardData = RetrofitServer.connectRetrofit().create(APIRequestData.class);
-        Call<WorkshopModel> tampilData = ardData.ardRetrieveData();
+        Call<WorkshopModel> tampilData = ardData.RetrieveData();
 
         tampilData.enqueue(new Callback<WorkshopModel>() {
             @Override
             public void onResponse(Call<WorkshopModel> call, Response<WorkshopModel> response) {
                 int kode = response.body().getCode();
                 String pesan = response.body().getMessage();
-                Toast.makeText(WorkshopActivity.this, "Kode 1 : "+kode+" Pesan : "+pesan, Toast.LENGTH_SHORT).show();
+                Toast.makeText(WorkshopActivity.this, "Kode : "+kode+" Pesan : "+pesan, Toast.LENGTH_SHORT).show();
 
                 listData = response.body().getData_workshop();
 

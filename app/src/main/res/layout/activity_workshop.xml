@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.WorkshopActivity"
-    android:id="@+id/drawableLayout">
+    android:id="@+id/drawableLayout"
+    android:layout_margin="10dp">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/refreshWorkshop"
@@ -17,9 +18,8 @@
             android:id="@+id/rvWorkshop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
             tools:ignore="MissingConstraints"
-            tools:listitem="@layout/card_item" />
+            tools:listitem="@layout/item_workshop" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 

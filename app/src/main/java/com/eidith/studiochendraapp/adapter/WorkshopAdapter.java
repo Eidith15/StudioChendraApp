@@ -1,7 +1,6 @@
 package com.eidith.studiochendraapp.adapter;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +33,7 @@ public class WorkshopAdapter extends RecyclerView.Adapter<WorkshopAdapter.Holder
     @NotNull
     @Override
     public HolderData onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_item, parent, false);
+        View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_workshop, parent, false);
         HolderData holder = new HolderData(layout);
         return holder;
     }
@@ -46,14 +45,9 @@ public class WorkshopAdapter extends RecyclerView.Adapter<WorkshopAdapter.Holder
         holder.tvId.setText(String.valueOf(workshopModel.getId_workshop()));
         holder.tvJudul.setText(workshopModel.getJudul_workshop());
         Glide.with(holder.itemView.getContext())
-                .load(RetrofitServer.imagesURL + listWorkshop.get(position).getGambar_workshop())
+                .load(RetrofitServer.baseURL+ "gambar/" + listWorkshop.get(position).getGambar_workshop())
                 .apply(new RequestOptions().override(1000, 400))
                 .into(holder.imgGambar);
-
-//        holder.imgGambar.setImageDrawable(res);
-
-
-
     }
 
     @Override
@@ -62,7 +56,7 @@ public class WorkshopAdapter extends RecyclerView.Adapter<WorkshopAdapter.Holder
     }
 
     public class HolderData extends RecyclerView.ViewHolder {
-        TextView tvId, tvJudul, tvDeskripsi, tvGambar, tvVideo;
+        TextView tvId, tvJudul;
         ImageView imgGambar;
 
 

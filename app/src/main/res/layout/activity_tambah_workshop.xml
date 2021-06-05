@@ -1,50 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:duplicateParentState="true"
-    android:layout_margin="10dp">
+    android:layout_margin="20dp">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:boxBackgroundColor="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-                    <EditText
-                        android:id="@+id/inputJudulWorkshop"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Judul Workshop"
-                        android:inputType="textCapSentences|textMultiLine"
-                        android:maxLines="2"
-                        android:textSize="20sp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#BCBABA"
+            app:boxBackgroundColor="@color/white">
 
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:boxBackgroundColor="@color/white"
-                        android:paddingBottom="20dp">
-
-                    <EditText
-                        android:id="@+id/inputDeskripsiWorkshop"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Deskripsi Workshop"
-                        android:inputType="textCapSentences|textMultiLine"
-                        android:maxLines="5"
-                        android:textSize="20sp" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            <Button
-                android:id="@+id/btnTambahWorkshop"
+            <EditText
+                android:id="@+id/inputJudulWorkshop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="UPLOAD"/>
+                android:hint="Judul Workshop"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines="2"
+                android:textSize="20sp"/>
 
-</LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/white"
+            android:textColorHint="#BCBABA"
+            android:paddingBottom="10dp">
+
+            <EditText
+                android:id="@+id/inputDeskripsiWorkshop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Deskripsi Workshop"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines="5"
+                android:textSize="20sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnSelectImage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:drawable/ic_menu_add"
+                app:backgroundTint="@color/grey"/>
+
+            <TextView
+                android:id="@+id/tvTambahGambar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tambah Gambar"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/grey"
+                style="@android:style/Widget.EditText"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnSelectVideo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:drawable/ic_menu_add"
+                app:backgroundTint="@color/grey" />
+
+            <TextView
+                android:id="@+id/tvTambahVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tambah Video"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/grey"
+                style="@android:style/Widget.EditText"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnTambahWorkshop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="upload data workshop"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+</ScrollView>
