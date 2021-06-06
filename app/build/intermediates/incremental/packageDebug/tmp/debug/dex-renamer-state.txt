@@ -1,4 +1,4 @@
-#Sat Jun 05 12:23:38 ICT 2021
+#Sun Jun 06 14:05:48 ICT 2021
 base.0=D\:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

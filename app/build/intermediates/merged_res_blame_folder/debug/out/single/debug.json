@@ -64,6 +64,10 @@
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\menu\\navigation_menu_user.xml"
     },
     {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\xml_network_security_config.xml.flat",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\xml\\network_security_config.xml"
+    },
+    {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },

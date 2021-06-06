@@ -142,9 +142,9 @@ public class WorkshopActivity extends AppCompatActivity {
         tampilData.enqueue(new Callback<WorkshopModel>() {
             @Override
             public void onResponse(Call<WorkshopModel> call, Response<WorkshopModel> response) {
-                int kode = response.body().getCode();
-                String pesan = response.body().getMessage();
-                Toast.makeText(WorkshopActivity.this, "Kode : "+kode+" Pesan : "+pesan, Toast.LENGTH_SHORT).show();
+//              int kode = response.body().getCode();
+//              String pesan = response.body().getMessage();
+//              Toast.makeText(WorkshopActivity.this, "Kode : "+kode+" | Pesan : "+pesan, Toast.LENGTH_SHORT).show();
 
                 listData = response.body().getData_workshop();
 

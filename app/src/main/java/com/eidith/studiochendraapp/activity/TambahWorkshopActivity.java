@@ -1,8 +1,13 @@
 package com.eidith.studiochendraapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
+import android.Manifest;
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,20 +19,36 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.eidith.studiochendraapp.R;
+import com.eidith.studiochendraapp.api.APIRequestData;
+import com.eidith.studiochendraapp.api.RetrofitServer;
+import com.eidith.studiochendraapp.model.WorkshopModel;
+
+import java.io.File;
+
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class TambahWorkshopActivity extends AppCompatActivity {
+
 
     private EditText etJudulWorkshop, etDeskripsiWorkshop;
     private Button btnSelectImage, btnSelectVideo, btnTambahWorkshop;
     private TextView tvInputImage, tvInputVideo;
     private String judul_workshop, deskripsi_workshop, gambar_workshop, video_workshop;
-    String mediaPath;
+    String mediaPathImage;
+    String mediaPathVideo;
     ProgressDialog progressDialog;
     private static final int IMG_REQUEST_CODE = 0;
     private static final int VID_REQUEST_CODE = 1;
-
-
-
+    private static final int REQUEST_EXTERNAL_STORAGE = 2;
+    private static String[] PERMISSIONS_STORAGE = {
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +56,7 @@ public class TambahWorkshopActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tambah_workshop);
 
         setTitle("Tambah Data Workshop");
+        verifyStoragePermissions(TambahWorkshopActivity.this);
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Uploading...");
@@ -82,7 +104,7 @@ public class TambahWorkshopActivity extends AppCompatActivity {
                 } else if (video_workshop.trim().equals("Tambah Video")){
                     tvInputVideo.setError("Harap Pilih Video");
                 } else {
-
+                    UploadData();
                 }
             }
         });
@@ -101,8 +123,8 @@ public class TambahWorkshopActivity extends AppCompatActivity {
                 cursor.moveToFirst();
 
                 int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-                mediaPath = cursor.getString(columnIndex);
-                tvInputImage.setText(mediaPath);
+                mediaPathImage = cursor.getString(columnIndex);
+                tvInputImage.setText(mediaPathImage);
                 tvInputImage.setError(null);
                 cursor.close();
             } else if (requestCode == 1 && resultCode == RESULT_OK && null != data) {
@@ -114,8 +136,8 @@ public class TambahWorkshopActivity extends AppCompatActivity {
                 cursor.moveToFirst();
 
                 int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-                mediaPath = cursor.getString(columnIndex);
-                tvInputVideo.setText(mediaPath);
+                mediaPathVideo = cursor.getString(columnIndex);
+                tvInputVideo.setText(mediaPathVideo);
                 tvInputVideo.setError(null);
                 cursor.close();
             } else {
@@ -126,9 +148,48 @@ public class TambahWorkshopActivity extends AppCompatActivity {
         }
     }
 
-    private void uploadFile(){
+    private void UploadData(){
         progressDialog.show();
 
+        File fileImage = new File(mediaPathImage);
+        File fileVideo = new File(mediaPathVideo);
 
+        RequestBody judul = RequestBody.create(MediaType.parse("text/plain"), etJudulWorkshop.getText().toString());
+        RequestBody deskripsi = RequestBody.create(MediaType.parse("text/plain"), etDeskripsiWorkshop.getText().toString());
+        RequestBody gambar = RequestBody.create(MediaType.parse("image/*"), fileImage);
+        MultipartBody.Part imagepart = MultipartBody.Part.createFormData("gambar_workshop", fileImage.getName(), gambar);
+        RequestBody video = RequestBody.create(MediaType.parse("video/*"), fileVideo);
+        MultipartBody.Part videopart = MultipartBody.Part.createFormData("video_workshop", fileVideo.getName(), video);
+
+        APIRequestData ardData = RetrofitServer.connectRetrofit().create(APIRequestData.class);
+        Call<WorkshopModel> createData = ardData.CreateData(judul, deskripsi, imagepart, videopart);
+
+        createData.enqueue(new Callback<WorkshopModel>() {
+            @Override
+            public void onResponse(Call<WorkshopModel> call, Response<WorkshopModel> response) {
+                int kode = response.body().getCode();
+                String pesan = response.body().getMessage();
+                Toast.makeText(TambahWorkshopActivity.this, "Kode : "+kode+" | Pesan : "+pesan, Toast.LENGTH_SHORT).show();
+                progressDialog.dismiss();
+                finish();
+            }
+
+            @Override
+            public void onFailure(Call<WorkshopModel> call, Throwable t) {
+                Toast.makeText(TambahWorkshopActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    public static void verifyStoragePermissions(Activity activity) {
+        int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(
+                    activity,
+                    PERMISSIONS_STORAGE,
+                    REQUEST_EXTERNAL_STORAGE
+            );
+        }
     }
 }
