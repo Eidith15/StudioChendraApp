@@ -7,8 +7,11 @@ public class RetrofitServer {
 
 
     public static final String baseURL = "http://10.0.2.2/studiochendra/";
+    public static final String imageURL = "http://10.0.2.2/studiochendra/gambar/";
+    public static final String videoURL = "http://10.0.2.2/studiochendra/video/";
     private static Retrofit retro;
 
+    //Connect retrofit to server to get Json and convert using Gson
     public static Retrofit connectRetrofit(){
         if (retro == null){
             retro = new Retrofit.Builder()

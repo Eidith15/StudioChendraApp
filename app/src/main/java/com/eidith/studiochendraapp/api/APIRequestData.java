@@ -12,9 +12,11 @@ import retrofit2.http.Part;
 
 public interface APIRequestData {
 
+    //Get data Workshop
     @GET("get_workshop.php")
     Call<WorkshopModel> RetrieveData();
 
+    //Post Data Workshop
     @Multipart
     @POST("post_workshop.php")
     Call<WorkshopModel> CreateData(@Part("judul_workshop") RequestBody judul_workshop,

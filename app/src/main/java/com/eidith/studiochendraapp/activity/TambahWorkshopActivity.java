@@ -39,9 +39,10 @@ public class TambahWorkshopActivity extends AppCompatActivity {
     private Button btnSelectImage, btnSelectVideo, btnTambahWorkshop;
     private TextView tvInputImage, tvInputVideo;
     private String judul_workshop, deskripsi_workshop, gambar_workshop, video_workshop;
-    String mediaPathImage;
-    String mediaPathVideo;
-    ProgressDialog progressDialog;
+    private String mediaPathImage;
+    private String mediaPathVideo;
+    private ProgressDialog progressDialog;
+    private int progress = 0;
     private static final int IMG_REQUEST_CODE = 0;
     private static final int VID_REQUEST_CODE = 1;
     private static final int REQUEST_EXTERNAL_STORAGE = 2;
@@ -56,11 +57,10 @@ public class TambahWorkshopActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tambah_workshop);
 
         setTitle("Tambah Data Workshop");
+
         verifyStoragePermissions(TambahWorkshopActivity.this);
 
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Uploading...");
-
+        // Assign Variable
         etJudulWorkshop = findViewById(R.id.inputJudulWorkshop);
         etDeskripsiWorkshop = findViewById(R.id.inputDeskripsiWorkshop);
         tvInputImage = findViewById(R.id.tvTambahGambar);
@@ -69,9 +69,15 @@ public class TambahWorkshopActivity extends AppCompatActivity {
         btnSelectVideo = findViewById(R.id.btnSelectVideo);
         btnTambahWorkshop = findViewById(R.id.btnTambahWorkshop);
 
+        //Set Progress dialog
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Uploading...");
+        progressDialog.setCancelable(false);
+
         btnSelectImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Select Image
                 Intent galleryIntent = new Intent (Intent.ACTION_PICK,
                         MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(galleryIntent, IMG_REQUEST_CODE);
@@ -81,6 +87,7 @@ public class TambahWorkshopActivity extends AppCompatActivity {
         btnSelectVideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Select Video
                 Intent galleryIntent = new Intent (Intent.ACTION_PICK,
                         MediaStore.Video.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(galleryIntent, VID_REQUEST_CODE);
@@ -90,11 +97,13 @@ public class TambahWorkshopActivity extends AppCompatActivity {
         btnTambahWorkshop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Get Data input
                 judul_workshop = etJudulWorkshop.getText().toString();
                 deskripsi_workshop = etDeskripsiWorkshop.getText().toString();
                 gambar_workshop = tvInputImage.getText().toString();
                 video_workshop = tvInputVideo.getText().toString();
 
+                //Checking Null
                 if (judul_workshop.trim().equals("")){
                     etJudulWorkshop.setError("Harap Masukan Judul");
                 } else if (deskripsi_workshop.trim().equals("")){
@@ -114,6 +123,7 @@ public class TambahWorkshopActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         try {
+            //Select Image from cursor and get path
             if (requestCode == 0 && resultCode == RESULT_OK && null != data) {
                 Uri selectedImage = data.getData();
                 String[] filePathColumn = {MediaStore.Images.Media.DATA};
@@ -127,6 +137,8 @@ public class TambahWorkshopActivity extends AppCompatActivity {
                 tvInputImage.setText(mediaPathImage);
                 tvInputImage.setError(null);
                 cursor.close();
+
+                //Select Video from cursor and get path
             } else if (requestCode == 1 && resultCode == RESULT_OK && null != data) {
                 Uri selectedVideo = data.getData();
                 String[] filePathColumn = {MediaStore.Video.Media.DATA};
@@ -151,9 +163,11 @@ public class TambahWorkshopActivity extends AppCompatActivity {
     private void UploadData(){
         progressDialog.show();
 
+        //Set path image to file type
         File fileImage = new File(mediaPathImage);
         File fileVideo = new File(mediaPathVideo);
 
+        //Set to Parser Json using Request Body and Multipart
         RequestBody judul = RequestBody.create(MediaType.parse("text/plain"), etJudulWorkshop.getText().toString());
         RequestBody deskripsi = RequestBody.create(MediaType.parse("text/plain"), etDeskripsiWorkshop.getText().toString());
         RequestBody gambar = RequestBody.create(MediaType.parse("image/*"), fileImage);
@@ -161,6 +175,7 @@ public class TambahWorkshopActivity extends AppCompatActivity {
         RequestBody video = RequestBody.create(MediaType.parse("video/*"), fileVideo);
         MultipartBody.Part videopart = MultipartBody.Part.createFormData("video_workshop", fileVideo.getName(), video);
 
+        //Execute createData to json method
         APIRequestData ardData = RetrofitServer.connectRetrofit().create(APIRequestData.class);
         Call<WorkshopModel> createData = ardData.CreateData(judul, deskripsi, imagepart, videopart);
 
@@ -181,7 +196,8 @@ public class TambahWorkshopActivity extends AppCompatActivity {
         });
     }
 
-    public static void verifyStoragePermissions(Activity activity) {
+    //Verify storage permission from user
+    private void verifyStoragePermissions(Activity activity) {
         int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
         if (permission != PackageManager.PERMISSION_GRANTED) {
