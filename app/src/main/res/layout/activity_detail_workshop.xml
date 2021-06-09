@@ -1,70 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:isScrollContainer="true">
+
 
     <LinearLayout
+        android:id="@+id/llayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
-        <RelativeLayout
-            android:id="@+id/frameVideo"
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/vvDetailWorkshop"
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            app:resize_mode="fit"
+            app:hide_on_touch="true"
+            app:show_timeout="5000"
+            app:rewind_increment="10000"
+            app:fastforward_increment="10000"
+            app:use_controller="true"
+            android:background="@color/black"
+            app:player_layout_id="@layout/exo_player_view"
+            app:controller_layout_id="@layout/custom_controller_exo" />
 
-            <com.google.android.exoplayer2.ui.PlayerView
-                android:id="@+id/vvDetailWorkshop"
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">\
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                app:resize_mode="fit"
-                app:hide_on_touch="true"
-                app:show_timeout="5000"
-                app:rewind_increment="10000"
-                app:fastforward_increment="10000"
-                app:use_controller="true"
-                android:background="@color/black"
-                app:player_layout_id="@layout/exo_player_view"
-                app:controller_layout_id="@layout/custom_controller_exo" />
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvDetailJudulWorkshop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:textStyle="bold"
+                    style="@style/Widget.AppCompat.EditText"/>
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/tvDetailDeskripsiWorkshop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:justificationMode="inter_word" />
 
-        <TextView
-            android:id="@+id/tvDetailJudulWorkshop"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="15dp"
-            android:textStyle="bold"
-            style="@style/Widget.AppCompat.EditText"/>
+                <ImageView
+                    android:id="@+id/ivDetailWorkshop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"/>
 
-        <TextView
-            android:id="@+id/tvDetailDeskripsiWorkshop"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            android:justificationMode="inter_word" />
+                <Button
+                    android:id="@+id/btnRegistrasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Registrasi Order"
+                    android:layout_margin="5dp" />
 
-        <ImageView
-            android:id="@+id/ivDetailWorkshop"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="fitXY"/>
-
-        <Button
-            android:id="@+id/btnRegistrasi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Registrasi Order"
-            android:layout_margin="5dp"
-            />
-
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
-</ScrollView>
+</RelativeLayout>

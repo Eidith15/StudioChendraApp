@@ -30,6 +30,7 @@
             android:parentActivityName="com.eidith.studiochendraapp.activity.WorkshopActivity" />
         <activity
             android:name="com.eidith.studiochendraapp.activity.DetailWorkshopActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:parentActivityName="com.eidith.studiochendraapp.activity.WorkshopActivity" />
         <activity android:name="com.eidith.studiochendraapp.activity.WorkshopActivity" >
             <intent-filter>

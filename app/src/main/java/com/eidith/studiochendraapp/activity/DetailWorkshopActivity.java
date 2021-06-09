@@ -29,7 +29,7 @@ public class DetailWorkshopActivity extends AppCompatActivity {
     private ImageButton btnFullScreen;
     private Button btnRegistrasiOrderWorkshop;
     private SimpleExoPlayer player;
-    private boolean fullscreen = false;
+    boolean fullscreen = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,18 +80,20 @@ public class DetailWorkshopActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Check
                 if(fullscreen) {
+                    //set exit full screen on click
                     btnFullScreen.setImageDrawable(getResources().getDrawable(R.drawable.ic_fullscreen));
                     getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
                     if(getSupportActionBar() != null){
                         getSupportActionBar().show();
                     }
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-                    RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) playerVideoDetailWorkshop.getLayoutParams();
+                    LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) playerVideoDetailWorkshop.getLayoutParams();
                     params.width = params.MATCH_PARENT;
-                    params.height = (int) ( 200 * getApplicationContext().getResources().getDisplayMetrics().density);
+                    params.height = (int) ( 250 * getApplicationContext().getResources().getDisplayMetrics().density);
                     playerVideoDetailWorkshop.setLayoutParams(params);
                     fullscreen = false;
                 }else{
+                    //Set full screen on click
                     btnFullScreen.setImageDrawable(getResources().getDrawable(R.drawable.ic_fullscreen_exit));
                     getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN
                             |View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
@@ -100,7 +102,7 @@ public class DetailWorkshopActivity extends AppCompatActivity {
                         getSupportActionBar().hide();
                     }
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-                    RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) playerVideoDetailWorkshop.getLayoutParams();
+                    LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) playerVideoDetailWorkshop.getLayoutParams();
                     params.width = params.MATCH_PARENT;
                     params.height = params.MATCH_PARENT;
                     playerVideoDetailWorkshop.setLayoutParams(params);

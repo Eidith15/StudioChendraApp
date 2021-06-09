@@ -15,9 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudioChendraApp">
-        <activity android:name=".activity.TambahWorkshopActivity"
+        <activity
+            android:name=".activity.TambahWorkshopActivity"
             android:parentActivityName=".activity.WorkshopActivity"></activity>
-        <activity android:name=".activity.DetailWorkshopActivity"
+        <activity
+            android:name=".activity.DetailWorkshopActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:parentActivityName=".activity.WorkshopActivity"></activity>
         <activity android:name=".activity.WorkshopActivity">
             <intent-filter>

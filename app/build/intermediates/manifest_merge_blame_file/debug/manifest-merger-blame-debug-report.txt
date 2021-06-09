@@ -24,7 +24,7 @@
 14-->[com.google.android.exoplayer:exoplayer-core:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\a34a160ef6a5d97ed288855c46902ca8\exoplayer-core-2.14.0\AndroidManifest.xml:24:22-76
 15
 16    <application
-16-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:9:5-28:19
+16-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:9:5-31:19
 17        android:name="androidx.multidex.MultiDexApplication"
 17-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:11:9-61
 18        android:allowBackup="true"
@@ -46,31 +46,33 @@
 27        android:theme="@style/Theme.StudioChendraApp" >
 27-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:17:9-54
 28        <activity
-28-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:18:9-19:80
+28-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:18:9-20:80
 29            android:name="com.eidith.studiochendraapp.activity.TambahWorkshopActivity"
-29-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:18:19-66
+29-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:19:13-60
 30            android:parentActivityName="com.eidith.studiochendraapp.activity.WorkshopActivity" />
-30-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:19:13-68
+30-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:20:13-68
 31        <activity
-31-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:20:9-21:80
+31-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:21:9-24:80
 32            android:name="com.eidith.studiochendraapp.activity.DetailWorkshopActivity"
-32-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:20:19-66
-33            android:parentActivityName="com.eidith.studiochendraapp.activity.WorkshopActivity" />
-33-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:21:13-68
-34        <activity android:name="com.eidith.studiochendraapp.activity.WorkshopActivity" >
-34-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:22:9-27:20
-34-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:22:19-60
-35            <intent-filter>
-35-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:23:13-26:29
-36                <action android:name="android.intent.action.MAIN" />
-36-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:24:17-69
-36-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:24:25-66
-37
-38                <category android:name="android.intent.category.LAUNCHER" />
-38-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:25:17-77
-38-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:25:27-74
-39            </intent-filter>
-40        </activity>
-41    </application>
-42
-43</manifest>
+32-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:22:13-60
+33            android:configChanges="keyboardHidden|orientation|screenSize"
+33-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:23:13-74
+34            android:parentActivityName="com.eidith.studiochendraapp.activity.WorkshopActivity" />
+34-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:24:13-68
+35        <activity android:name="com.eidith.studiochendraapp.activity.WorkshopActivity" >
+35-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:25:9-30:20
+35-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:25:19-60
+36            <intent-filter>
+36-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:26:13-29:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:27:17-69
+37-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:27:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:28:17-77
+39-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:28:27-74
+40            </intent-filter>
+41        </activity>
+42    </application>
+43
+44</manifest>
