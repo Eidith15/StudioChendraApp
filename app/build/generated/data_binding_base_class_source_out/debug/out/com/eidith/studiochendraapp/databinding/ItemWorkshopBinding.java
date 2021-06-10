@@ -20,20 +20,25 @@ public final class ItemWorkshopBinding implements ViewBinding {
   private final CardView rootView;
 
   @NonNull
-  public final ImageView imgGambar;
+  public final ImageView imgGambarWorkshop;
 
   @NonNull
-  public final TextView textId;
+  public final TextView textIdWorkshop;
 
   @NonNull
-  public final TextView textJudul;
+  public final TextView textJudulWorkshop;
 
-  private ItemWorkshopBinding(@NonNull CardView rootView, @NonNull ImageView imgGambar,
-      @NonNull TextView textId, @NonNull TextView textJudul) {
+  @NonNull
+  public final TextView tvTanggalWorkshop;
+
+  private ItemWorkshopBinding(@NonNull CardView rootView, @NonNull ImageView imgGambarWorkshop,
+      @NonNull TextView textIdWorkshop, @NonNull TextView textJudulWorkshop,
+      @NonNull TextView tvTanggalWorkshop) {
     this.rootView = rootView;
-    this.imgGambar = imgGambar;
-    this.textId = textId;
-    this.textJudul = textJudul;
+    this.imgGambarWorkshop = imgGambarWorkshop;
+    this.textIdWorkshop = textIdWorkshop;
+    this.textJudulWorkshop = textJudulWorkshop;
+    this.tvTanggalWorkshop = tvTanggalWorkshop;
   }
 
   @Override
@@ -63,25 +68,32 @@ public final class ItemWorkshopBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.imgGambar;
-      ImageView imgGambar = rootView.findViewById(id);
-      if (imgGambar == null) {
+      id = R.id.imgGambarWorkshop;
+      ImageView imgGambarWorkshop = rootView.findViewById(id);
+      if (imgGambarWorkshop == null) {
         break missingId;
       }
 
-      id = R.id.textId;
-      TextView textId = rootView.findViewById(id);
-      if (textId == null) {
+      id = R.id.textIdWorkshop;
+      TextView textIdWorkshop = rootView.findViewById(id);
+      if (textIdWorkshop == null) {
         break missingId;
       }
 
-      id = R.id.textJudul;
-      TextView textJudul = rootView.findViewById(id);
-      if (textJudul == null) {
+      id = R.id.textJudulWorkshop;
+      TextView textJudulWorkshop = rootView.findViewById(id);
+      if (textJudulWorkshop == null) {
         break missingId;
       }
 
-      return new ItemWorkshopBinding((CardView) rootView, imgGambar, textId, textJudul);
+      id = R.id.tvTanggalWorkshop;
+      TextView tvTanggalWorkshop = rootView.findViewById(id);
+      if (tvTanggalWorkshop == null) {
+        break missingId;
+      }
+
+      return new ItemWorkshopBinding((CardView) rootView, imgGambarWorkshop, textIdWorkshop,
+          textJudulWorkshop, tvTanggalWorkshop);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

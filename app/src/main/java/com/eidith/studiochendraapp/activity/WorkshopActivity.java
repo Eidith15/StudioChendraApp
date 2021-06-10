@@ -158,14 +158,14 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
                 recyclerView.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
 
-                progressBar.setVisibility(View.INVISIBLE);
+                progressBar.setVisibility(View.GONE);
             }
 
             @Override
             public void onFailure(Call<WorkshopModel> call, Throwable t) {
                 Toast.makeText(WorkshopActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
 
-                progressBar.setVisibility(View.INVISIBLE);
+                progressBar.setVisibility(View.GONE);
             }
         });
     }
@@ -179,6 +179,7 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
         intent.putExtra("Deskripsi Workshop", listWorkshop.get(position).getDeskripsi_workshop());
         intent.putExtra("Gambar Workshop", listWorkshop.get(position).getGambar_workshop());
         intent.putExtra("Video Workshop", listWorkshop.get(position).getVideo_workshop());
+        intent.putExtra("Tanggal Workshop", listWorkshop.get(position).getTanggal_workshop());
         startActivity(intent);
     }
 

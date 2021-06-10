@@ -1846,7 +1846,10 @@ drawable exo_styled_controls_speed
 drawable exo_styled_controls_subtitle_off
 drawable exo_styled_controls_subtitle_on
 drawable exo_styled_controls_vr
+drawable ic_add_photo
+drawable ic_add_video
 drawable ic_clock_black_24dp
+drawable ic_datepicker
 drawable ic_fullscreen
 drawable ic_fullscreen_exit
 drawable ic_fwd
@@ -1988,6 +1991,7 @@ id beginning
 id blocking
 id bottom
 id bounce
+id btnDatePicker
 id btnFullscreen
 id btnRegistrasi
 id btnSelectImage
@@ -2153,7 +2157,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imgGambar
+id imgGambarWorkshop
 id info
 id inputDeskripsiWorkshop
 id inputJudulWorkshop
@@ -2360,8 +2364,8 @@ id test_radiobutton_app_button_tint
 id text
 id text2
 id textEnd
-id textId
-id textJudul
+id textIdWorkshop
+id textJudulWorkshop
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -2394,8 +2398,8 @@ id transition_transform
 id triangle
 id tvDetailDeskripsiWorkshop
 id tvDetailJudulWorkshop
-id tvTambahGambar
-id tvTambahVideo
+id tvDetailTanggalWorkshop
+id tvTanggalWorkshop
 id unchecked
 id uniform
 id unlabeled

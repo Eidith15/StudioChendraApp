@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -53,8 +52,10 @@ public class WorkshopAdapter extends RecyclerView.Adapter<WorkshopAdapter.ViewHo
         holder.tvJudul.setText(workshopModel.getJudul_workshop());
         Glide.with(holder.itemView.getContext())
                 .load(RetrofitServer.imageURL + listWorkshop.get(position).getGambar_workshop())
-                .apply(new RequestOptions().override(1080, 720))
+                .apply(new RequestOptions().override(1280, 720))
                 .into(holder.imgGambar);
+        holder.tvTanggal.setText(String.valueOf(workshopModel.getTanggal_workshop()));
+
     }
 
     @Override
@@ -65,14 +66,17 @@ public class WorkshopAdapter extends RecyclerView.Adapter<WorkshopAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView tvId, tvJudul;
         ImageView imgGambar;
+        TextView tvTanggal;
+
         OnItemClickListener onItemClickListener;
 
         public ViewHolder(@NonNull View itemView, OnItemClickListener onItemClickListener) {
             super(itemView);
             //Assign value
-            tvId = itemView.findViewById(R.id.textId);
-            tvJudul = itemView.findViewById(R.id.textJudul);
-            imgGambar = itemView.findViewById(R.id.imgGambar);
+            tvId = itemView.findViewById(R.id.textIdWorkshop);
+            tvJudul = itemView.findViewById(R.id.textJudulWorkshop);
+            imgGambar = itemView.findViewById(R.id.imgGambarWorkshop);
+            tvTanggal = itemView.findViewById(R.id.tvTanggalWorkshop);
             this.onItemClickListener = onItemClickListener;
 
             itemView.setOnClickListener(this);

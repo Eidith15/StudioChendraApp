@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -19,6 +18,9 @@ import java.lang.String;
 public final class ActivityTambahWorkshopBinding implements ViewBinding {
   @NonNull
   private final ScrollView rootView;
+
+  @NonNull
+  public final Button btnDatePicker;
 
   @NonNull
   public final Button btnSelectImage;
@@ -35,25 +37,17 @@ public final class ActivityTambahWorkshopBinding implements ViewBinding {
   @NonNull
   public final EditText inputJudulWorkshop;
 
-  @NonNull
-  public final TextView tvTambahGambar;
-
-  @NonNull
-  public final TextView tvTambahVideo;
-
-  private ActivityTambahWorkshopBinding(@NonNull ScrollView rootView,
+  private ActivityTambahWorkshopBinding(@NonNull ScrollView rootView, @NonNull Button btnDatePicker,
       @NonNull Button btnSelectImage, @NonNull Button btnSelectVideo,
       @NonNull Button btnTambahWorkshop, @NonNull EditText inputDeskripsiWorkshop,
-      @NonNull EditText inputJudulWorkshop, @NonNull TextView tvTambahGambar,
-      @NonNull TextView tvTambahVideo) {
+      @NonNull EditText inputJudulWorkshop) {
     this.rootView = rootView;
+    this.btnDatePicker = btnDatePicker;
     this.btnSelectImage = btnSelectImage;
     this.btnSelectVideo = btnSelectVideo;
     this.btnTambahWorkshop = btnTambahWorkshop;
     this.inputDeskripsiWorkshop = inputDeskripsiWorkshop;
     this.inputJudulWorkshop = inputJudulWorkshop;
-    this.tvTambahGambar = tvTambahGambar;
-    this.tvTambahVideo = tvTambahVideo;
   }
 
   @Override
@@ -83,6 +77,12 @@ public final class ActivityTambahWorkshopBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnDatePicker;
+      Button btnDatePicker = rootView.findViewById(id);
+      if (btnDatePicker == null) {
+        break missingId;
+      }
+
       id = R.id.btnSelectImage;
       Button btnSelectImage = rootView.findViewById(id);
       if (btnSelectImage == null) {
@@ -113,21 +113,8 @@ public final class ActivityTambahWorkshopBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tvTambahGambar;
-      TextView tvTambahGambar = rootView.findViewById(id);
-      if (tvTambahGambar == null) {
-        break missingId;
-      }
-
-      id = R.id.tvTambahVideo;
-      TextView tvTambahVideo = rootView.findViewById(id);
-      if (tvTambahVideo == null) {
-        break missingId;
-      }
-
-      return new ActivityTambahWorkshopBinding((ScrollView) rootView, btnSelectImage,
-          btnSelectVideo, btnTambahWorkshop, inputDeskripsiWorkshop, inputJudulWorkshop,
-          tvTambahGambar, tvTambahVideo);
+      return new ActivityTambahWorkshopBinding((ScrollView) rootView, btnDatePicker, btnSelectImage,
+          btnSelectVideo, btnTambahWorkshop, inputDeskripsiWorkshop, inputJudulWorkshop);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

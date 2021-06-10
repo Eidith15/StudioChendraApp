@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,7 +25,7 @@ import com.google.android.exoplayer2.ui.PlayerView;
 public class DetailWorkshopActivity extends AppCompatActivity {
 
     private PlayerView playerVideoDetailWorkshop;
-    private TextView tvDetailJudulWorkshop, tvDetailDeskripsiWorkshop;
+    private TextView tvDetailJudulWorkshop, tvDetailDeskripsiWorkshop, tvDetailTanggalWorkshop;
     private ImageView ivDetailWorkshop;
     private ImageButton btnFullScreen;
     private Button btnRegistrasiOrderWorkshop;
@@ -45,16 +46,20 @@ public class DetailWorkshopActivity extends AppCompatActivity {
         ivDetailWorkshop = findViewById(R.id.ivDetailWorkshop);
         btnRegistrasiOrderWorkshop = findViewById(R.id.btnRegistrasi);
         btnFullScreen = findViewById(R.id.btnFullscreen);
+        tvDetailTanggalWorkshop = findViewById(R.id.tvDetailTanggalWorkshop);
 
         //Get data from extras
         String judulWorkshop = getIntent().getExtras().getString("Judul Workshop");
         String deskripsiWorkshop = getIntent().getExtras().getString("Deskripsi Workshop");
         String gambarWorkshop = getIntent().getExtras().getString("Gambar Workshop");
         String videWorkshop = getIntent().getExtras().getString("Video Workshop");
+        String tanggalWorkshop = getIntent().getExtras().getString("Tanggal Workshop");
 
         //Set data to view
         tvDetailJudulWorkshop.setText(judulWorkshop);
         tvDetailDeskripsiWorkshop.setText(deskripsiWorkshop);
+        tvDetailTanggalWorkshop.setText(tanggalWorkshop);
+
 
         //Glide Image to image view
         Glide.with(DetailWorkshopActivity.this)
@@ -89,7 +94,7 @@ public class DetailWorkshopActivity extends AppCompatActivity {
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) playerVideoDetailWorkshop.getLayoutParams();
                     params.width = params.MATCH_PARENT;
-                    params.height = (int) ( 250 * getApplicationContext().getResources().getDisplayMetrics().density);
+                    params.height = (int) ( 200 * getApplicationContext().getResources().getDisplayMetrics().density);
                     playerVideoDetailWorkshop.setLayoutParams(params);
                     fullscreen = false;
                 }else{

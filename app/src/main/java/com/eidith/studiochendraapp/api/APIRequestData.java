@@ -21,6 +21,7 @@ public interface APIRequestData {
     @POST("post_workshop.php")
     Call<WorkshopModel> CreateData(@Part("judul_workshop") RequestBody judul_workshop,
                                    @Part("deskripsi_workshop") RequestBody deskripsi_workshop,
+                                   @Part("tanggal_workshop") RequestBody tanggal_workshop,
                                    @Part MultipartBody.Part gambar_workshop,
                                    @Part MultipartBody.Part video_workshop);
 

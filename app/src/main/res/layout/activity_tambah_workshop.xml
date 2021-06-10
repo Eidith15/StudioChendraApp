@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="#BCBABA"
-            app:boxBackgroundColor="@color/white">
+            app:boxBackgroundColor="@color/transparent">
 
             <EditText
                 android:id="@+id/inputJudulWorkshop"
@@ -32,9 +32,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:boxBackgroundColor="@color/white"
-            android:textColorHint="#BCBABA"
-            android:paddingBottom="10dp">
+            app:boxBackgroundColor="@color/transparent"
+            android:textColorHint="#BCBABA">
 
             <EditText
                 android:id="@+id/inputDeskripsiWorkshop"
@@ -50,54 +49,45 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
             android:gravity="center">
+
+            <Button
+                android:id="@+id/btnDatePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pilih Tanggal"
+                android:drawableLeft="@drawable/ic_datepicker"
+                android:textColor="@color/grey"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:layout_gravity="start" />
 
             <Button
                 android:id="@+id/btnSelectImage"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center_horizontal"
-                android:background="@android:drawable/ic_menu_add"
-                app:backgroundTint="@color/grey"/>
-
-            <TextView
-                android:id="@+id/tvTambahGambar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tambah Gambar"
-                android:textSize="15sp"
-                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/ic_add_photo"
                 android:textColor="@color/grey"
-                style="@android:style/Widget.EditText"
-                android:background="@null"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:layout_gravity="start" />
 
             <Button
                 android:id="@+id/btnSelectVideo"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center_horizontal"
-                android:background="@android:drawable/ic_menu_add"
-                app:backgroundTint="@color/grey" />
-
-            <TextView
-                android:id="@+id/tvTambahVideo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tambah Video"
-                android:textSize="15sp"
-                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/ic_add_video"
                 android:textColor="@color/grey"
-                style="@android:style/Widget.EditText"
-                android:background="@null"/>
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:layout_gravity="start" />
 
         </LinearLayout>
 

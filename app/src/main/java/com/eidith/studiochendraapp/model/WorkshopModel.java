@@ -5,10 +5,19 @@ import java.util.List;
 public class WorkshopModel {
     private int id_workshop;
     private String judul_workshop, deskripsi_workshop, gambar_workshop, video_workshop;
+    private String tanggal_workshop;
 
     private int  code;
     private String message;
     private List<WorkshopModel> data_workshop;
+
+    public String getTanggal_workshop() {
+        return tanggal_workshop;
+    }
+
+    public void setTanggal_workshop(String tanggal_workshop) {
+        this.tanggal_workshop = tanggal_workshop;
+    }
 
     public int getId_workshop() {
         return id_workshop;
