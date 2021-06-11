@@ -2,12 +2,10 @@ package com.eidith.studiochendraapp.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,17 +13,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import com.eidith.studiochendraapp.R;
 import com.eidith.studiochendraapp.adapter.WorkshopAdapter;
 import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.api.RetrofitServer;
 import com.eidith.studiochendraapp.model.WorkshopModel;
 import com.google.android.material.navigation.NavigationView;
-
 import org.jetbrains.annotations.NotNull;
-
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,15 +29,15 @@ import retrofit2.Response;
 
 public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapter.OnItemClickListener {
 
-    private RecyclerView recyclerView;
+    private RecyclerView rvWorkshop;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     private List<WorkshopModel> listWorkshop = new ArrayList<>();
-    private SwipeRefreshLayout swipeRefreshLayout;
-    private ProgressBar progressBar;
-    private DrawerLayout drawerLayout;
+    private SwipeRefreshLayout refreshWorkshop;
+    private ProgressBar pbarWorkshop;
+    private DrawerLayout drawerLayoutWorkshop;
     private ActionBarDrawerToggle actionBarDrawerToggle;
-    private NavigationView navigationView;
+    private NavigationView navViewWorkshop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -53,21 +47,21 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
         setTitle("Workshop");
 
         //Assign Variable
-        recyclerView = findViewById(R.id.rvWorkshop);
-        swipeRefreshLayout = findViewById(R.id.refreshWorkshop);
-        progressBar = findViewById(R.id.pbarWorkshop);
-        navigationView = findViewById(R.id.navView);
-        drawerLayout = findViewById(R.id.drawableLayout);
+        rvWorkshop = findViewById(R.id.rvWorkshop);
+        refreshWorkshop = findViewById(R.id.refreshWorkshop);
+        pbarWorkshop = findViewById(R.id.pbarWorkshop);
+        navViewWorkshop = findViewById(R.id.navViewWorkshop);
+        drawerLayoutWorkshop = findViewById(R.id.drawableLayoutWorkshop);
 
         //Set Recycler view Layout
         layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(layoutManager);
+        rvWorkshop.setLayoutManager(layoutManager);
 
         //Set Menu on Action bar
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayoutWorkshop, R.string.open, R.string.close);
 
         //Navigation view menu listener
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+        navViewWorkshop.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
                 switch (item.getItemId()){
@@ -76,12 +70,13 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
                         return true;
 
                     case R.id.tambahWorkshop:
-                        Intent intent = new Intent(WorkshopActivity.this, TambahWorkshopActivity.class);
-                        startActivity(intent);
+                        Intent intentWorkshop = new Intent(WorkshopActivity.this, TambahWorkshopActivity.class);
+                        startActivity(intentWorkshop);
                         return true;
 
                     case R.id.tambahArtikelFotografi:
-                        Toast.makeText(WorkshopActivity.this, "Ini Ke Tambah Artikel", Toast.LENGTH_SHORT).show();
+                        Intent intentArtikel = new Intent(WorkshopActivity.this, TambahArtikelActivity.class);
+                        startActivity(intentArtikel);
                         return true;
 
                     case R.id.tambahLayananJasaFotografi:
@@ -110,17 +105,17 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
         });
 
         //Set menu
-        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        drawerLayoutWorkshop.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Set refresh swipe to get data
-        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+        refreshWorkshop.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                swipeRefreshLayout.setRefreshing(true);
+                refreshWorkshop.setRefreshing(true);
                 retrieveData();
-                swipeRefreshLayout.setRefreshing(false);
+                refreshWorkshop.setRefreshing(false);
             }
         });
     }
@@ -142,11 +137,11 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
     }
 
     public void retrieveData(){
-        progressBar.setVisibility(View.VISIBLE);
+        pbarWorkshop.setVisibility(View.VISIBLE);
 
         //Conncet to server to parse Json and get data
         APIRequestData ardData = RetrofitServer.connectRetrofit().create(APIRequestData.class);
-        Call<WorkshopModel> tampilData = ardData.RetrieveData();
+        Call<WorkshopModel> tampilData = ardData.RetrieveDataWorkshop();
 
         tampilData.enqueue(new Callback<WorkshopModel>() {
             @Override
@@ -155,17 +150,17 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
                 listWorkshop = response.body().getData_workshop();
 
                 adapter = new WorkshopAdapter(WorkshopActivity.this, listWorkshop, WorkshopActivity.this::OnItemClick);
-                recyclerView.setAdapter(adapter);
+                rvWorkshop.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
 
-                progressBar.setVisibility(View.GONE);
+                pbarWorkshop.setVisibility(View.GONE);
             }
 
             @Override
             public void onFailure(Call<WorkshopModel> call, Throwable t) {
                 Toast.makeText(WorkshopActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
 
-                progressBar.setVisibility(View.GONE);
+                pbarWorkshop.setVisibility(View.GONE);
             }
         });
     }

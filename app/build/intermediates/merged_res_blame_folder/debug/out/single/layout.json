@@ -4,6 +4,10 @@
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_detail_workshop.xml"
     },
     {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\custom_controller_exo.xml",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\custom_controller_exo.xml"
     },
@@ -18,5 +22,21 @@
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_tambah_workshop.xml",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_tambah_workshop.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_tambah_artikel.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_tambah_artikel.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_artikel.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\item_artikel.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_artikel.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_artikel.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail_artikel.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_detail_artikel.xml"
     }
 ]

@@ -18,7 +18,7 @@
             app:boxBackgroundColor="@color/transparent">
 
             <EditText
-                android:id="@+id/inputJudulWorkshop"
+                android:id="@+id/etJudulWorkshop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Judul Workshop"
@@ -36,7 +36,7 @@
             android:textColorHint="#BCBABA">
 
             <EditText
-                android:id="@+id/inputDeskripsiWorkshop"
+                android:id="@+id/etDeskripsiWorkshop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Deskripsi Workshop"
@@ -54,7 +54,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/btnDatePicker"
+                android:id="@+id/btnDatePickerWorkshop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Pilih Tanggal"
@@ -66,7 +66,7 @@
                 android:layout_gravity="start" />
 
             <Button
-                android:id="@+id/btnSelectImage"
+                android:id="@+id/btnSelectImageWorkshop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tambah Gambar"
@@ -78,7 +78,7 @@
                 android:layout_gravity="start" />
 
             <Button
-                android:id="@+id/btnSelectVideo"
+                android:id="@+id/btnSelectVideoWorkshop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tambah Video"

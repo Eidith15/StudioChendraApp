@@ -2,31 +2,48 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/akunAdmin"
-        android:title="Akun" />
+    <group android:id="@+id/g1nav" android:checkableBehavior="single">
+        <item android:id="@+id/akunAdmin"
+            android:title="Akun"
+            android:icon="@drawable/ic_account_menu" />
+    </group>
 
-    <item android:id="@+id/tambahWorkshop"
-        android:title="Tambah Data Workshop"
-        app:showAsAction="never"/>
+    <group android:id="@+id/g2nav" android:checkableBehavior="single">
+        <item android:id="@+id/tambahWorkshop"
+            android:title="Tambah Data Workshop"
+            app:showAsAction="never"
+            android:icon="@drawable/ic_workshop_menu"/>
+    </group>
 
-    <item android:id="@+id/tambahArtikelFotografi"
-        android:title="Tambah Data Artikel Fotografi" />
-
-    <item android:id="@+id/tambahLayananJasaFotografi"
-        android:title="Tambah Data Layanan Jasa Fotografi" />
-
-    <item android:id="@+id/tambahFotoPortofolio"
-        android:title="Tambah Data Foto Portofolio" />
-
-    <item android:id="@+id/registrasiOrderAdmin"
-        android:title="List Registrasi Order" />
-
-    <item android:id="@+id/respondCustomer"
-        android:title="Respond Customer" />
-
-    <item android:id="@+id/logout"
-        android:title="Logout" />
-
-
+    <group android:id="@+id/g4nav" android:checkableBehavior="single">
+        <item android:id="@+id/tambahArtikelFotografi"
+            android:title="Tambah Data Artikel Fotografi"
+            android:icon="@drawable/ic_artikel_menu"/>
+    </group>
+    <group android:id="@+id/g5nav" android:checkableBehavior="single">
+        <item android:id="@+id/tambahLayananJasaFotografi"
+            android:title="Tambah Data Layanan Jasa Fotografi"
+            android:icon="@drawable/ic_layanan_menu"/>
+    </group>
+    <group android:id="@+id/g6nav" android:checkableBehavior="single">
+        <item android:id="@+id/tambahFotoPortofolio"
+            android:title="Tambah Data Foto Portofolio"
+            android:icon="@drawable/ic_portofolio_menu"/>
+    </group>
+    <group android:id="@+id/g7nav" android:checkableBehavior="single">
+        <item android:id="@+id/registrasiOrderAdmin"
+            android:title="List Registrasi Order"
+            android:icon="@drawable/ic_registrasi_menu"/>
+    </group>
+    <group android:id="@+id/g8nav" android:checkableBehavior="single">
+        <item android:id="@+id/respondCustomer"
+            android:title="Respond Customer"
+            android:icon="@drawable/ic_respond_customer_menu"/>
+    </group>
+    <group android:id="@+id/g9nav" android:checkableBehavior="single">
+        <item android:id="@+id/logout"
+            android:title="Logout"
+            android:icon="@drawable/ic_logout_menu"/>
+    </group>
 
 </menu>

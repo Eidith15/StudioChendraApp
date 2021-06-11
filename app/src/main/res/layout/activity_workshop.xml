@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.WorkshopActivity"
-    android:id="@+id/drawableLayout"
-    android:layout_margin="10dp">
+    android:id="@+id/drawableLayoutWorkshop">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/refreshWorkshop"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvWorkshop"
@@ -31,11 +31,13 @@
         android:visibility="gone"/>
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navView"
+        android:id="@+id/navViewWorkshop"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:menu="@menu/navigation_menu_admin"
         android:layout_gravity="start"
+        app:menu="@menu/navigation_menu_admin"
+        app:itemTextColor="@color/grey"
+        app:itemIconTint="@color/grey"
         />
 
 </androidx.drawerlayout.widget.DrawerLayout>

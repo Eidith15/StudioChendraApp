@@ -1,6 +1,5 @@
 package com.eidith.studiochendraapp.activity;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -14,7 +13,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -40,14 +38,6 @@ import retrofit2.Response;
 
 public class TambahWorkshopActivity extends AppCompatActivity {
 
-
-    private EditText etJudulWorkshop, etDeskripsiWorkshop;
-    private Button btnTambahWorkshop, btnDatePicker, btnSelectVideo, btnSelectImage;
-    private String judul_workshop, deskripsi_workshop, gambar_workshop, video_workshop, tanggal_workshop;
-    private String mediaPathImage;
-    private String mediaPathVideo;
-    private ProgressDialog progressDialog;
-    private int progress = 0;
     private static final int IMG_REQUEST_CODE = 0;
     private static final int VID_REQUEST_CODE = 1;
     private static final int REQUEST_EXTERNAL_STORAGE = 2;
@@ -55,7 +45,16 @@ public class TambahWorkshopActivity extends AppCompatActivity {
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
+
+    private EditText etJudulWorkshop, etDeskripsiWorkshop;
+    private Button btnTambahWorkshop, btnDatePickerWorkshop, btnSelectVideoWorkshop, btnSelectImageWorkshop;
+
+    private ProgressDialog progressDialog;
     private DatePickerDialog.OnDateSetListener dateSetListener;
+
+    private String judul_workshop, deskripsi_workshop, gambar_workshop, video_workshop, tanggal_workshop;
+    private String mediaPathImage;
+    private String mediaPathVideo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,11 +66,11 @@ public class TambahWorkshopActivity extends AppCompatActivity {
         verifyStoragePermissions(TambahWorkshopActivity.this);
 
         // Assign Variable
-        etJudulWorkshop = findViewById(R.id.inputJudulWorkshop);
-        etDeskripsiWorkshop = findViewById(R.id.inputDeskripsiWorkshop);
-        btnDatePicker = findViewById(R.id.btnDatePicker);
-        btnSelectImage = findViewById(R.id.btnSelectImage);
-        btnSelectVideo = findViewById(R.id.btnSelectVideo);
+        etJudulWorkshop = findViewById(R.id.etJudulWorkshop);
+        etDeskripsiWorkshop = findViewById(R.id.etDeskripsiWorkshop);
+        btnDatePickerWorkshop = findViewById(R.id.btnDatePickerWorkshop);
+        btnSelectImageWorkshop = findViewById(R.id.btnSelectImageWorkshop);
+        btnSelectVideoWorkshop = findViewById(R.id.btnSelectVideoWorkshop);
         btnTambahWorkshop = findViewById(R.id.btnTambahWorkshop);
 
         //Set Progress dialog
@@ -84,22 +83,21 @@ public class TambahWorkshopActivity extends AppCompatActivity {
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 int selectedmonth = month+1;
                 String date = year+"-"+selectedmonth+"-"+dayOfMonth;
-                btnDatePicker.setText(date);
-                btnDatePicker.setError(null);
+                btnDatePickerWorkshop.setText(date);
+                btnDatePickerWorkshop.setError(null);
             }
         };
 
-        btnDatePicker.setOnClickListener(new View.OnClickListener() {
+        btnDatePickerWorkshop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDatePickerDialog();
-
             }
         });
 
 
 
-        btnSelectImage.setOnClickListener(new View.OnClickListener() {
+        btnSelectImageWorkshop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Select Image
@@ -109,7 +107,7 @@ public class TambahWorkshopActivity extends AppCompatActivity {
             }
         });
 
-        btnSelectVideo.setOnClickListener(new View.OnClickListener() {
+        btnSelectVideoWorkshop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Select Video
@@ -125,9 +123,9 @@ public class TambahWorkshopActivity extends AppCompatActivity {
                 //Get Data input
                 judul_workshop = etJudulWorkshop.getText().toString();
                 deskripsi_workshop = etDeskripsiWorkshop.getText().toString();
-                gambar_workshop = btnSelectImage.getText().toString();
-                video_workshop = btnSelectVideo.getText().toString();
-                tanggal_workshop = btnDatePicker.getText().toString();
+                gambar_workshop = btnSelectImageWorkshop.getText().toString();
+                video_workshop = btnSelectVideoWorkshop.getText().toString();
+                tanggal_workshop = btnDatePickerWorkshop.getText().toString();
 
                 //Checking Null
                 if (judul_workshop.trim().equals("")){
@@ -135,11 +133,11 @@ public class TambahWorkshopActivity extends AppCompatActivity {
                 } else if (deskripsi_workshop.trim().equals("")){
                     etDeskripsiWorkshop.setError("Harap Masukan Deskripsi");
                 } else if (tanggal_workshop.trim().equals("Pilih Tanggal")){
-                    btnDatePicker.setError("Harap Masukan Tanggal");
+                    btnDatePickerWorkshop.setError("Harap Masukan Tanggal");
                 } else if (gambar_workshop.trim().equals("Tambah Gambar")){
-                    btnSelectImage.setError("Harap Pilih Gambar");
+                    btnSelectImageWorkshop.setError("Harap Pilih Gambar");
                 } else if (video_workshop.trim().equals("Tambah Video")){
-                    btnSelectVideo.setError("Harap Pilih Video");
+                    btnSelectVideoWorkshop.setError("Harap Pilih Video");
                 } else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(TambahWorkshopActivity.this);
                     builder.setTitle("Tambah Data Workshop");
@@ -180,8 +178,8 @@ public class TambahWorkshopActivity extends AppCompatActivity {
 
                 int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
                 mediaPathImage = cursor.getString(columnIndex);
-                btnSelectImage.setText(mediaPathImage);
-                btnSelectImage.setError(null);
+                btnSelectImageWorkshop.setText(mediaPathImage);
+                btnSelectImageWorkshop.setError(null);
                 cursor.close();
 
                 //Select Video from cursor and get path
@@ -195,8 +193,8 @@ public class TambahWorkshopActivity extends AppCompatActivity {
 
                 int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
                 mediaPathVideo = cursor.getString(columnIndex);
-                btnSelectVideo.setText(mediaPathVideo);
-                btnSelectVideo.setError(null);
+                btnSelectVideoWorkshop.setText(mediaPathVideo);
+                btnSelectVideoWorkshop.setError(null);
                 cursor.close();
             } else {
                 Toast.makeText(this, "Harap pilih Image/Video", Toast.LENGTH_LONG).show();
@@ -216,7 +214,7 @@ public class TambahWorkshopActivity extends AppCompatActivity {
         //Set to Parser Json using Request Body and Multipart
         RequestBody judul = RequestBody.create(MediaType.parse("text/plain"), etJudulWorkshop.getText().toString());
         RequestBody deskripsi = RequestBody.create(MediaType.parse("text/plain"), etDeskripsiWorkshop.getText().toString());
-        RequestBody tanggal = RequestBody.create(MediaType.parse("text/plain"), btnDatePicker.getText().toString());
+        RequestBody tanggal = RequestBody.create(MediaType.parse("text/plain"), btnDatePickerWorkshop.getText().toString());
         RequestBody gambar = RequestBody.create(MediaType.parse("image/*"), fileImage);
         MultipartBody.Part imagepart = MultipartBody.Part.createFormData("gambar_workshop", fileImage.getName(), gambar);
         RequestBody video = RequestBody.create(MediaType.parse("video/*"), fileVideo);
@@ -224,7 +222,7 @@ public class TambahWorkshopActivity extends AppCompatActivity {
 
         //Execute createData to json method
         APIRequestData ardData = RetrofitServer.connectRetrofit().create(APIRequestData.class);
-        Call<WorkshopModel> createData = ardData.CreateData(judul, deskripsi, tanggal, imagepart, videopart);
+        Call<WorkshopModel> createData = ardData.CreateDataWorkshop(judul, deskripsi, tanggal, imagepart, videopart);
 
         createData.enqueue(new Callback<WorkshopModel>() {
             @Override

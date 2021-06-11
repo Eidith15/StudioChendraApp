@@ -4,13 +4,10 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,11 +21,11 @@ import com.google.android.exoplayer2.ui.PlayerView;
 
 public class DetailWorkshopActivity extends AppCompatActivity {
 
-    private PlayerView playerVideoDetailWorkshop;
+    private PlayerView vvDetailWorkshop;
     private TextView tvDetailJudulWorkshop, tvDetailDeskripsiWorkshop, tvDetailTanggalWorkshop;
     private ImageView ivDetailWorkshop;
     private ImageButton btnFullScreen;
-    private Button btnRegistrasiOrderWorkshop;
+    private Button btnRegistrasiWorkshop;
     private SimpleExoPlayer player;
     boolean fullscreen = false;
 
@@ -40,11 +37,11 @@ public class DetailWorkshopActivity extends AppCompatActivity {
         setTitle("Workshop Detail");
 
         //Assign Variable
-        playerVideoDetailWorkshop = findViewById(R.id.vvDetailWorkshop);
+        vvDetailWorkshop = findViewById(R.id.vvDetailWorkshop);
         tvDetailJudulWorkshop = findViewById(R.id.tvDetailJudulWorkshop);
         tvDetailDeskripsiWorkshop = findViewById(R.id.tvDetailDeskripsiWorkshop);
         ivDetailWorkshop = findViewById(R.id.ivDetailWorkshop);
-        btnRegistrasiOrderWorkshop = findViewById(R.id.btnRegistrasi);
+        btnRegistrasiWorkshop = findViewById(R.id.btnRegistrasiWorkshop);
         btnFullScreen = findViewById(R.id.btnFullscreen);
         tvDetailTanggalWorkshop = findViewById(R.id.tvDetailTanggalWorkshop);
 
@@ -60,24 +57,23 @@ public class DetailWorkshopActivity extends AppCompatActivity {
         tvDetailDeskripsiWorkshop.setText(deskripsiWorkshop);
         tvDetailTanggalWorkshop.setText(tanggalWorkshop);
 
-
         //Glide Image to image view
         Glide.with(DetailWorkshopActivity.this)
                 .load(RetrofitServer.imageURL+gambarWorkshop)
-                .apply(new RequestOptions().override(1080, 720))
+                .apply(new RequestOptions().override(800, 400))
                 .into(ivDetailWorkshop);
 
         //Create exo Player fof playing video
         MediaItem mediaItem = MediaItem.fromUri(RetrofitServer.videoURL+videWorkshop);
         player = new SimpleExoPlayer.Builder(this).build();
 
-        playerVideoDetailWorkshop.setShowBuffering(PlayerView.SHOW_BUFFERING_ALWAYS);
-        playerVideoDetailWorkshop.setShowBuffering(PlayerView.SHOW_BUFFERING_WHEN_PLAYING);
-        playerVideoDetailWorkshop.setPlayer(player);
-        playerVideoDetailWorkshop.setKeepScreenOn(true);
+        vvDetailWorkshop.setShowBuffering(PlayerView.SHOW_BUFFERING_ALWAYS);
+        vvDetailWorkshop.setShowBuffering(PlayerView.SHOW_BUFFERING_WHEN_PLAYING);
+        vvDetailWorkshop.setPlayer(player);
+        vvDetailWorkshop.setKeepScreenOn(true);
         player.setMediaItem(mediaItem);
         player.prepare();
-        playerVideoDetailWorkshop.hideController();
+        vvDetailWorkshop.hideController();
         player.setPlayWhenReady(true);
 
         btnFullScreen.setOnClickListener(new View.OnClickListener() {
@@ -92,10 +88,10 @@ public class DetailWorkshopActivity extends AppCompatActivity {
                         getSupportActionBar().show();
                     }
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-                    LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) playerVideoDetailWorkshop.getLayoutParams();
+                    LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) vvDetailWorkshop.getLayoutParams();
                     params.width = params.MATCH_PARENT;
                     params.height = (int) ( 200 * getApplicationContext().getResources().getDisplayMetrics().density);
-                    playerVideoDetailWorkshop.setLayoutParams(params);
+                    vvDetailWorkshop.setLayoutParams(params);
                     fullscreen = false;
                 }else{
                     //Set full screen on click
@@ -107,10 +103,10 @@ public class DetailWorkshopActivity extends AppCompatActivity {
                         getSupportActionBar().hide();
                     }
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-                    LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) playerVideoDetailWorkshop.getLayoutParams();
+                    LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) vvDetailWorkshop.getLayoutParams();
                     params.width = params.MATCH_PARENT;
                     params.height = params.MATCH_PARENT;
-                    playerVideoDetailWorkshop.setLayoutParams(params);
+                    vvDetailWorkshop.setLayoutParams(params);
                     fullscreen = true;
                 }
 

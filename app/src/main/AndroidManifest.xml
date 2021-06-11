@@ -3,31 +3,41 @@
     package="com.eidith.studiochendraapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:label="@string/app_name"
         android:name="androidx.multidex.MultiDexApplication"
-        android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudioChendraApp">
-        <activity
-            android:name=".activity.TambahWorkshopActivity"
-            android:parentActivityName=".activity.WorkshopActivity"></activity>
-        <activity
-            android:name=".activity.DetailWorkshopActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:parentActivityName=".activity.WorkshopActivity"></activity>
-        <activity android:name=".activity.WorkshopActivity">
+        <activity android:name=".activity.MainActivity"></activity>
+        <activity android:name=".activity.ArtikelActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.DetailArtikelActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:parentActivityName=".activity.ArtikelActivity" />
+        <activity
+            android:name=".activity.TambahArtikelActivity"
+            android:parentActivityName=".activity.ArtikelActivity" />
+        <activity android:name=".activity.WorkshopActivity" />
+        <activity
+            android:name=".activity.DetailWorkshopActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:parentActivityName=".activity.WorkshopActivity" />
+        <activity
+            android:name=".activity.TambahWorkshopActivity"
+            android:parentActivityName=".activity.WorkshopActivity" />
     </application>
 
 </manifest>

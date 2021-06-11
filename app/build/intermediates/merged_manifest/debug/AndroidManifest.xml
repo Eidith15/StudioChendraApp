@@ -25,20 +25,29 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.StudioChendraApp" >
-        <activity
-            android:name="com.eidith.studiochendraapp.activity.TambahWorkshopActivity"
-            android:parentActivityName="com.eidith.studiochendraapp.activity.WorkshopActivity" />
-        <activity
-            android:name="com.eidith.studiochendraapp.activity.DetailWorkshopActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:parentActivityName="com.eidith.studiochendraapp.activity.WorkshopActivity" />
-        <activity android:name="com.eidith.studiochendraapp.activity.WorkshopActivity" >
+        <activity android:name="com.eidith.studiochendraapp.activity.MainActivity" />
+        <activity android:name="com.eidith.studiochendraapp.activity.ArtikelActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.eidith.studiochendraapp.activity.DetailArtikelActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:parentActivityName="com.eidith.studiochendraapp.activity.ArtikelActivity" />
+        <activity
+            android:name="com.eidith.studiochendraapp.activity.TambahArtikelActivity"
+            android:parentActivityName="com.eidith.studiochendraapp.activity.ArtikelActivity" />
+        <activity android:name="com.eidith.studiochendraapp.activity.WorkshopActivity" />
+        <activity
+            android:name="com.eidith.studiochendraapp.activity.DetailWorkshopActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:parentActivityName="com.eidith.studiochendraapp.activity.WorkshopActivity" />
+        <activity
+            android:name="com.eidith.studiochendraapp.activity.TambahWorkshopActivity"
+            android:parentActivityName="com.eidith.studiochendraapp.activity.WorkshopActivity" />
     </application>
 
 </manifest>

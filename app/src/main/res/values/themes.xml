@@ -14,4 +14,9 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="NavView" parent="Widget.Design.NavigationView">
+        <item name="android:listDivider">@color/grey</item>
+        <item name="android:textColorSecondary">@color/grey</item>
+    </style>
+
 </resources>

@@ -1,28 +1,28 @@
-com/eidith/studiochendraapp/databinding/ActivityTambahWorkshopBinding.java
- com.eidith.studiochendraapp.databinding.ActivityTambahWorkshopBinding
+com/eidith/studiochendraapp/adapter/ArtikelAdapter.java
+ com.eidith.studiochendraapp.adapter.ArtikelAdapter
+ com.eidith.studiochendraapp.adapter.ArtikelAdapter$OnItemClickListener
+ com.eidith.studiochendraapp.adapter.ArtikelAdapter$ViewHolder
+com/eidith/studiochendraapp/api/APIRequestData.java
+ com.eidith.studiochendraapp.api.APIRequestData
+com/eidith/studiochendraapp/activity/ArtikelActivity.java
+ com.eidith.studiochendraapp.activity.ArtikelActivity
+ com.eidith.studiochendraapp.activity.ArtikelActivity$1
+ com.eidith.studiochendraapp.activity.ArtikelActivity$2
+ com.eidith.studiochendraapp.activity.ArtikelActivity$3
 com/eidith/studiochendraapp/activity/DetailWorkshopActivity.java
  com.eidith.studiochendraapp.activity.DetailWorkshopActivity
  com.eidith.studiochendraapp.activity.DetailWorkshopActivity$1
-com/eidith/studiochendraapp/model/WorkshopModel.java
- com.eidith.studiochendraapp.model.WorkshopModel
 com/eidith/studiochendraapp/databinding/ActivityWorkshopBinding.java
  com.eidith.studiochendraapp.databinding.ActivityWorkshopBinding
-com/eidith/studiochendraapp/databinding/ActivityDetailWorkshopBinding.java
- com.eidith.studiochendraapp.databinding.ActivityDetailWorkshopBinding
 com/eidith/studiochendraapp/adapter/WorkshopAdapter.java
  com.eidith.studiochendraapp.adapter.WorkshopAdapter
  com.eidith.studiochendraapp.adapter.WorkshopAdapter$OnItemClickListener
  com.eidith.studiochendraapp.adapter.WorkshopAdapter$ViewHolder
-com/eidith/studiochendraapp/api/RetrofitServer.java
- com.eidith.studiochendraapp.api.RetrofitServer
+com/eidith/studiochendraapp/activity/MainActivity.java
+ com.eidith.studiochendraapp.activity.MainActivity
+ com.eidith.studiochendraapp.activity.MainActivity$1
 com/eidith/studiochendraapp/BuildConfig.java
  com.eidith.studiochendraapp.BuildConfig
-com/eidith/studiochendraapp/databinding/CustomControllerExoBinding.java
- com.eidith.studiochendraapp.databinding.CustomControllerExoBinding
-com/eidith/studiochendraapp/databinding/ItemWorkshopBinding.java
- com.eidith.studiochendraapp.databinding.ItemWorkshopBinding
-com/eidith/studiochendraapp/api/APIRequestData.java
- com.eidith.studiochendraapp.api.APIRequestData
 com/eidith/studiochendraapp/activity/TambahWorkshopActivity.java
  com.eidith.studiochendraapp.activity.TambahWorkshopActivity
  com.eidith.studiochendraapp.activity.TambahWorkshopActivity$1
@@ -33,8 +33,49 @@ com/eidith/studiochendraapp/activity/TambahWorkshopActivity.java
  com.eidith.studiochendraapp.activity.TambahWorkshopActivity$5$1
  com.eidith.studiochendraapp.activity.TambahWorkshopActivity$5$2
  com.eidith.studiochendraapp.activity.TambahWorkshopActivity$6
+com/eidith/studiochendraapp/databinding/ItemArtikelBinding.java
+ com.eidith.studiochendraapp.databinding.ItemArtikelBinding
+com/eidith/studiochendraapp/model/LayananModel.java
+ com.eidith.studiochendraapp.model.LayananModel
+com/eidith/studiochendraapp/activity/DetailArtikelActivity.java
+ com.eidith.studiochendraapp.activity.DetailArtikelActivity
+ com.eidith.studiochendraapp.activity.DetailArtikelActivity$1
+com/eidith/studiochendraapp/activity/TambahArtikelActivity.java
+ com.eidith.studiochendraapp.activity.TambahArtikelActivity
+ com.eidith.studiochendraapp.activity.TambahArtikelActivity$1
+ com.eidith.studiochendraapp.activity.TambahArtikelActivity$2
+ com.eidith.studiochendraapp.activity.TambahArtikelActivity$3
+ com.eidith.studiochendraapp.activity.TambahArtikelActivity$4
+ com.eidith.studiochendraapp.activity.TambahArtikelActivity$5
+ com.eidith.studiochendraapp.activity.TambahArtikelActivity$5$1
+ com.eidith.studiochendraapp.activity.TambahArtikelActivity$5$2
+ com.eidith.studiochendraapp.activity.TambahArtikelActivity$6
+com/eidith/studiochendraapp/databinding/ActivityArtikelBinding.java
+ com.eidith.studiochendraapp.databinding.ActivityArtikelBinding
+com/eidith/studiochendraapp/databinding/ActivityDetailArtikelBinding.java
+ com.eidith.studiochendraapp.databinding.ActivityDetailArtikelBinding
+com/eidith/studiochendraapp/model/WorkshopModel.java
+ com.eidith.studiochendraapp.model.WorkshopModel
+com/eidith/studiochendraapp/model/PortofolioModel.java
+ com.eidith.studiochendraapp.model.PortofolioModel
 com/eidith/studiochendraapp/activity/WorkshopActivity.java
  com.eidith.studiochendraapp.activity.WorkshopActivity
  com.eidith.studiochendraapp.activity.WorkshopActivity$1
  com.eidith.studiochendraapp.activity.WorkshopActivity$2
  com.eidith.studiochendraapp.activity.WorkshopActivity$3
+com/eidith/studiochendraapp/databinding/ActivityMainBinding.java
+ com.eidith.studiochendraapp.databinding.ActivityMainBinding
+com/eidith/studiochendraapp/model/ArtikelModel.java
+ com.eidith.studiochendraapp.model.ArtikelModel
+com/eidith/studiochendraapp/api/RetrofitServer.java
+ com.eidith.studiochendraapp.api.RetrofitServer
+com/eidith/studiochendraapp/databinding/ActivityTambahArtikelBinding.java
+ com.eidith.studiochendraapp.databinding.ActivityTambahArtikelBinding
+com/eidith/studiochendraapp/databinding/ItemWorkshopBinding.java
+ com.eidith.studiochendraapp.databinding.ItemWorkshopBinding
+com/eidith/studiochendraapp/databinding/ActivityTambahWorkshopBinding.java
+ com.eidith.studiochendraapp.databinding.ActivityTambahWorkshopBinding
+com/eidith/studiochendraapp/databinding/ActivityDetailWorkshopBinding.java
+ com.eidith.studiochendraapp.databinding.ActivityDetailWorkshopBinding
+com/eidith/studiochendraapp/databinding/CustomControllerExoBinding.java
+ com.eidith.studiochendraapp.databinding.CustomControllerExoBinding

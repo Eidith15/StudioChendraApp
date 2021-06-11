@@ -20,34 +20,34 @@ public final class ActivityTambahWorkshopBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
-  public final Button btnDatePicker;
+  public final Button btnDatePickerWorkshop;
 
   @NonNull
-  public final Button btnSelectImage;
+  public final Button btnSelectImageWorkshop;
 
   @NonNull
-  public final Button btnSelectVideo;
+  public final Button btnSelectVideoWorkshop;
 
   @NonNull
   public final Button btnTambahWorkshop;
 
   @NonNull
-  public final EditText inputDeskripsiWorkshop;
+  public final EditText etDeskripsiWorkshop;
 
   @NonNull
-  public final EditText inputJudulWorkshop;
+  public final EditText etJudulWorkshop;
 
-  private ActivityTambahWorkshopBinding(@NonNull ScrollView rootView, @NonNull Button btnDatePicker,
-      @NonNull Button btnSelectImage, @NonNull Button btnSelectVideo,
-      @NonNull Button btnTambahWorkshop, @NonNull EditText inputDeskripsiWorkshop,
-      @NonNull EditText inputJudulWorkshop) {
+  private ActivityTambahWorkshopBinding(@NonNull ScrollView rootView,
+      @NonNull Button btnDatePickerWorkshop, @NonNull Button btnSelectImageWorkshop,
+      @NonNull Button btnSelectVideoWorkshop, @NonNull Button btnTambahWorkshop,
+      @NonNull EditText etDeskripsiWorkshop, @NonNull EditText etJudulWorkshop) {
     this.rootView = rootView;
-    this.btnDatePicker = btnDatePicker;
-    this.btnSelectImage = btnSelectImage;
-    this.btnSelectVideo = btnSelectVideo;
+    this.btnDatePickerWorkshop = btnDatePickerWorkshop;
+    this.btnSelectImageWorkshop = btnSelectImageWorkshop;
+    this.btnSelectVideoWorkshop = btnSelectVideoWorkshop;
     this.btnTambahWorkshop = btnTambahWorkshop;
-    this.inputDeskripsiWorkshop = inputDeskripsiWorkshop;
-    this.inputJudulWorkshop = inputJudulWorkshop;
+    this.etDeskripsiWorkshop = etDeskripsiWorkshop;
+    this.etJudulWorkshop = etJudulWorkshop;
   }
 
   @Override
@@ -77,21 +77,21 @@ public final class ActivityTambahWorkshopBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnDatePicker;
-      Button btnDatePicker = rootView.findViewById(id);
-      if (btnDatePicker == null) {
+      id = R.id.btnDatePickerWorkshop;
+      Button btnDatePickerWorkshop = rootView.findViewById(id);
+      if (btnDatePickerWorkshop == null) {
         break missingId;
       }
 
-      id = R.id.btnSelectImage;
-      Button btnSelectImage = rootView.findViewById(id);
-      if (btnSelectImage == null) {
+      id = R.id.btnSelectImageWorkshop;
+      Button btnSelectImageWorkshop = rootView.findViewById(id);
+      if (btnSelectImageWorkshop == null) {
         break missingId;
       }
 
-      id = R.id.btnSelectVideo;
-      Button btnSelectVideo = rootView.findViewById(id);
-      if (btnSelectVideo == null) {
+      id = R.id.btnSelectVideoWorkshop;
+      Button btnSelectVideoWorkshop = rootView.findViewById(id);
+      if (btnSelectVideoWorkshop == null) {
         break missingId;
       }
 
@@ -101,20 +101,21 @@ public final class ActivityTambahWorkshopBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.inputDeskripsiWorkshop;
-      EditText inputDeskripsiWorkshop = rootView.findViewById(id);
-      if (inputDeskripsiWorkshop == null) {
+      id = R.id.etDeskripsiWorkshop;
+      EditText etDeskripsiWorkshop = rootView.findViewById(id);
+      if (etDeskripsiWorkshop == null) {
         break missingId;
       }
 
-      id = R.id.inputJudulWorkshop;
-      EditText inputJudulWorkshop = rootView.findViewById(id);
-      if (inputJudulWorkshop == null) {
+      id = R.id.etJudulWorkshop;
+      EditText etJudulWorkshop = rootView.findViewById(id);
+      if (etJudulWorkshop == null) {
         break missingId;
       }
 
-      return new ActivityTambahWorkshopBinding((ScrollView) rootView, btnDatePicker, btnSelectImage,
-          btnSelectVideo, btnTambahWorkshop, inputDeskripsiWorkshop, inputJudulWorkshop);
+      return new ActivityTambahWorkshopBinding((ScrollView) rootView, btnDatePickerWorkshop,
+          btnSelectImageWorkshop, btnSelectVideoWorkshop, btnTambahWorkshop, etDeskripsiWorkshop,
+          etJudulWorkshop);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

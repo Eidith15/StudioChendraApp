@@ -22,10 +22,10 @@ public final class ActivityWorkshopBinding implements ViewBinding {
   private final DrawerLayout rootView;
 
   @NonNull
-  public final DrawerLayout drawableLayout;
+  public final DrawerLayout drawableLayoutWorkshop;
 
   @NonNull
-  public final NavigationView navView;
+  public final NavigationView navViewWorkshop;
 
   @NonNull
   public final ProgressBar pbarWorkshop;
@@ -37,12 +37,12 @@ public final class ActivityWorkshopBinding implements ViewBinding {
   public final RecyclerView rvWorkshop;
 
   private ActivityWorkshopBinding(@NonNull DrawerLayout rootView,
-      @NonNull DrawerLayout drawableLayout, @NonNull NavigationView navView,
+      @NonNull DrawerLayout drawableLayoutWorkshop, @NonNull NavigationView navViewWorkshop,
       @NonNull ProgressBar pbarWorkshop, @NonNull SwipeRefreshLayout refreshWorkshop,
       @NonNull RecyclerView rvWorkshop) {
     this.rootView = rootView;
-    this.drawableLayout = drawableLayout;
-    this.navView = navView;
+    this.drawableLayoutWorkshop = drawableLayoutWorkshop;
+    this.navViewWorkshop = navViewWorkshop;
     this.pbarWorkshop = pbarWorkshop;
     this.refreshWorkshop = refreshWorkshop;
     this.rvWorkshop = rvWorkshop;
@@ -75,11 +75,11 @@ public final class ActivityWorkshopBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      DrawerLayout drawableLayout = (DrawerLayout) rootView;
+      DrawerLayout drawableLayoutWorkshop = (DrawerLayout) rootView;
 
-      id = R.id.navView;
-      NavigationView navView = rootView.findViewById(id);
-      if (navView == null) {
+      id = R.id.navViewWorkshop;
+      NavigationView navViewWorkshop = rootView.findViewById(id);
+      if (navViewWorkshop == null) {
         break missingId;
       }
 
@@ -101,8 +101,8 @@ public final class ActivityWorkshopBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityWorkshopBinding((DrawerLayout) rootView, drawableLayout, navView,
-          pbarWorkshop, refreshWorkshop, rvWorkshop);
+      return new ActivityWorkshopBinding((DrawerLayout) rootView, drawableLayoutWorkshop,
+          navViewWorkshop, pbarWorkshop, refreshWorkshop, rvWorkshop);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

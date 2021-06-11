@@ -1,5 +1,6 @@
 package com.eidith.studiochendraapp.api;
 
+import com.eidith.studiochendraapp.model.ArtikelModel;
 import com.eidith.studiochendraapp.model.WorkshopModel;
 
 import okhttp3.MultipartBody;
@@ -12,18 +13,31 @@ import retrofit2.http.Part;
 
 public interface APIRequestData {
 
-    //Get data Workshop
+    //Get data workshop
     @GET("get_workshop.php")
-    Call<WorkshopModel> RetrieveData();
+    Call<WorkshopModel> RetrieveDataWorkshop();
 
-    //Post Data Workshop
+    //Post data workshop
     @Multipart
     @POST("post_workshop.php")
-    Call<WorkshopModel> CreateData(@Part("judul_workshop") RequestBody judul_workshop,
-                                   @Part("deskripsi_workshop") RequestBody deskripsi_workshop,
-                                   @Part("tanggal_workshop") RequestBody tanggal_workshop,
-                                   @Part MultipartBody.Part gambar_workshop,
-                                   @Part MultipartBody.Part video_workshop);
+    Call<WorkshopModel> CreateDataWorkshop(@Part("judul_workshop") RequestBody judul_workshop,
+                                           @Part("deskripsi_workshop") RequestBody deskripsi_workshop,
+                                           @Part("tanggal_workshop") RequestBody tanggal_workshop,
+                                           @Part MultipartBody.Part gambar_workshop,
+                                           @Part MultipartBody.Part video_workshop);
+
+    //Get data artikel
+    @GET("get_artikel.php")
+    Call<ArtikelModel> RetrieveDataArtikel();
+
+    //Post data workshop
+    @Multipart
+    @POST("post_artikel.php")
+    Call<ArtikelModel> CreateDataArtikel(@Part("judul_artikel") RequestBody judul_artikel,
+                                           @Part("deskripsi_artikel") RequestBody deskripsi_artikel,
+                                           @Part("tanggal_artikel") RequestBody tanggal_artikel,
+                                           @Part MultipartBody.Part gambar_artikel,
+                                           @Part MultipartBody.Part video_artikel);
 
 
 }

@@ -52,7 +52,7 @@ public class WorkshopAdapter extends RecyclerView.Adapter<WorkshopAdapter.ViewHo
         holder.tvJudul.setText(workshopModel.getJudul_workshop());
         Glide.with(holder.itemView.getContext())
                 .load(RetrofitServer.imageURL + listWorkshop.get(position).getGambar_workshop())
-                .apply(new RequestOptions().override(1280, 720))
+                .apply(new RequestOptions().override(800, 400))
                 .into(holder.imgGambar);
         holder.tvTanggal.setText(String.valueOf(workshopModel.getTanggal_workshop()));
 

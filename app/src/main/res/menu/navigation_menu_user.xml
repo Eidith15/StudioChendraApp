@@ -3,7 +3,7 @@
     <item android:id="@+id/akunUser"
         android:title="Akun" />
 
-    <item android:id="@+id/Workshop"
+    <item android:id="@+id/workshop"
         android:title="Workshop" />
 
     <item android:id="@+id/artikelFotografi"
