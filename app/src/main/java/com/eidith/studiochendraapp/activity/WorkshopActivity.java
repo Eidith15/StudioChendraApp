@@ -65,33 +65,39 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
             @Override
             public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.akunAdmin:
+                    case R.id.homeUser:
+                        Intent intentHome = new Intent(WorkshopActivity.this, MainActivity.class);
+                        startActivity(intentHome);
+                        return true;
+
+                    case R.id.akunUser:
                         Toast.makeText(WorkshopActivity.this, "Ini ke Akun", Toast.LENGTH_SHORT).show();
                         return true;
 
-                    case R.id.tambahWorkshop:
-                        Intent intentWorkshop = new Intent(WorkshopActivity.this, TambahWorkshopActivity.class);
-                        startActivity(intentWorkshop);
+                    case R.id.workshop:
+                        drawerLayoutWorkshop.closeDrawers();
                         return true;
 
-                    case R.id.tambahArtikelFotografi:
-                        Intent intentArtikel = new Intent(WorkshopActivity.this, TambahArtikelActivity.class);
+                    case R.id.artikelFotografi:
+                        Intent intentArtikel = new Intent(WorkshopActivity.this, ArtikelActivity.class);
                         startActivity(intentArtikel);
                         return true;
 
-                    case R.id.tambahLayananJasaFotografi:
-                        Toast.makeText(WorkshopActivity.this, "Ini Ke Tambah Layanan", Toast.LENGTH_SHORT).show();
+                    case R.id.layananJasaFotografi:
+                        Intent intentLayanan = new Intent(WorkshopActivity.this, LayananActivity.class);
+                        startActivity(intentLayanan);
                         return true;
 
-                    case R.id.tambahFotoPortofolio:
-                        Toast.makeText(WorkshopActivity.this, "Ini Ke Tambah Foto", Toast.LENGTH_SHORT).show();
+                    case R.id.fotoPortofolio:
+                        Intent intentPortofolio = new Intent(WorkshopActivity.this, PortofolioActivity.class);
+                        startActivity(intentPortofolio);
                         return true;
 
-                    case R.id.registrasiOrderAdmin:
+                    case R.id.registrasiOrder:
                         Toast.makeText(WorkshopActivity.this, "Ini Ke Registrasi Order", Toast.LENGTH_SHORT).show();
                         return true;
 
-                    case R.id.respondCustomer:
+                    case R.id.customerService:
                         Toast.makeText(WorkshopActivity.this, "Ini Ke Respond Customer", Toast.LENGTH_SHORT).show();
                         return true;
 
@@ -134,6 +140,7 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
     protected void onResume() {
         super.onResume();
         retrieveData();
+        drawerLayoutWorkshop.closeDrawers();
     }
 
     public void retrieveData(){

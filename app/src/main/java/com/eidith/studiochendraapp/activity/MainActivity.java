@@ -47,26 +47,32 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
                 switch (item.getItemId()){
+                    case R.id.homeUser:
+                        drawableLayoutMain.closeDrawers();
+                        return true;
+
                     case R.id.akunUser:
                         Toast.makeText(MainActivity.this, "Ini ke Akun", Toast.LENGTH_SHORT).show();
                         return true;
 
                     case R.id.workshop:
-                        Intent intentWorkshop = new Intent(MainActivity.this, TambahWorkshopActivity.class);
+                        Intent intentWorkshop = new Intent(MainActivity.this, WorkshopActivity.class);
                         startActivity(intentWorkshop);
                         return true;
 
                     case R.id.artikelFotografi:
-                        Intent intentArtikel = new Intent(MainActivity.this, TambahArtikelActivity.class);
+                        Intent intentArtikel = new Intent(MainActivity.this, ArtikelActivity.class);
                         startActivity(intentArtikel);
                         return true;
 
                     case R.id.layananJasaFotografi:
-                        Toast.makeText(MainActivity.this, "Ini Ke Tambah Layanan", Toast.LENGTH_SHORT).show();
+                        Intent intentLayanan = new Intent(MainActivity.this, LayananActivity.class);
+                        startActivity(intentLayanan);
                         return true;
 
                     case R.id.fotoPortofolio:
-                        Toast.makeText(MainActivity.this, "Ini Ke Tambah Foto", Toast.LENGTH_SHORT).show();
+                        Intent intentPortofolio = new Intent(MainActivity.this, PortofolioActivity.class);
+                        startActivity(intentPortofolio);
                         return true;
 
                     case R.id.registrasiOrder:
@@ -91,6 +97,12 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        drawableLayoutMain.closeDrawers();
     }
 
     //On item selected Menu

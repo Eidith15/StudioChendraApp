@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.eidith.studiochendraapp">
+    package="com.eidith.studiochendraapp" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -14,9 +14,9 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.StudioChendraApp">
-        <activity android:name=".activity.MainActivity"></activity>
-        <activity android:name=".activity.ArtikelActivity">
+        android:theme="@style/Theme.StudioChendraApp" >
+
+        <activity android:name=".activity.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,13 +24,18 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".activity.ArtikelActivity"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
             android:name=".activity.DetailArtikelActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:parentActivityName=".activity.ArtikelActivity" />
         <activity
             android:name=".activity.TambahArtikelActivity"
             android:parentActivityName=".activity.ArtikelActivity" />
-        <activity android:name=".activity.WorkshopActivity" />
+        <activity
+            android:name=".activity.WorkshopActivity"
+            android:parentActivityName=".activity.MainActivity" />
         <activity
             android:name=".activity.DetailWorkshopActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -38,6 +43,26 @@
         <activity
             android:name=".activity.TambahWorkshopActivity"
             android:parentActivityName=".activity.WorkshopActivity" />
+        <activity
+            android:name=".activity.LayananActivity"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.DetailLayananActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:parentActivityName=".activity.LayananActivity" />
+        <activity
+            android:name=".activity.TambahLayananActivity"
+            android:parentActivityName=".activity.LayananActivity" />
+        <activity
+            android:name=".activity.PortofolioActivity"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.DetailPortofolioActivity"
+            android:parentActivityName=".activity.PortofolioActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".activity.TambahPortofolioActivity"
+            android:parentActivityName=".activity.PortofolioActivity"/>
     </application>
 
 </manifest>

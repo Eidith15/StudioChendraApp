@@ -24,7 +24,6 @@ public class DetailArtikelActivity extends AppCompatActivity {
     private PlayerView vvDetailArtikel;
     private TextView tvDetailTanggalArtikel, tvDetailJudulArtikel, tvDetailDeskripsiArtikel;
     private ImageView ivDetailArtikel;
-    private Button btnRegistrasiArtikel;
 
     private ImageButton btnFullScreen;
     private SimpleExoPlayer player;
@@ -44,7 +43,6 @@ public class DetailArtikelActivity extends AppCompatActivity {
         tvDetailJudulArtikel = findViewById(R.id.tvDetailJudulArtikel);
         tvDetailDeskripsiArtikel = findViewById(R.id.tvDetailDeskripsiArtikel);
         ivDetailArtikel = findViewById(R.id.ivDetailArtikel);
-        btnRegistrasiArtikel = findViewById(R.id.btnRegistrasiArtikel);
         btnFullScreen = findViewById(R.id.btnFullscreen);
 
         //Get data from extras

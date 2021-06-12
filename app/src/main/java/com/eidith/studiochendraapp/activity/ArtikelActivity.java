@@ -69,33 +69,39 @@ public class ArtikelActivity extends AppCompatActivity implements ArtikelAdapter
             @Override
             public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.akunAdmin:
+                    case R.id.homeUser:
+                        Intent intentHome = new Intent(ArtikelActivity.this, MainActivity.class);
+                        startActivity(intentHome);
+                        return true;
+
+                    case R.id.akunUser:
                         Toast.makeText(ArtikelActivity.this, "Ini ke Akun", Toast.LENGTH_SHORT).show();
                         return true;
 
-                    case R.id.tambahWorkshop:
-                        Intent intentWorkshop = new Intent(ArtikelActivity.this, TambahWorkshopActivity.class);
+                    case R.id.workshop:
+                        Intent intentWorkshop = new Intent(ArtikelActivity.this, WorkshopActivity.class);
                         startActivity(intentWorkshop);
                         return true;
 
-                    case R.id.tambahArtikelFotografi:
-                        Intent intentArtikel = new Intent(ArtikelActivity.this, TambahArtikelActivity.class);
-                        startActivity(intentArtikel);
+                    case R.id.artikelFotografi:
+                        drawableLayoutArtikel.closeDrawers();
                         return true;
 
-                    case R.id.tambahLayananJasaFotografi:
-                        Toast.makeText(ArtikelActivity.this, "Ini Ke Tambah Layanan", Toast.LENGTH_SHORT).show();
+                    case R.id.layananJasaFotografi:
+                        Intent intentLayanan = new Intent(ArtikelActivity.this, LayananActivity.class);
+                        startActivity(intentLayanan);
                         return true;
 
-                    case R.id.tambahFotoPortofolio:
-                        Toast.makeText(ArtikelActivity.this, "Ini Ke Tambah Foto", Toast.LENGTH_SHORT).show();
+                    case R.id.fotoPortofolio:
+                        Intent intentPortofolio = new Intent(ArtikelActivity.this, PortofolioActivity.class);
+                        startActivity(intentPortofolio);
                         return true;
 
-                    case R.id.registrasiOrderAdmin:
+                    case R.id.registrasiOrder:
                         Toast.makeText(ArtikelActivity.this, "Ini Ke Registrasi Order", Toast.LENGTH_SHORT).show();
                         return true;
 
-                    case R.id.respondCustomer:
+                    case R.id.customerService:
                         Toast.makeText(ArtikelActivity.this, "Ini Ke Respond Customer", Toast.LENGTH_SHORT).show();
                         return true;
 
@@ -138,6 +144,7 @@ public class ArtikelActivity extends AppCompatActivity implements ArtikelAdapter
     protected void onResume() {
         super.onResume();
         retrieveData();
+        drawableLayoutArtikel.closeDrawers();
     }
 
     public void retrieveData(){

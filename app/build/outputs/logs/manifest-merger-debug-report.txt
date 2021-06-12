@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-43:12
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-68:12
 MERGED from [androidx.databinding:viewbinding:4.2.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\947a71c6d3280253a2aa382ca3d9c53f\viewbinding-4.2.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.multidex:multidex:2.0.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\7c84e7269c6b70952089dffb6b7d6b73\multidex-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.3.4] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\6082f1932e0c1d943b4c3894e5629f5c\navigation-ui-2.3.4\AndroidManifest.xml:17:1-24:12
@@ -18,6 +18,7 @@ MERGED from [com.google.android.exoplayer:exoplayer-ui:2.14.0] D:\AndroidStudio\
 MERGED from [androidx.recyclerview:recyclerview:1.2.0-beta02] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\3d7e26f8b9a10f4ed57dd501a34327dd\recyclerview-1.2.0-beta02\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\053474d187d76d0c9d5a99d24b4c193c\swiperefreshlayout-1.2.0-alpha01\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.bumptech.glide:glide:4.12.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\b648c1f4a004a00323e4d1105505efaf\glide-4.12.0\AndroidManifest.xml:2:1-12:12
+MERGED from [com.zolad:zoominimageview:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\43635fa74a8866bacee6bae1316ac027\zoominimageview-1.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\5a0ff6eba4a0ab8a5ff2db13b6b96742\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\b9204796e7e567996b1d6e9b487b57da\appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\eb1af8f1493225341620214c24755800\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -59,20 +60,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] D:\AndroidStudio\Gradl
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\194f0a18b2b3f1b16744a232ed855690\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\e07e114cb47d0c60a85ca2367f8a128b\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\8d11d86b037c681c007c37e744e988c0\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-68:12
 	package
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:3:5-42
 		INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml
 		INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-43:12
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-68:12
 		INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-43:12
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-68:12
 		INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:11-69
@@ -89,7 +90,7 @@ ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:7:
 	android:name
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:7:22-78
 application
-ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:9:5-41:19
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:9:5-66:19
 MERGED from [com.google.android.material:material:1.3.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\2730d74d200c17936a122ce975a9aa70\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\2730d74d200c17936a122ce975a9aa70\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\f05760a6ab320001c8b604d10d78ac7b\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -121,13 +122,9 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] D:\AndroidS
 	android:name
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:10:9-61
 activity#com.eidith.studiochendraapp.activity.MainActivity
-ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:18:9-68
-	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:18:19-56
-activity#com.eidith.studiochendraapp.activity.ArtikelActivity
 ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:19:9-25:20
 	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:19:19-59
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:19:19-56
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
@@ -138,38 +135,86 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:23:17-77
 	android:name
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:23:27-74
-activity#com.eidith.studiochendraapp.activity.DetailArtikelActivity
-ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:26:9-29:70
+activity#com.eidith.studiochendraapp.activity.ArtikelActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:26:9-28:67
 	android:parentActivityName
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:29:13-67
-	android:configChanges
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:28:13-74
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:28:13-64
 	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:27:13-59
-activity#com.eidith.studiochendraapp.activity.TambahArtikelActivity
-ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:30:9-32:70
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:27:13-53
+activity#com.eidith.studiochendraapp.activity.DetailArtikelActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:29:9-32:70
 	android:parentActivityName
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:32:13-67
-	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:31:13-59
-activity#com.eidith.studiochendraapp.activity.WorkshopActivity
-ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:33:9-63
-	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:33:19-60
-activity#com.eidith.studiochendraapp.activity.DetailWorkshopActivity
-ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:34:9-37:71
-	android:parentActivityName
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:37:13-68
 	android:configChanges
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:36:13-74
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:31:13-74
 	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:35:13-60
-activity#com.eidith.studiochendraapp.activity.TambahWorkshopActivity
-ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:38:9-40:71
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:30:13-59
+activity#com.eidith.studiochendraapp.activity.TambahArtikelActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:33:9-35:70
 	android:parentActivityName
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:40:13-68
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:35:13-67
 	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:39:13-60
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:34:13-59
+activity#com.eidith.studiochendraapp.activity.WorkshopActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:36:9-38:67
+	android:parentActivityName
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:38:13-64
+	android:name
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:37:13-54
+activity#com.eidith.studiochendraapp.activity.DetailWorkshopActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:39:9-42:71
+	android:parentActivityName
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:42:13-68
+	android:configChanges
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:41:13-74
+	android:name
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:40:13-60
+activity#com.eidith.studiochendraapp.activity.TambahWorkshopActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:43:9-45:71
+	android:parentActivityName
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:45:13-68
+	android:name
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:44:13-60
+activity#com.eidith.studiochendraapp.activity.LayananActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:46:9-48:67
+	android:parentActivityName
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:48:13-64
+	android:name
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:47:13-53
+activity#com.eidith.studiochendraapp.activity.DetailLayananActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:49:9-52:70
+	android:parentActivityName
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:52:13-67
+	android:configChanges
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:51:13-74
+	android:name
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:50:13-59
+activity#com.eidith.studiochendraapp.activity.TambahLayananActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:53:9-55:70
+	android:parentActivityName
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:55:13-67
+	android:name
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:54:13-59
+activity#com.eidith.studiochendraapp.activity.PortofolioActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:56:9-58:67
+	android:parentActivityName
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:58:13-64
+	android:name
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:57:13-56
+activity#com.eidith.studiochendraapp.activity.DetailPortofolioActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:59:9-62:66
+	android:parentActivityName
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:61:13-70
+	android:theme
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:62:13-63
+	android:name
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:60:13-62
+activity#com.eidith.studiochendraapp.activity.TambahPortofolioActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:63:9-65:72
+	android:parentActivityName
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:65:13-70
+	android:name
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:64:13-62
 uses-sdk
 INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml
@@ -202,6 +247,8 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01] D:\An
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\053474d187d76d0c9d5a99d24b4c193c\swiperefreshlayout-1.2.0-alpha01\AndroidManifest.xml:20:5-22:41
 MERGED from [com.github.bumptech.glide:glide:4.12.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\b648c1f4a004a00323e4d1105505efaf\glide-4.12.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:glide:4.12.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\b648c1f4a004a00323e4d1105505efaf\glide-4.12.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.zolad:zoominimageview:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\43635fa74a8866bacee6bae1316ac027\zoominimageview-1.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.zolad:zoominimageview:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\43635fa74a8866bacee6bae1316ac027\zoominimageview-1.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\5a0ff6eba4a0ab8a5ff2db13b6b96742\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\5a0ff6eba4a0ab8a5ff2db13b6b96742\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\b9204796e7e567996b1d6e9b487b57da\appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41

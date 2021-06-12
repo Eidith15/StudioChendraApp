@@ -1,6 +1,8 @@
 package com.eidith.studiochendraapp.api;
 
 import com.eidith.studiochendraapp.model.ArtikelModel;
+import com.eidith.studiochendraapp.model.LayananModel;
+import com.eidith.studiochendraapp.model.PortofolioModel;
 import com.eidith.studiochendraapp.model.WorkshopModel;
 
 import okhttp3.MultipartBody;
@@ -38,6 +40,30 @@ public interface APIRequestData {
                                            @Part("tanggal_artikel") RequestBody tanggal_artikel,
                                            @Part MultipartBody.Part gambar_artikel,
                                            @Part MultipartBody.Part video_artikel);
+
+    //Get data layanan
+    @GET("get_layanan.php")
+    Call<LayananModel> RetrieveDataLayanan();
+
+    //Post data layanan
+    @Multipart
+    @POST("post_layanan.php")
+    Call<LayananModel> CreateDataLayanan(@Part("judul_layanan") RequestBody judul_layanan,
+                                         @Part("deskripsi_layanan") RequestBody deskripsi_layanan,
+                                         @Part("tanggal_layanan") RequestBody tanggal_layanan,
+                                         @Part MultipartBody.Part gambar_layanan,
+                                         @Part MultipartBody.Part video_layanan);
+
+    //Get data layanan
+    @GET("get_portofolio.php")
+    Call<PortofolioModel> RetrieveDataPortofolio();
+
+    //Post data layanan
+    @Multipart
+    @POST("post_portofolio.php")
+    Call<PortofolioModel> CreateDataPortofolio(@Part("judul_portofolio") RequestBody judu_portofolio,
+                                         @Part("deskripsi_foto") RequestBody deskripsi_foto,
+                                         @Part MultipartBody.Part gambar_foto);
 
 
 }
