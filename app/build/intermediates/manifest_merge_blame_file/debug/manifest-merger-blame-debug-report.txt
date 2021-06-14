@@ -42,103 +42,102 @@
 24-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:15:9-54
 25        android:supportsRtl="true"
 25-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:16:9-35
-26        android:testOnly="true"
-27        android:theme="@style/Theme.StudioChendraApp" >
-27-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:17:9-54
-28        <activity android:name="com.eidith.studiochendraapp.activity.MainActivity" >
-28-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:19:9-25:20
-28-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:19:19-56
-29            <intent-filter>
-29-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:20:13-24:29
-30                <action android:name="android.intent.action.MAIN" />
-30-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:21:17-69
-30-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:21:25-66
-31
-32                <category android:name="android.intent.category.LAUNCHER" />
-32-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:23:17-77
-32-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:23:27-74
-33            </intent-filter>
-34        </activity>
-35        <activity
-35-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:26:9-28:67
-36            android:name="com.eidith.studiochendraapp.activity.ArtikelActivity"
-36-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:27:13-53
-37            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
-37-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:28:13-64
-38        <activity
-38-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:29:9-32:70
-39            android:name="com.eidith.studiochendraapp.activity.DetailArtikelActivity"
-39-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:30:13-59
-40            android:configChanges="keyboardHidden|orientation|screenSize"
-40-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:31:13-74
-41            android:parentActivityName="com.eidith.studiochendraapp.activity.ArtikelActivity" />
-41-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:32:13-67
-42        <activity
-42-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:33:9-35:70
-43            android:name="com.eidith.studiochendraapp.activity.TambahArtikelActivity"
-43-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:34:13-59
-44            android:parentActivityName="com.eidith.studiochendraapp.activity.ArtikelActivity" />
-44-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:35:13-67
-45        <activity
-45-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:36:9-38:67
-46            android:name="com.eidith.studiochendraapp.activity.WorkshopActivity"
-46-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:37:13-54
-47            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
-47-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:38:13-64
-48        <activity
-48-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:39:9-42:71
-49            android:name="com.eidith.studiochendraapp.activity.DetailWorkshopActivity"
-49-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:40:13-60
-50            android:configChanges="keyboardHidden|orientation|screenSize"
-50-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:41:13-74
-51            android:parentActivityName="com.eidith.studiochendraapp.activity.WorkshopActivity" />
-51-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:42:13-68
-52        <activity
-52-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:43:9-45:71
-53            android:name="com.eidith.studiochendraapp.activity.TambahWorkshopActivity"
-53-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:44:13-60
-54            android:parentActivityName="com.eidith.studiochendraapp.activity.WorkshopActivity" />
-54-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:45:13-68
-55        <activity
-55-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:46:9-48:67
-56            android:name="com.eidith.studiochendraapp.activity.LayananActivity"
-56-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:47:13-53
-57            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
-57-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:48:13-64
-58        <activity
-58-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:49:9-52:70
-59            android:name="com.eidith.studiochendraapp.activity.DetailLayananActivity"
-59-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:50:13-59
-60            android:configChanges="keyboardHidden|orientation|screenSize"
-60-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:51:13-74
-61            android:parentActivityName="com.eidith.studiochendraapp.activity.LayananActivity" />
-61-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:52:13-67
-62        <activity
-62-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:53:9-55:70
-63            android:name="com.eidith.studiochendraapp.activity.TambahLayananActivity"
-63-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:54:13-59
-64            android:parentActivityName="com.eidith.studiochendraapp.activity.LayananActivity" />
-64-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:55:13-67
-65        <activity
-65-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:56:9-58:67
-66            android:name="com.eidith.studiochendraapp.activity.PortofolioActivity"
-66-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:57:13-56
-67            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
-67-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:58:13-64
-68        <activity
-68-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:59:9-62:66
-69            android:name="com.eidith.studiochendraapp.activity.DetailPortofolioActivity"
-69-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:60:13-62
-70            android:parentActivityName="com.eidith.studiochendraapp.activity.PortofolioActivity"
-70-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:61:13-70
-71            android:theme="@style/Theme.AppCompat.NoActionBar" />
-71-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:62:13-63
-72        <activity
-72-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:63:9-65:72
-73            android:name="com.eidith.studiochendraapp.activity.TambahPortofolioActivity"
-73-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:64:13-62
-74            android:parentActivityName="com.eidith.studiochendraapp.activity.PortofolioActivity" />
-74-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:65:13-70
-75    </application>
-76
-77</manifest>
+26        android:theme="@style/Theme.StudioChendraApp" >
+26-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:17:9-54
+27        <activity android:name="com.eidith.studiochendraapp.activity.MainActivity" >
+27-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:19:9-25:20
+27-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:19:19-56
+28            <intent-filter>
+28-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:20:13-24:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:21:17-69
+29-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:21:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:23:17-77
+31-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:23:27-74
+32            </intent-filter>
+33        </activity>
+34        <activity
+34-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:26:9-28:67
+35            android:name="com.eidith.studiochendraapp.activity.artikel.ArtikelActivity"
+35-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:27:13-61
+36            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
+36-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:28:13-64
+37        <activity
+37-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:29:9-32:78
+38            android:name="com.eidith.studiochendraapp.activity.artikel.DetailArtikelActivity"
+38-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:30:13-67
+39            android:configChanges="keyboardHidden|orientation|screenSize"
+39-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:31:13-74
+40            android:parentActivityName="com.eidith.studiochendraapp.activity.artikel.ArtikelActivity" />
+40-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:32:13-75
+41        <activity
+41-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:33:9-35:78
+42            android:name="com.eidith.studiochendraapp.activity.artikel.TambahArtikelActivity"
+42-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:34:13-67
+43            android:parentActivityName="com.eidith.studiochendraapp.activity.artikel.ArtikelActivity" />
+43-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:35:13-75
+44        <activity
+44-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:36:9-38:67
+45            android:name="com.eidith.studiochendraapp.activity.workshop.WorkshopActivity"
+45-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:37:13-63
+46            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
+46-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:38:13-64
+47        <activity
+47-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:39:9-42:80
+48            android:name="com.eidith.studiochendraapp.activity.workshop.DetailWorkshopActivity"
+48-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:40:13-69
+49            android:configChanges="keyboardHidden|orientation|screenSize"
+49-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:41:13-74
+50            android:parentActivityName="com.eidith.studiochendraapp.activity.workshop.WorkshopActivity" />
+50-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:42:13-77
+51        <activity
+51-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:43:9-45:80
+52            android:name="com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity"
+52-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:44:13-69
+53            android:parentActivityName="com.eidith.studiochendraapp.activity.workshop.WorkshopActivity" />
+53-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:45:13-77
+54        <activity
+54-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:46:9-48:67
+55            android:name="com.eidith.studiochendraapp.activity.layanan.LayananActivity"
+55-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:47:13-61
+56            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
+56-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:48:13-64
+57        <activity
+57-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:49:9-52:78
+58            android:name="com.eidith.studiochendraapp.activity.layanan.DetailLayananActivity"
+58-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:50:13-67
+59            android:configChanges="keyboardHidden|orientation|screenSize"
+59-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:51:13-74
+60            android:parentActivityName="com.eidith.studiochendraapp.activity.layanan.LayananActivity" />
+60-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:52:13-75
+61        <activity
+61-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:53:9-55:78
+62            android:name="com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity"
+62-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:54:13-67
+63            android:parentActivityName="com.eidith.studiochendraapp.activity.layanan.LayananActivity" />
+63-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:55:13-75
+64        <activity
+64-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:56:9-58:67
+65            android:name="com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity"
+65-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:57:13-67
+66            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
+66-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:58:13-64
+67        <activity
+67-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:59:9-62:66
+68            android:name="com.eidith.studiochendraapp.activity.portofolio.DetailPortofolioActivity"
+68-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:60:13-73
+69            android:parentActivityName="com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity"
+69-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:61:13-81
+70            android:theme="@style/Theme.AppCompat.NoActionBar" />
+70-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:62:13-63
+71        <activity
+71-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:63:9-65:84
+72            android:name="com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity"
+72-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:64:13-73
+73            android:parentActivityName="com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity" />
+73-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:65:13-81
+74    </application>
+75
+76</manifest>

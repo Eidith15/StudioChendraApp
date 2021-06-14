@@ -16,6 +16,9 @@ MERGED from [androidx.viewpager2:viewpager2:1.0.0] D:\AndroidStudio\Gradle\cache
 MERGED from [com.google.android.exoplayer:exoplayer:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\ec51b60015daf507e5824d46fa0d48e8\exoplayer-2.14.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.exoplayer:exoplayer-ui:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\5c3aba343f2263152b30355232d3c78b\exoplayer-ui-2.14.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.2.0-beta02] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\3d7e26f8b9a10f4ed57dd501a34327dd\recyclerview-1.2.0-beta02\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\de0c1abe9fc71b3727b3a6acbfc63439\lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\069caddae50f0fb4d724c264674eb4ae\lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\ff1d9a03853e830c980748ff480d700f\lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\053474d187d76d0c9d5a99d24b4c193c\swiperefreshlayout-1.2.0-alpha01\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.bumptech.glide:glide:4.12.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\b648c1f4a004a00323e4d1105505efaf\glide-4.12.0\AndroidManifest.xml:2:1-12:12
 MERGED from [com.zolad:zoominimageview:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\43635fa74a8866bacee6bae1316ac027\zoominimageview-1.0.0\AndroidManifest.xml:2:1-11:12
@@ -46,19 +49,19 @@ MERGED from [com.google.android.exoplayer:exoplayer-rtsp:2.14.0] D:\AndroidStudi
 MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\2c2923fbb9f2ee73c016a6768f0f3c76\exoplayer-smoothstreaming-2.14.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.exoplayer:exoplayer-transformer:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\a8e73eaf4cb8d21244f180a928d0fa77\exoplayer-transformer-2.14.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.exoplayer:exoplayer-core:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\a34a160ef6a5d97ed288855c46902ca8\exoplayer-core-2.14.0\AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\ee32a41b299ebcf4e78d691344f52243\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\23c09b64eca157197e79768ebbeca4df\lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\2a2a39c450de65bb311f2f4b7ae140da\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\f6de2a670d04d6e6d777da00f7299d4c\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\ee32a41b299ebcf4e78d691344f52243\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\597822b5f1d6b2ae8477c0a08baab41d\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\31c5a9d741217c1f32107f5a83ea7081\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\fe0e8ac94f4774ce64165910c34be08b\exoplayer-extractor-2.14.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.exoplayer:exoplayer-common:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\f6552b1f53267126b3c72ab2105efa06\exoplayer-common-2.14.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\86149b99bec44172fe0a29e4b901cf0f\lifecycle-livedata-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\48d3e93f663364a971ec0b0d91325f8d\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\e07e114cb47d0c60a85ca2367f8a128b\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\ca96f6182f57510854af9a656e5790c4\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\b33061385d67b982bb885113b832fc1e\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\01df92b7300672a5ff8664dc3764ee51\print-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\0f9f9612216e1658ded37de1f7493c8e\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\194f0a18b2b3f1b16744a232ed855690\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.1.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\e07e114cb47d0c60a85ca2367f8a128b\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\8d11d86b037c681c007c37e744e988c0\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-68:12
 INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:2:1-68:12
@@ -135,86 +138,86 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:23:17-77
 	android:name
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:23:27-74
-activity#com.eidith.studiochendraapp.activity.ArtikelActivity
+activity#com.eidith.studiochendraapp.activity.artikel.ArtikelActivity
 ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:26:9-28:67
 	android:parentActivityName
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:28:13-64
 	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:27:13-53
-activity#com.eidith.studiochendraapp.activity.DetailArtikelActivity
-ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:29:9-32:70
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:27:13-61
+activity#com.eidith.studiochendraapp.activity.artikel.DetailArtikelActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:29:9-32:78
 	android:parentActivityName
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:32:13-67
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:32:13-75
 	android:configChanges
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:31:13-74
 	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:30:13-59
-activity#com.eidith.studiochendraapp.activity.TambahArtikelActivity
-ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:33:9-35:70
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:30:13-67
+activity#com.eidith.studiochendraapp.activity.artikel.TambahArtikelActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:33:9-35:78
 	android:parentActivityName
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:35:13-67
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:35:13-75
 	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:34:13-59
-activity#com.eidith.studiochendraapp.activity.WorkshopActivity
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:34:13-67
+activity#com.eidith.studiochendraapp.activity.workshop.WorkshopActivity
 ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:36:9-38:67
 	android:parentActivityName
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:38:13-64
 	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:37:13-54
-activity#com.eidith.studiochendraapp.activity.DetailWorkshopActivity
-ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:39:9-42:71
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:37:13-63
+activity#com.eidith.studiochendraapp.activity.workshop.DetailWorkshopActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:39:9-42:80
 	android:parentActivityName
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:42:13-68
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:42:13-77
 	android:configChanges
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:41:13-74
 	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:40:13-60
-activity#com.eidith.studiochendraapp.activity.TambahWorkshopActivity
-ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:43:9-45:71
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:40:13-69
+activity#com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:43:9-45:80
 	android:parentActivityName
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:45:13-68
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:45:13-77
 	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:44:13-60
-activity#com.eidith.studiochendraapp.activity.LayananActivity
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:44:13-69
+activity#com.eidith.studiochendraapp.activity.layanan.LayananActivity
 ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:46:9-48:67
 	android:parentActivityName
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:48:13-64
 	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:47:13-53
-activity#com.eidith.studiochendraapp.activity.DetailLayananActivity
-ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:49:9-52:70
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:47:13-61
+activity#com.eidith.studiochendraapp.activity.layanan.DetailLayananActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:49:9-52:78
 	android:parentActivityName
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:52:13-67
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:52:13-75
 	android:configChanges
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:51:13-74
 	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:50:13-59
-activity#com.eidith.studiochendraapp.activity.TambahLayananActivity
-ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:53:9-55:70
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:50:13-67
+activity#com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:53:9-55:78
 	android:parentActivityName
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:55:13-67
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:55:13-75
 	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:54:13-59
-activity#com.eidith.studiochendraapp.activity.PortofolioActivity
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:54:13-67
+activity#com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity
 ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:56:9-58:67
 	android:parentActivityName
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:58:13-64
 	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:57:13-56
-activity#com.eidith.studiochendraapp.activity.DetailPortofolioActivity
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:57:13-67
+activity#com.eidith.studiochendraapp.activity.portofolio.DetailPortofolioActivity
 ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:59:9-62:66
 	android:parentActivityName
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:61:13-70
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:61:13-81
 	android:theme
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:62:13-63
 	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:60:13-62
-activity#com.eidith.studiochendraapp.activity.TambahPortofolioActivity
-ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:63:9-65:72
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:60:13-73
+activity#com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:63:9-65:84
 	android:parentActivityName
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:65:13-70
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:65:13-81
 	android:name
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:64:13-62
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:64:13-73
 uses-sdk
 INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml
@@ -243,6 +246,12 @@ MERGED from [com.google.android.exoplayer:exoplayer-ui:2.14.0] D:\AndroidStudio\
 MERGED from [com.google.android.exoplayer:exoplayer-ui:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\5c3aba343f2263152b30355232d3c78b\exoplayer-ui-2.14.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.2.0-beta02] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\3d7e26f8b9a10f4ed57dd501a34327dd\recyclerview-1.2.0-beta02\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.2.0-beta02] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\3d7e26f8b9a10f4ed57dd501a34327dd\recyclerview-1.2.0-beta02\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\de0c1abe9fc71b3727b3a6acbfc63439\lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\de0c1abe9fc71b3727b3a6acbfc63439\lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\069caddae50f0fb4d724c264674eb4ae\lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\069caddae50f0fb4d724c264674eb4ae\lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\ff1d9a03853e830c980748ff480d700f\lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\ff1d9a03853e830c980748ff480d700f\lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\053474d187d76d0c9d5a99d24b4c193c\swiperefreshlayout-1.2.0-alpha01\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\053474d187d76d0c9d5a99d24b4c193c\swiperefreshlayout-1.2.0-alpha01\AndroidManifest.xml:20:5-22:41
 MERGED from [com.github.bumptech.glide:glide:4.12.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\b648c1f4a004a00323e4d1105505efaf\glide-4.12.0\AndroidManifest.xml:6:5-8:41
@@ -303,12 +312,12 @@ MERGED from [com.google.android.exoplayer:exoplayer-transformer:2.14.0] D:\Andro
 MERGED from [com.google.android.exoplayer:exoplayer-transformer:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\a8e73eaf4cb8d21244f180a928d0fa77\exoplayer-transformer-2.14.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.exoplayer:exoplayer-core:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\a34a160ef6a5d97ed288855c46902ca8\exoplayer-core-2.14.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.exoplayer:exoplayer-core:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\a34a160ef6a5d97ed288855c46902ca8\exoplayer-core-2.14.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\ee32a41b299ebcf4e78d691344f52243\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\ee32a41b299ebcf4e78d691344f52243\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\23c09b64eca157197e79768ebbeca4df\lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\23c09b64eca157197e79768ebbeca4df\lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\2a2a39c450de65bb311f2f4b7ae140da\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\2a2a39c450de65bb311f2f4b7ae140da\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\f6de2a670d04d6e6d777da00f7299d4c\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\f6de2a670d04d6e6d777da00f7299d4c\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\ee32a41b299ebcf4e78d691344f52243\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\ee32a41b299ebcf4e78d691344f52243\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\597822b5f1d6b2ae8477c0a08baab41d\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\597822b5f1d6b2ae8477c0a08baab41d\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\31c5a9d741217c1f32107f5a83ea7081\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
@@ -317,18 +326,18 @@ MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.14.0] D:\Android
 MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\fe0e8ac94f4774ce64165910c34be08b\exoplayer-extractor-2.14.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.exoplayer:exoplayer-common:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\f6552b1f53267126b3c72ab2105efa06\exoplayer-common-2.14.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.exoplayer:exoplayer-common:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\f6552b1f53267126b3c72ab2105efa06\exoplayer-common-2.14.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\86149b99bec44172fe0a29e4b901cf0f\lifecycle-livedata-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\86149b99bec44172fe0a29e4b901cf0f\lifecycle-livedata-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\48d3e93f663364a971ec0b0d91325f8d\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\48d3e93f663364a971ec0b0d91325f8d\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\e07e114cb47d0c60a85ca2367f8a128b\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\e07e114cb47d0c60a85ca2367f8a128b\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.documentfile:documentfile:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\ca96f6182f57510854af9a656e5790c4\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\ca96f6182f57510854af9a656e5790c4\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\b33061385d67b982bb885113b832fc1e\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\b33061385d67b982bb885113b832fc1e\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\01df92b7300672a5ff8664dc3764ee51\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\01df92b7300672a5ff8664dc3764ee51\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\0f9f9612216e1658ded37de1f7493c8e\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\0f9f9612216e1658ded37de1f7493c8e\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\194f0a18b2b3f1b16744a232ed855690\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\194f0a18b2b3f1b16744a232ed855690\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\e07e114cb47d0c60a85ca2367f8a128b\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\e07e114cb47d0c60a85ca2367f8a128b\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\8d11d86b037c681c007c37e744e988c0\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\8d11d86b037c681c007c37e744e988c0\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 INJECTED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml

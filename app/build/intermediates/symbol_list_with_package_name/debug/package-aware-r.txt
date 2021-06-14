@@ -1318,6 +1318,8 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen action_bar_size
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
 dimen appcompat_dialog_background_inset
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
@@ -2324,6 +2326,7 @@ id path
 id pathRelative
 id pbarArtikel
 id pbarLayanan
+id pbarMain
 id pbarPotrofolio
 id pbarWorkshop
 id peekHeight
@@ -2338,6 +2341,7 @@ id ratio
 id rectangles
 id refreshArtikel
 id refreshLayanan
+id refreshMain
 id refreshPortofolio
 id refreshWorkshop
 id registrasiOrder
@@ -2352,6 +2356,10 @@ id rounded
 id row_index_key
 id rvArtikel
 id rvLayanan
+id rvMainArtikel
+id rvMainLayanan
+id rvMainPortofolio
+id rvMainWorkshop
 id rvPortofolio
 id rvWorkshop
 id save_non_transition_alpha
@@ -2479,7 +2487,6 @@ id tvDetailJudulWorkshop
 id tvDetailTanggalArtikel
 id tvDetailTanggalLayanan
 id tvDetailTanggalWorkshop
-id tvPaketLayanan
 id tvTanggalArtikel
 id tvTanggalWorkshop
 id unchecked
@@ -2489,6 +2496,7 @@ id up
 id useLogo
 id video_decoder_gl_surface_view
 id view_offset_helper
+id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
 id vvDetailArtikel
@@ -2720,6 +2728,8 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_sign_in
+string action_sign_in_short
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -2787,7 +2797,10 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string invalid_password
+string invalid_username
 string item_view_role_description
+string login_failed
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
@@ -2846,8 +2859,12 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string prompt_email
+string prompt_password
 string search_menu_title
 string status_bar_notification_info_overflow
+string title_activity_login
+string welcome
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

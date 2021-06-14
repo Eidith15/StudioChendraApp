@@ -48,11 +48,11 @@ public class LayananAdapter extends  RecyclerView.Adapter<LayananAdapter.ViewHol
         LayananModel layananModel = listLayanan.get(position);
 
         //set item data to view
-        holder.tvId.setText(String.valueOf(layananModel.getId_layanan()));
+        holder.tvIdLayanan.setText(String.valueOf(layananModel.getId_layanan()));
         Glide.with(holder.itemView.getContext())
                 .load(RetrofitServer.imageURL + listLayanan.get(position).getGambar_layanan())
-                .apply(new RequestOptions().override(800, 400))
-                .into(holder.imgGambar);
+                .apply(new RequestOptions().override(1280, 500))
+                .into(holder.imgGambarLayanan);
 
     }
 
@@ -62,16 +62,16 @@ public class LayananAdapter extends  RecyclerView.Adapter<LayananAdapter.ViewHol
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        TextView tvId;
-        ImageView imgGambar;
+        TextView tvIdLayanan;
+        ImageView imgGambarLayanan;
 
         LayananAdapter.OnItemClickListener onItemClickListener;
 
         public ViewHolder(@NonNull View itemView, LayananAdapter.OnItemClickListener onItemClickListener) {
             super(itemView);
             //Assign value
-            tvId = itemView.findViewById(R.id.textIdLayanan);
-            imgGambar = itemView.findViewById(R.id.imgGambarLayanan);
+            tvIdLayanan = itemView.findViewById(R.id.textIdLayanan);
+            imgGambarLayanan = itemView.findViewById(R.id.imgGambarLayanan);
             this.onItemClickListener = onItemClickListener;
 
             itemView.setOnClickListener(this);
@@ -79,12 +79,12 @@ public class LayananAdapter extends  RecyclerView.Adapter<LayananAdapter.ViewHol
 
         @Override
         public void onClick(View v) {
-            onItemClickListener.OnItemClick(getAdapterPosition());
+            onItemClickListener.OnItemClickLayanan(getAdapterPosition());
         }
     }
 
     public interface OnItemClickListener {
-        void OnItemClick(int position);
+        void OnItemClickLayanan(int position);
     }
 
 }

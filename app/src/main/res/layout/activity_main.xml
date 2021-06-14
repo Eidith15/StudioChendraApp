@@ -8,27 +8,108 @@
     tools:context=".activity.MainActivity"
     android:id="@+id/drawableLayoutMain">
 
-<!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
-<!--        android:id="@+id/refreshMain"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_margin="10dp">-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-<!--        <androidx.recyclerview.widget.RecyclerView-->
-<!--            android:id="@+id/rvMain"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            tools:ignore="MissingConstraints"-->
-<!--            tools:listitem="@layout/item_workshop" />-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-<!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-<!--    <ProgressBar-->
-<!--        android:id="@+id/pbarMain"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:visibility="gone"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="12sp"
+                    android:text="Artikel Fotografi"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMainArtikel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:orientation="vertical"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/item_artikel" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="12sp"
+                    android:text="Workshop"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMainWorkshop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    tools:ignore="MissingConstraints"
+                    tools:listitem="@layout/item_workshop"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="12sp"
+                    android:text="Layanan Jasa Fotografi"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMainLayanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/item_layanan" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="12sp"
+                    android:text="Portofolio Gallery"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMainPortofolio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    tools:ignore="MissingConstraints"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/item_portofolio" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/pbarMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navViewMain"

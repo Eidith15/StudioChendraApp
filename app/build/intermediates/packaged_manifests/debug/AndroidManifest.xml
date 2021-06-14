@@ -23,7 +23,6 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.StudioChendraApp" >
         <activity android:name="com.eidith.studiochendraapp.activity.MainActivity" >
             <intent-filter>
@@ -33,45 +32,45 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.eidith.studiochendraapp.activity.ArtikelActivity"
+            android:name="com.eidith.studiochendraapp.activity.artikel.ArtikelActivity"
             android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
         <activity
-            android:name="com.eidith.studiochendraapp.activity.DetailArtikelActivity"
+            android:name="com.eidith.studiochendraapp.activity.artikel.DetailArtikelActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:parentActivityName="com.eidith.studiochendraapp.activity.ArtikelActivity" />
+            android:parentActivityName="com.eidith.studiochendraapp.activity.artikel.ArtikelActivity" />
         <activity
-            android:name="com.eidith.studiochendraapp.activity.TambahArtikelActivity"
-            android:parentActivityName="com.eidith.studiochendraapp.activity.ArtikelActivity" />
+            android:name="com.eidith.studiochendraapp.activity.artikel.TambahArtikelActivity"
+            android:parentActivityName="com.eidith.studiochendraapp.activity.artikel.ArtikelActivity" />
         <activity
-            android:name="com.eidith.studiochendraapp.activity.WorkshopActivity"
+            android:name="com.eidith.studiochendraapp.activity.workshop.WorkshopActivity"
             android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
         <activity
-            android:name="com.eidith.studiochendraapp.activity.DetailWorkshopActivity"
+            android:name="com.eidith.studiochendraapp.activity.workshop.DetailWorkshopActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:parentActivityName="com.eidith.studiochendraapp.activity.WorkshopActivity" />
+            android:parentActivityName="com.eidith.studiochendraapp.activity.workshop.WorkshopActivity" />
         <activity
-            android:name="com.eidith.studiochendraapp.activity.TambahWorkshopActivity"
-            android:parentActivityName="com.eidith.studiochendraapp.activity.WorkshopActivity" />
+            android:name="com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity"
+            android:parentActivityName="com.eidith.studiochendraapp.activity.workshop.WorkshopActivity" />
         <activity
-            android:name="com.eidith.studiochendraapp.activity.LayananActivity"
+            android:name="com.eidith.studiochendraapp.activity.layanan.LayananActivity"
             android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
         <activity
-            android:name="com.eidith.studiochendraapp.activity.DetailLayananActivity"
+            android:name="com.eidith.studiochendraapp.activity.layanan.DetailLayananActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:parentActivityName="com.eidith.studiochendraapp.activity.LayananActivity" />
+            android:parentActivityName="com.eidith.studiochendraapp.activity.layanan.LayananActivity" />
         <activity
-            android:name="com.eidith.studiochendraapp.activity.TambahLayananActivity"
-            android:parentActivityName="com.eidith.studiochendraapp.activity.LayananActivity" />
+            android:name="com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity"
+            android:parentActivityName="com.eidith.studiochendraapp.activity.layanan.LayananActivity" />
         <activity
-            android:name="com.eidith.studiochendraapp.activity.PortofolioActivity"
+            android:name="com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity"
             android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
         <activity
-            android:name="com.eidith.studiochendraapp.activity.DetailPortofolioActivity"
-            android:parentActivityName="com.eidith.studiochendraapp.activity.PortofolioActivity"
+            android:name="com.eidith.studiochendraapp.activity.portofolio.DetailPortofolioActivity"
+            android:parentActivityName="com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name="com.eidith.studiochendraapp.activity.TambahPortofolioActivity"
-            android:parentActivityName="com.eidith.studiochendraapp.activity.PortofolioActivity" />
+            android:name="com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity"
+            android:parentActivityName="com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity" />
     </application>
 
 </manifest>

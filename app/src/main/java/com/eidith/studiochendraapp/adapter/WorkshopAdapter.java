@@ -48,13 +48,13 @@ public class WorkshopAdapter extends RecyclerView.Adapter<WorkshopAdapter.ViewHo
         WorkshopModel workshopModel = listWorkshop.get(position);
 
         //set item data to view
-        holder.tvId.setText(String.valueOf(workshopModel.getId_workshop()));
-        holder.tvJudul.setText(workshopModel.getJudul_workshop());
+        holder.tvIdWorkshop.setText(String.valueOf(workshopModel.getId_workshop()));
+        holder.tvJudulWorkshop.setText(workshopModel.getJudul_workshop());
         Glide.with(holder.itemView.getContext())
                 .load(RetrofitServer.imageURL + listWorkshop.get(position).getGambar_workshop())
-                .apply(new RequestOptions().override(800, 400))
-                .into(holder.imgGambar);
-        holder.tvTanggal.setText(String.valueOf(workshopModel.getTanggal_workshop()));
+                .apply(new RequestOptions().override(1280, 500))
+                .into(holder.imgGambarWorkshop);
+        holder.tvTanggalWorkshop.setText(String.valueOf(workshopModel.getTanggal_workshop()));
 
     }
 
@@ -64,19 +64,19 @@ public class WorkshopAdapter extends RecyclerView.Adapter<WorkshopAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        TextView tvId, tvJudul;
-        ImageView imgGambar;
-        TextView tvTanggal;
+        TextView tvIdWorkshop, tvJudulWorkshop;
+        ImageView imgGambarWorkshop;
+        TextView tvTanggalWorkshop;
 
         OnItemClickListener onItemClickListener;
 
         public ViewHolder(@NonNull View itemView, OnItemClickListener onItemClickListener) {
             super(itemView);
             //Assign value
-            tvId = itemView.findViewById(R.id.textIdWorkshop);
-            tvJudul = itemView.findViewById(R.id.textJudulWorkshop);
-            imgGambar = itemView.findViewById(R.id.imgGambarWorkshop);
-            tvTanggal = itemView.findViewById(R.id.tvTanggalWorkshop);
+            tvIdWorkshop = itemView.findViewById(R.id.textIdWorkshop);
+            tvJudulWorkshop = itemView.findViewById(R.id.textJudulWorkshop);
+            imgGambarWorkshop = itemView.findViewById(R.id.imgGambarWorkshop);
+            tvTanggalWorkshop = itemView.findViewById(R.id.tvTanggalWorkshop);
             this.onItemClickListener = onItemClickListener;
 
             itemView.setOnClickListener(this);
@@ -84,12 +84,12 @@ public class WorkshopAdapter extends RecyclerView.Adapter<WorkshopAdapter.ViewHo
 
         @Override
         public void onClick(View v) {
-            onItemClickListener.OnItemClick(getAdapterPosition());
+            onItemClickListener.OnItemClickWorkshop(getAdapterPosition());
         }
     }
 
     public interface OnItemClickListener {
-        void OnItemClick(int position);
+        void OnItemClickWorkshop(int position);
     }
 
 }

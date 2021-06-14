@@ -15,7 +15,6 @@ import com.bumptech.glide.request.RequestOptions;
 import com.eidith.studiochendraapp.R;
 import com.eidith.studiochendraapp.api.RetrofitServer;
 import com.eidith.studiochendraapp.model.ArtikelModel;
-import com.eidith.studiochendraapp.model.WorkshopModel;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -49,13 +48,13 @@ public class ArtikelAdapter extends RecyclerView.Adapter<ArtikelAdapter.ViewHold
         ArtikelModel artikelModel = listArtikel.get(position);
 
         //set item data to view
-        holder.tvId.setText(String.valueOf(artikelModel.getId_artikel()));
-        holder.tvJudul.setText(artikelModel.getJudul_artikel());
+        holder.tvIdArtikel.setText(String.valueOf(artikelModel.getId_artikel()));
+        holder.tvJudulArtikel.setText(artikelModel.getJudul_artikel());
         Glide.with(holder.itemView.getContext())
                 .load(RetrofitServer.imageURL + listArtikel.get(position).getGambar_artikel())
-                .apply(new RequestOptions().override(800, 400))
-                .into(holder.imgGambar);
-        holder.tvTanggal.setText(String.valueOf(artikelModel.getTanggal_artikel()));
+                .apply(new RequestOptions().override(1280, 720))
+                .into(holder.imgGambarArtikel);
+        holder.tvTanggalArtikel.setText(String.valueOf(artikelModel.getTanggal_artikel()));
 
     }
 
@@ -65,19 +64,19 @@ public class ArtikelAdapter extends RecyclerView.Adapter<ArtikelAdapter.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        TextView tvId, tvJudul;
-        ImageView imgGambar;
-        TextView tvTanggal;
+        TextView tvIdArtikel, tvJudulArtikel;
+        ImageView imgGambarArtikel;
+        TextView tvTanggalArtikel;
 
         OnItemClickListener onItemClickListener;
 
         public ViewHolder(@NonNull View itemView, OnItemClickListener onItemClickListener) {
             super(itemView);
             //Assign value
-            tvId = itemView.findViewById(R.id.textIdArtikel);
-            tvJudul = itemView.findViewById(R.id.textJudulArtikel);
-            imgGambar = itemView.findViewById(R.id.imgGambarArtikel);
-            tvTanggal = itemView.findViewById(R.id.tvTanggalArtikel);
+            tvIdArtikel = itemView.findViewById(R.id.textIdArtikel);
+            tvJudulArtikel = itemView.findViewById(R.id.textJudulArtikel);
+            imgGambarArtikel = itemView.findViewById(R.id.imgGambarArtikel);
+            tvTanggalArtikel = itemView.findViewById(R.id.tvTanggalArtikel);
             this.onItemClickListener = onItemClickListener;
 
             itemView.setOnClickListener(this);
@@ -85,12 +84,12 @@ public class ArtikelAdapter extends RecyclerView.Adapter<ArtikelAdapter.ViewHold
 
         @Override
         public void onClick(View v) {
-            onItemClickListener.OnItemClick(getAdapterPosition());
+            onItemClickListener.OnItemClickArtikel(getAdapterPosition());
         }
     }
 
     public interface OnItemClickListener {
-        void OnItemClick(int position);
+        void OnItemClickArtikel(int position);
     }
 
 }

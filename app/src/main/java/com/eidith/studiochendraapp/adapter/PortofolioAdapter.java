@@ -1,12 +1,10 @@
 package com.eidith.studiochendraapp.adapter;
 
 import android.content.Context;
-import android.content.pm.ActivityInfo;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -50,11 +48,11 @@ public class PortofolioAdapter extends RecyclerView.Adapter<PortofolioAdapter.Vi
         PortofolioModel portofolioModel = listPortofolio.get(position);
 
         //set item data to view
-        holder.tvId.setText(String.valueOf(portofolioModel.getId_portofolio()));
+        holder.tvIdPortofolio.setText(String.valueOf(portofolioModel.getId_portofolio()));
         Glide.with(holder.itemView.getContext())
                 .load(RetrofitServer.imageURL + listPortofolio.get(position).getGambar_foto())
-                .apply(new RequestOptions().override(800, 400))
-                .into(holder.imgGambar);
+                .apply(new RequestOptions().override(1280, 720))
+                .into(holder.imgGambarPortofolio);
 
     }
 
@@ -64,16 +62,16 @@ public class PortofolioAdapter extends RecyclerView.Adapter<PortofolioAdapter.Vi
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        TextView tvId;
-        ImageView imgGambar;
+        TextView tvIdPortofolio;
+        ImageView imgGambarPortofolio;
 
         PortofolioAdapter.OnItemClickListener onItemClickListener;
 
         public ViewHolder(@NonNull View itemView, PortofolioAdapter.OnItemClickListener onItemClickListener) {
             super(itemView);
             //Assign value
-            tvId = itemView.findViewById(R.id.textIdPortofolio);
-            imgGambar = itemView.findViewById(R.id.imgGambarPortofolio);
+            tvIdPortofolio = itemView.findViewById(R.id.textIdPortofolio);
+            imgGambarPortofolio = itemView.findViewById(R.id.imgGambarPortofolio);
             this.onItemClickListener = onItemClickListener;
 
             itemView.setOnClickListener(this);
@@ -81,12 +79,12 @@ public class PortofolioAdapter extends RecyclerView.Adapter<PortofolioAdapter.Vi
 
         @Override
         public void onClick(View v) {
-            onItemClickListener.OnItemClick(getAdapterPosition());
+            onItemClickListener.OnItemClickPortofolio(getAdapterPosition());
         }
     }
 
     public interface OnItemClickListener {
-        void OnItemClick(int position);
+        void OnItemClickPortofolio(int position);
     }
 
 }

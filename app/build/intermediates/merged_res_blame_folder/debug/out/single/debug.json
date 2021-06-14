@@ -45,11 +45,11 @@
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_layanan.xml.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\item_layanan.xml"
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\layanan\\layout\\item_layanan.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_tambah_artikel.xml.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_tambah_artikel.xml"
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\artikel\\layout\\activity_tambah_artikel.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_add_video.png.flat",
@@ -61,7 +61,7 @@
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_detail_layanan.xml.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_detail_layanan.xml"
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\layanan\\layout\\activity_detail_layanan.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_play.png.flat",
@@ -125,7 +125,7 @@
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_portofolio.xml.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\item_portofolio.xml"
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\portofolio\\layout\\item_portofolio.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_pause.png.flat",
@@ -189,7 +189,7 @@
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_layanan.xml.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_layanan.xml"
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\layanan\\layout\\activity_layanan.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_fullscreen.png.flat",
@@ -213,7 +213,7 @@
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_workshop.xml.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_workshop.xml"
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\workshop\\layout\\activity_workshop.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_controller_exo.xml.flat",
@@ -221,7 +221,7 @@
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_tambah_workshop.xml.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_tambah_workshop.xml"
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\workshop\\layout\\activity_tambah_workshop.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
@@ -249,7 +249,7 @@
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_detail_workshop.xml.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_detail_workshop.xml"
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\workshop\\layout\\activity_detail_workshop.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_add_photo.png.flat",
@@ -317,11 +317,11 @@
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_tambah_portofolio.xml.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_tambah_portofolio.xml"
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\portofolio\\layout\\activity_tambah_portofolio.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_detail_artikel.xml.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_detail_artikel.xml"
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\artikel\\layout\\activity_detail_artikel.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_artikel_menu.png.flat",
@@ -393,11 +393,11 @@
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_detail_portofolio.xml.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_detail_portofolio.xml"
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\portofolio\\layout\\activity_detail_portofolio.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_artikel.xml.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\item_artikel.xml"
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\artikel\\layout\\item_artikel.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_registrasi_menu.png.flat",
@@ -533,7 +533,7 @@
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_artikel.xml.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_artikel.xml"
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\artikel\\layout\\activity_artikel.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_fullscreen.png.flat",
@@ -601,7 +601,7 @@
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_portofolio.xml.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_portofolio.xml"
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\portofolio\\layout\\activity_portofolio.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -649,7 +649,7 @@
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_tambah_layanan.xml.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_tambah_layanan.xml"
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\layanan\\layout\\activity_tambah_layanan.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_portofolio_menu.png.flat",
@@ -657,7 +657,7 @@
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_workshop.xml.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\item_workshop.xml"
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\workshop\\layout\\item_workshop.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_datepicker.png.flat",
