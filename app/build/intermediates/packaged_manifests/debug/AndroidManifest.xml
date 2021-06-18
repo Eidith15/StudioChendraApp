@@ -23,14 +23,29 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.StudioChendraApp" >
-        <activity android:name="com.eidith.studiochendraapp.activity.MainActivity" >
+        <activity
+            android:name="com.eidith.studiochendraapp.activity.login.LoginActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.eidith.studiochendraapp.activity.login.RegisterActivity"
+            android:parentActivityName="com.eidith.studiochendraapp.activity.login.LoginActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.eidith.studiochendraapp.activity.MainActivity"
+            android:parentActivityName="com.eidith.studiochendraapp.activity.login.LoginActivity" >
+            <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.eidith.studiochendraapp.activity.akun.AkunActivity"
+            android:parentActivityName="com.eidith.studiochendraapp.activity.login.LoginActivity" />
         <activity
             android:name="com.eidith.studiochendraapp.activity.artikel.ArtikelActivity"
             android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />

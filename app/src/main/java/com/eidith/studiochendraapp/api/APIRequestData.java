@@ -3,17 +3,27 @@ package com.eidith.studiochendraapp.api;
 import com.eidith.studiochendraapp.model.ArtikelModel;
 import com.eidith.studiochendraapp.model.LayananModel;
 import com.eidith.studiochendraapp.model.PortofolioModel;
+import com.eidith.studiochendraapp.model.UserModel;
 import com.eidith.studiochendraapp.model.WorkshopModel;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import retrofit2.Call;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
 
 public interface APIRequestData {
+
+    @FormUrlEncoded
+    @POST("login_user.php")
+    Call<UserModel> AuthUser(
+            @Field("username_user") String usernameInput,
+            @Field("password_user") String passwordInput
+    );
 
     //Get data workshop
     @GET("get_workshop.php")
@@ -26,7 +36,8 @@ public interface APIRequestData {
                                            @Part("deskripsi_workshop") RequestBody deskripsi_workshop,
                                            @Part("tanggal_workshop") RequestBody tanggal_workshop,
                                            @Part MultipartBody.Part gambar_workshop,
-                                           @Part MultipartBody.Part video_workshop);
+                                           @Part MultipartBody.Part video_workshop
+    );
 
     //Get data artikel
     @GET("get_artikel.php")
@@ -39,7 +50,8 @@ public interface APIRequestData {
                                            @Part("deskripsi_artikel") RequestBody deskripsi_artikel,
                                            @Part("tanggal_artikel") RequestBody tanggal_artikel,
                                            @Part MultipartBody.Part gambar_artikel,
-                                           @Part MultipartBody.Part video_artikel);
+                                           @Part MultipartBody.Part video_artikel
+    );
 
     //Get data layanan
     @GET("get_layanan.php")
@@ -52,7 +64,8 @@ public interface APIRequestData {
                                          @Part("deskripsi_layanan") RequestBody deskripsi_layanan,
                                          @Part("tanggal_layanan") RequestBody tanggal_layanan,
                                          @Part MultipartBody.Part gambar_layanan,
-                                         @Part MultipartBody.Part video_layanan);
+                                         @Part MultipartBody.Part video_layanan
+    );
 
     //Get data layanan
     @GET("get_portofolio.php")
@@ -63,7 +76,8 @@ public interface APIRequestData {
     @POST("post_portofolio.php")
     Call<PortofolioModel> CreateDataPortofolio(@Part("judul_portofolio") RequestBody judu_portofolio,
                                          @Part("deskripsi_foto") RequestBody deskripsi_foto,
-                                         @Part MultipartBody.Part gambar_foto);
+                                         @Part MultipartBody.Part gambar_foto
+    );
 
 
 }

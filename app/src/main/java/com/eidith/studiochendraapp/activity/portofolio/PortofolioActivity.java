@@ -16,12 +16,13 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.eidith.studiochendraapp.R;
+import com.eidith.studiochendraapp.activity.akun.AkunActivity;
 import com.eidith.studiochendraapp.activity.artikel.ArtikelActivity;
 import com.eidith.studiochendraapp.activity.layanan.LayananActivity;
 import com.eidith.studiochendraapp.activity.workshop.WorkshopActivity;
 import com.eidith.studiochendraapp.adapter.PortofolioAdapter;
 import com.eidith.studiochendraapp.api.APIRequestData;
-import com.eidith.studiochendraapp.api.RetrofitServer;
+import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.model.PortofolioModel;
 import com.google.android.material.navigation.NavigationView;
 
@@ -77,7 +78,9 @@ public class PortofolioActivity extends AppCompatActivity implements PortofolioA
                         return true;
 
                     case R.id.akunUser:
-                        Toast.makeText(PortofolioActivity.this, "Ini ke Akun", Toast.LENGTH_SHORT).show();
+                        Intent intentAkun = new Intent(PortofolioActivity.this, AkunActivity.class);
+                        startActivity(intentAkun);
+                        finish();
                         return true;
 
                     case R.id.workshop:
@@ -110,7 +113,7 @@ public class PortofolioActivity extends AppCompatActivity implements PortofolioA
                         Toast.makeText(PortofolioActivity.this, "Ini Ke Respond Customer", Toast.LENGTH_SHORT).show();
                         return true;
 
-                    case R.id.logout:
+                    case R.id.logoutUser:
                         Toast.makeText(PortofolioActivity.this, "Ini Ke Logout", Toast.LENGTH_SHORT).show();
                         return true;
 
@@ -156,7 +159,7 @@ public class PortofolioActivity extends AppCompatActivity implements PortofolioA
         pbarPotrofolio.setVisibility(View.VISIBLE);
 
         //Conncet to server to parse Json and get data
-        APIRequestData ardData = RetrofitServer.connectRetrofit().create(APIRequestData.class);
+        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
         Call<PortofolioModel> tampilData = ardData.RetrieveDataPortofolio();
 
         tampilData.enqueue(new Callback<PortofolioModel>() {

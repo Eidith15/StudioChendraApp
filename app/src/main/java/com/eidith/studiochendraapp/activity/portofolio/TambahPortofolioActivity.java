@@ -21,7 +21,7 @@ import android.widget.Toast;
 
 import com.eidith.studiochendraapp.R;
 import com.eidith.studiochendraapp.api.APIRequestData;
-import com.eidith.studiochendraapp.api.RetrofitServer;
+import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.model.PortofolioModel;
 
 import java.io.File;
@@ -162,7 +162,7 @@ public class TambahPortofolioActivity extends AppCompatActivity {
         MultipartBody.Part imagepart = MultipartBody.Part.createFormData("gambar_foto", fileImage.getName(), gambar);
 
         //Execute createData to json method
-        APIRequestData ardData = RetrofitServer.connectRetrofit().create(APIRequestData.class);
+        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
         Call<PortofolioModel> createData = ardData.CreateDataPortofolio(judul, deskripsi, imagepart);
 
         createData.enqueue(new Callback<PortofolioModel>() {

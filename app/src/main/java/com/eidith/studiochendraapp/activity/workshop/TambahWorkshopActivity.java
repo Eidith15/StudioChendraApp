@@ -23,7 +23,7 @@ import android.widget.Toast;
 
 import com.eidith.studiochendraapp.R;
 import com.eidith.studiochendraapp.api.APIRequestData;
-import com.eidith.studiochendraapp.api.RetrofitServer;
+import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.model.WorkshopModel;
 
 import java.io.File;
@@ -221,7 +221,7 @@ public class TambahWorkshopActivity extends AppCompatActivity {
         MultipartBody.Part videopart = MultipartBody.Part.createFormData("video_workshop", fileVideo.getName(), video);
 
         //Execute createData to json method
-        APIRequestData ardData = RetrofitServer.connectRetrofit().create(APIRequestData.class);
+        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
         Call<WorkshopModel> createData = ardData.CreateDataWorkshop(judul, deskripsi, tanggal, imagepart, videopart);
 
         createData.enqueue(new Callback<WorkshopModel>() {

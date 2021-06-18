@@ -31,7 +31,7 @@
                 android:layout_centerInParent="true"
                 android:text="Judul Foto"
                 android:textStyle="bold"
-                android:textColor="@color/white"
+                android:textColor="@color/smoke_white"
                 android:maxLines="2"
                 android:ellipsize="end"
                 android:justificationMode="inter_word"/>
@@ -50,7 +50,7 @@
                 android:layout_gravity="start"
                 android:layout_centerInParent="true"
                 android:text="Deskripsi Foto"
-                android:textColor="@color/white"
+                android:textColor="@color/smoke_white"
                 android:maxLines="3"
                 android:ellipsize="end"
                 android:justificationMode="inter_word"

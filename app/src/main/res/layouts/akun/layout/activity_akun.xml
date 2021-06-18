@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.akun.AkunActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Akun"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/smoke_white">
+
+        <TextView
+            android:id="@+id/tvAkunUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:drawableLeft="@drawable/ic_username"
+            android:textColor="@color/grey"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:layout_gravity="start"
+            android:drawablePadding="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"/>
+
+        <TextView
+            android:id="@+id/tvAkunPasword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:drawableLeft="@drawable/ic_password"
+            android:textColor="@color/grey"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:layout_gravity="start"
+            android:inputType="textPassword"
+            android:drawablePadding="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data Diri"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/smoke_white">
+
+        <TextView
+            android:id="@+id/tvAkunNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:drawableLeft="@drawable/ic_username"
+            android:textColor="@color/grey"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:layout_gravity="start"
+            android:drawablePadding="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"/>
+
+        <TextView
+            android:id="@+id/tvAkunEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:drawableLeft="@drawable/ic_email"
+            android:textColor="@color/grey"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:layout_gravity="start"
+            android:drawablePadding="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"/>
+
+        <TextView
+            android:id="@+id/tvAkunNoHp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No. Handphone"
+            android:drawableLeft="@drawable/ic_nohp"
+            android:textColor="@color/grey"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:layout_gravity="start"
+            android:drawablePadding="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <Button
+            android:id="@+id/btnAkunLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOGOUT"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

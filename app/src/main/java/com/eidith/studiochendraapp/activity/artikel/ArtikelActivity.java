@@ -12,7 +12,6 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
@@ -22,7 +21,7 @@ import com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity;
 import com.eidith.studiochendraapp.activity.workshop.WorkshopActivity;
 import com.eidith.studiochendraapp.adapter.ArtikelAdapter;
 import com.eidith.studiochendraapp.api.APIRequestData;
-import com.eidith.studiochendraapp.api.RetrofitServer;
+import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.model.ArtikelModel;
 import com.google.android.material.navigation.NavigationView;
 
@@ -111,7 +110,7 @@ public class ArtikelActivity extends AppCompatActivity implements ArtikelAdapter
                         Toast.makeText(ArtikelActivity.this, "Ini Ke Respond Customer", Toast.LENGTH_SHORT).show();
                         return true;
 
-                    case R.id.logout:
+                    case R.id.logoutUser:
                         Toast.makeText(ArtikelActivity.this, "Ini Ke Logout", Toast.LENGTH_SHORT).show();
                         return true;
 
@@ -157,7 +156,7 @@ public class ArtikelActivity extends AppCompatActivity implements ArtikelAdapter
         pbarArtikel.setVisibility(View.VISIBLE);
 
         //Conncet to server to parse Json and get data
-        APIRequestData ardData = RetrofitServer.connectRetrofit().create(APIRequestData.class);
+        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
         Call<ArtikelModel> tampilData = ardData.RetrieveDataArtikel();
 
         tampilData.enqueue(new Callback<ArtikelModel>() {
@@ -176,7 +175,6 @@ public class ArtikelActivity extends AppCompatActivity implements ArtikelAdapter
             @Override
             public void onFailure(Call<ArtikelModel> call, Throwable t) {
                 Toast.makeText(ArtikelActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
-
                 pbarArtikel.setVisibility(View.GONE);
             }
         });

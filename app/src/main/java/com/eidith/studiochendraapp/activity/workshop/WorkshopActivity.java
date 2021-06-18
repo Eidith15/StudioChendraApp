@@ -19,7 +19,7 @@ import com.eidith.studiochendraapp.activity.layanan.LayananActivity;
 import com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity;
 import com.eidith.studiochendraapp.adapter.WorkshopAdapter;
 import com.eidith.studiochendraapp.api.APIRequestData;
-import com.eidith.studiochendraapp.api.RetrofitServer;
+import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.model.WorkshopModel;
 import com.google.android.material.navigation.NavigationView;
 import org.jetbrains.annotations.NotNull;
@@ -106,7 +106,7 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
                         Toast.makeText(WorkshopActivity.this, "Ini Ke Respond Customer", Toast.LENGTH_SHORT).show();
                         return true;
 
-                    case R.id.logout:
+                    case R.id.logoutUser:
                         Toast.makeText(WorkshopActivity.this, "Ini Ke Logout", Toast.LENGTH_SHORT).show();
                         return true;
 
@@ -152,7 +152,7 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
         pbarWorkshop.setVisibility(View.VISIBLE);
 
         //Conncet to server to parse Json and get data
-        APIRequestData ardData = RetrofitServer.connectRetrofit().create(APIRequestData.class);
+        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
         Call<WorkshopModel> tampilData = ardData.RetrieveDataWorkshop();
 
         tampilData.enqueue(new Callback<WorkshopModel>() {

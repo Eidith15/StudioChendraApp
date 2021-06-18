@@ -20,6 +20,10 @@
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\portofolio\\layout\\activity_detail_portofolio.xml"
     },
     {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_akun.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\akun\\layout\\activity_akun.xml"
+    },
+    {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_artikel.xml",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\artikel\\layout\\item_artikel.xml"
     },
@@ -42,6 +46,14 @@
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\login\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\login\\layout\\activity_login.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_portofolio.xml",

@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.api.RetrofitServer;
+import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.model.PortofolioModel;
 
 import org.jetbrains.annotations.NotNull;
@@ -50,7 +50,7 @@ public class PortofolioAdapter extends RecyclerView.Adapter<PortofolioAdapter.Vi
         //set item data to view
         holder.tvIdPortofolio.setText(String.valueOf(portofolioModel.getId_portofolio()));
         Glide.with(holder.itemView.getContext())
-                .load(RetrofitServer.imageURL + listPortofolio.get(position).getGambar_foto())
+                .load(APIClient.imageURL + listPortofolio.get(position).getGambar_foto())
                 .apply(new RequestOptions().override(1280, 720))
                 .into(holder.imgGambarPortofolio);
 

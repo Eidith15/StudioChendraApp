@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.api.RetrofitServer;
+import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.model.LayananModel;
 
 import org.jetbrains.annotations.NotNull;
@@ -50,7 +50,7 @@ public class LayananAdapter extends  RecyclerView.Adapter<LayananAdapter.ViewHol
         //set item data to view
         holder.tvIdLayanan.setText(String.valueOf(layananModel.getId_layanan()));
         Glide.with(holder.itemView.getContext())
-                .load(RetrofitServer.imageURL + listLayanan.get(position).getGambar_layanan())
+                .load(APIClient.imageURL + listLayanan.get(position).getGambar_layanan())
                 .apply(new RequestOptions().override(1280, 500))
                 .into(holder.imgGambarLayanan);
 

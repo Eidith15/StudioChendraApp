@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.api.RetrofitServer;
+import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.model.WorkshopModel;
 
 import org.jetbrains.annotations.NotNull;
@@ -51,7 +51,7 @@ public class WorkshopAdapter extends RecyclerView.Adapter<WorkshopAdapter.ViewHo
         holder.tvIdWorkshop.setText(String.valueOf(workshopModel.getId_workshop()));
         holder.tvJudulWorkshop.setText(workshopModel.getJudul_workshop());
         Glide.with(holder.itemView.getContext())
-                .load(RetrofitServer.imageURL + listWorkshop.get(position).getGambar_workshop())
+                .load(APIClient.imageURL + listWorkshop.get(position).getGambar_workshop())
                 .apply(new RequestOptions().override(1280, 500))
                 .into(holder.imgGambarWorkshop);
         holder.tvTanggalWorkshop.setText(String.valueOf(workshopModel.getTanggal_workshop()));

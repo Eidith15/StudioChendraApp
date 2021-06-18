@@ -23,7 +23,7 @@ import android.widget.Toast;
 
 import com.eidith.studiochendraapp.R;
 import com.eidith.studiochendraapp.api.APIRequestData;
-import com.eidith.studiochendraapp.api.RetrofitServer;
+import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.model.LayananModel;
 
 import java.io.File;
@@ -220,7 +220,7 @@ public class TambahLayananActivity extends AppCompatActivity {
         MultipartBody.Part videopart = MultipartBody.Part.createFormData("video_layanan", fileVideo.getName(), video);
 
         //Execute createData to json method
-        APIRequestData ardData = RetrofitServer.connectRetrofit().create(APIRequestData.class);
+        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
         Call<LayananModel> createData = ardData.CreateDataLayanan(judul, deskripsi, tanggal, imagepart, videopart);
 
         createData.enqueue(new Callback<LayananModel>() {

@@ -13,7 +13,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.eidith.studiochendraapp.R;
@@ -22,7 +21,7 @@ import com.eidith.studiochendraapp.activity.artikel.ArtikelActivity;
 import com.eidith.studiochendraapp.activity.workshop.WorkshopActivity;
 import com.eidith.studiochendraapp.adapter.LayananAdapter;
 import com.eidith.studiochendraapp.api.APIRequestData;
-import com.eidith.studiochendraapp.api.RetrofitServer;
+import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.model.LayananModel;
 import com.google.android.material.navigation.NavigationView;
 
@@ -110,7 +109,7 @@ public class LayananActivity extends AppCompatActivity implements LayananAdapter
                         Toast.makeText(LayananActivity.this, "Ini Ke Respond Customer", Toast.LENGTH_SHORT).show();
                         return true;
 
-                    case R.id.logout:
+                    case R.id.logoutUser:
                         Toast.makeText(LayananActivity.this, "Ini Ke Logout", Toast.LENGTH_SHORT).show();
                         return true;
 
@@ -156,7 +155,7 @@ public class LayananActivity extends AppCompatActivity implements LayananAdapter
         pbarLayanan.setVisibility(View.VISIBLE);
 
         //Conncet to server to parse Json and get data
-        APIRequestData ardData = RetrofitServer.connectRetrofit().create(APIRequestData.class);
+        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
         Call<LayananModel> tampilData = ardData.RetrieveDataLayanan();
 
         tampilData.enqueue(new Callback<LayananModel>() {

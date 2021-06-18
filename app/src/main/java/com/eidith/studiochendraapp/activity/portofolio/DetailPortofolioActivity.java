@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.api.RetrofitServer;
+import com.eidith.studiochendraapp.api.APIClient;
 import com.zolad.zoominimageview.ZoomInImageView;
 
 public class DetailPortofolioActivity extends AppCompatActivity {
@@ -43,7 +43,7 @@ public class DetailPortofolioActivity extends AppCompatActivity {
 
         //Glide Image to image view
         Glide.with(DetailPortofolioActivity.this)
-                .load(RetrofitServer.imageURL+gambarFoto)
+                .load(APIClient.imageURL+gambarFoto)
                 .apply(new RequestOptions().override(800, 400))
                 .into(ivDetailPortofolio);
 

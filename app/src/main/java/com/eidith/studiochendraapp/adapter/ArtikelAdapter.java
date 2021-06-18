@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.api.RetrofitServer;
+import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.model.ArtikelModel;
 
 import org.jetbrains.annotations.NotNull;
@@ -51,7 +51,7 @@ public class ArtikelAdapter extends RecyclerView.Adapter<ArtikelAdapter.ViewHold
         holder.tvIdArtikel.setText(String.valueOf(artikelModel.getId_artikel()));
         holder.tvJudulArtikel.setText(artikelModel.getJudul_artikel());
         Glide.with(holder.itemView.getContext())
-                .load(RetrofitServer.imageURL + listArtikel.get(position).getGambar_artikel())
+                .load(APIClient.imageURL + listArtikel.get(position).getGambar_artikel())
                 .apply(new RequestOptions().override(1280, 720))
                 .into(holder.imgGambarArtikel);
         holder.tvTanggalArtikel.setText(String.valueOf(artikelModel.getTanggal_artikel()));

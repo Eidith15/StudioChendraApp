@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.api.RetrofitServer;
+import com.eidith.studiochendraapp.api.APIClient;
 import com.google.android.exoplayer2.MediaItem;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.ui.PlayerView;
@@ -60,12 +60,12 @@ public class DetailLayananActivity extends AppCompatActivity {
 
         //Glide Image to image view
         Glide.with(DetailLayananActivity.this)
-                .load(RetrofitServer.imageURL+gambarLayanan)
+                .load(APIClient.imageURL+gambarLayanan)
                 .apply(new RequestOptions().override(800, 400))
                 .into(ivDetailLayanan);
 
         //Create exo Player fof playing video
-        MediaItem mediaItem = MediaItem.fromUri(RetrofitServer.videoURL+videoLayanan);
+        MediaItem mediaItem = MediaItem.fromUri(APIClient.videoURL+videoLayanan);
         player = new SimpleExoPlayer.Builder(this).build();
 
         vvDetailLayanan.setShowBuffering(PlayerView.SHOW_BUFFERING_ALWAYS);

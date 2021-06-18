@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="#BCBABA"
-            app:boxBackgroundColor="@color/transparent">
+            app:boxBackgroundColor="@color/white">
 
             <EditText
                 android:id="@+id/etJudulPortofolio"
@@ -32,7 +32,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:boxBackgroundColor="@color/transparent"
+            app:boxBackgroundColor="@color/white"
             android:textColorHint="#BCBABA">
 
             <EditText
@@ -72,7 +72,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="upload data Portofolio"
-            android:textSize="20sp"
             android:layout_marginTop="10dp"/>
     </LinearLayout>
 

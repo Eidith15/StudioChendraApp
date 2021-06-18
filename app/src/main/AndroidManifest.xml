@@ -16,13 +16,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudioChendraApp">
 
-        <activity android:name=".activity.MainActivity">
+        <activity
+            android:name=".activity.login.LoginActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activity.login.RegisterActivity"
+            android:parentActivityName=".activity.login.LoginActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name=".activity.MainActivity"
+            android:parentActivityName=".activity.login.LoginActivity" />
+        <activity
+            android:name=".activity.akun.AkunActivity"
+            android:parentActivityName=".activity.login.LoginActivity"/>
         <activity
             android:name=".activity.artikel.ArtikelActivity"
             android:parentActivityName=".activity.MainActivity" />

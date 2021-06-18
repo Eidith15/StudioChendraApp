@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.api.RetrofitServer;
+import com.eidith.studiochendraapp.api.APIClient;
 import com.google.android.exoplayer2.MediaItem;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.ui.PlayerView;
@@ -58,12 +58,12 @@ public class DetailArtikelActivity extends AppCompatActivity {
 
         //Glide Image to image view
         Glide.with(DetailArtikelActivity.this)
-                .load(RetrofitServer.imageURL+gambarArtikel)
+                .load(APIClient.imageURL+gambarArtikel)
                 .apply(new RequestOptions().override(800, 400))
                 .into(ivDetailArtikel);
 
         //Create exo Player fof playing video
-        MediaItem mediaItem = MediaItem.fromUri(RetrofitServer.videoURL+videoArtikel);
+        MediaItem mediaItem = MediaItem.fromUri(APIClient.videoURL+videoArtikel);
         player = new SimpleExoPlayer.Builder(this).build();
 
         vvDetailArtikel.setShowBuffering(PlayerView.SHOW_BUFFERING_ALWAYS);

@@ -23,6 +23,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tvMainArtikel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -30,7 +31,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="5dp"
                     android:textSize="12sp"
-                    android:text="Artikel Fotografi"/>
+                    android:text="Artikel Fotografi"
+                    android:visibility="gone"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvMainArtikel"
@@ -43,6 +45,7 @@
                     tools:listitem="@layout/item_artikel" />
 
                 <TextView
+                    android:id="@+id/tvMainWorkshop"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -50,7 +53,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="5dp"
                     android:textSize="12sp"
-                    android:text="Workshop"/>
+                    android:text="Workshop"
+                    android:visibility="gone"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvMainWorkshop"
@@ -61,6 +65,7 @@
                     tools:listitem="@layout/item_workshop"/>
 
                 <TextView
+                    android:id="@+id/tvMainLayanan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -68,7 +73,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="5dp"
                     android:textSize="12sp"
-                    android:text="Layanan Jasa Fotografi"/>
+                    android:text="Layanan Jasa Fotografi"
+                    android:visibility="gone"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvMainLayanan"
@@ -79,6 +85,7 @@
                     tools:listitem="@layout/item_layanan" />
 
                 <TextView
+                    android:id="@+id/tvMainPortofolio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -86,7 +93,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="5dp"
                     android:textSize="12sp"
-                    android:text="Portofolio Gallery"/>
+                    android:text="Gallery"
+                    android:visibility="gone"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvMainPortofolio"
