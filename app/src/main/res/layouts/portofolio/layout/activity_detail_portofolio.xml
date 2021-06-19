@@ -6,7 +6,7 @@
     android:isScrollContainer="true"
     tools:context=".activity.portofolio.DetailPortofolioActivity">
 
-    <com.zolad.zoominimageview.ZoomInImageView
+    <com.github.chrisbanes.photoview.PhotoView
         android:id="@+id/ivDetailPortofolio"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

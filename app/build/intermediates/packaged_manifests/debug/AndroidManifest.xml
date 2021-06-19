@@ -30,6 +30,8 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
@@ -38,14 +40,10 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name="com.eidith.studiochendraapp.activity.MainActivity"
-            android:parentActivityName="com.eidith.studiochendraapp.activity.login.LoginActivity" >
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:parentActivityName="com.eidith.studiochendraapp.activity.login.LoginActivity" />
         <activity
             android:name="com.eidith.studiochendraapp.activity.akun.AkunActivity"
-            android:parentActivityName="com.eidith.studiochendraapp.activity.login.LoginActivity" />
+            android:parentActivityName="com.eidith.studiochendraapp.activity.workshop.WorkshopActivity" />
         <activity
             android:name="com.eidith.studiochendraapp.activity.artikel.ArtikelActivity"
             android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />

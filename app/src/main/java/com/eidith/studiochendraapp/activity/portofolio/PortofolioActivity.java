@@ -48,6 +48,12 @@ public class PortofolioActivity extends AppCompatActivity implements PortofolioA
     private List<PortofolioModel> listPortofolio = new ArrayList<>();
     private ActionBarDrawerToggle actionBarDrawerToggle;
 
+    private String namaUser;
+    private String emailUser;
+    private String noHpUser;
+    private String usernameUser;
+    private String passwordUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +67,12 @@ public class PortofolioActivity extends AppCompatActivity implements PortofolioA
         rvPortofolio = findViewById(R.id.rvPortofolio);
         pbarPotrofolio = findViewById(R.id.pbarPotrofolio);
         navViewPortofolio = findViewById(R.id.navViewPortofolio);
+
+        namaUser = getIntent().getExtras().getString("Nama User");
+        emailUser = getIntent().getExtras().getString("Email User");
+        noHpUser = getIntent().getExtras().getString("NoHp User");
+        usernameUser = getIntent().getExtras().getString("Username User");
+        passwordUser = getIntent().getExtras().getString("Password User");
 
         layoutManager = new GridLayoutManager(this,2, GridLayoutManager.VERTICAL, false);
         rvPortofolio.setLayoutManager(layoutManager);
@@ -79,6 +91,11 @@ public class PortofolioActivity extends AppCompatActivity implements PortofolioA
 
                     case R.id.akunUser:
                         Intent intentAkun = new Intent(PortofolioActivity.this, AkunActivity.class);
+                        intentAkun.putExtra("Nama User", namaUser);
+                        intentAkun.putExtra("Email User", emailUser);
+                        intentAkun.putExtra("NoHp User", noHpUser);
+                        intentAkun.putExtra("Username User", usernameUser);
+                        intentAkun.putExtra("Password User", passwordUser);
                         startActivity(intentAkun);
                         finish();
                         return true;

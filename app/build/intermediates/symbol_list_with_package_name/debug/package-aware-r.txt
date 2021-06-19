@@ -1856,6 +1856,7 @@ drawable ic_artikel_menu
 drawable ic_clock_black_24dp
 drawable ic_datepicker
 drawable ic_email
+drawable ic_email_login
 drawable ic_fullscreen
 drawable ic_fullscreen_exit
 drawable ic_fwd
@@ -1870,6 +1871,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_nohp
+drawable ic_nohp_login
 drawable ic_password
 drawable ic_password_login
 drawable ic_pause
@@ -2242,7 +2244,6 @@ id ivDetailPortofolio
 id ivDetailWorkshop
 id ivLoginLogo
 id ivRegisterLogo
-id iv_zoominpic
 id jumpToEnd
 id jumpToStart
 id labelGroup
@@ -2653,7 +2654,6 @@ layout item_artikel
 layout item_layanan
 layout item_portofolio
 layout item_workshop
-layout layout_zoominimage
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider

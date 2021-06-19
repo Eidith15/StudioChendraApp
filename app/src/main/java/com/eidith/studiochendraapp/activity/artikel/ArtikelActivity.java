@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.eidith.studiochendraapp.R;
+import com.eidith.studiochendraapp.activity.akun.AkunActivity;
 import com.eidith.studiochendraapp.activity.layanan.LayananActivity;
 import com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity;
 import com.eidith.studiochendraapp.activity.workshop.WorkshopActivity;
@@ -47,6 +48,12 @@ public class ArtikelActivity extends AppCompatActivity implements ArtikelAdapter
     private List<ArtikelModel> listArtikel = new ArrayList<>();
     private ActionBarDrawerToggle actionBarDrawerToggle;
 
+    private String namaUser;
+    private String emailUser;
+    private String noHpUser;
+    private String usernameUser;
+    private String passwordUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +67,12 @@ public class ArtikelActivity extends AppCompatActivity implements ArtikelAdapter
         rvArtikel = findViewById(R.id.rvArtikel);
         pbarArtikel = findViewById(R.id.pbarArtikel);
         navViewArtikel = findViewById(R.id.navViewArtikel);
+
+        namaUser = getIntent().getExtras().getString("Nama User");
+        emailUser = getIntent().getExtras().getString("Email User");
+        noHpUser = getIntent().getExtras().getString("NoHp User");
+        usernameUser = getIntent().getExtras().getString("Username User");
+        passwordUser = getIntent().getExtras().getString("Password User");
 
         layoutManager = new GridLayoutManager(this,2, GridLayoutManager.VERTICAL, false);
         rvArtikel.setLayoutManager(layoutManager);
@@ -77,7 +90,14 @@ public class ArtikelActivity extends AppCompatActivity implements ArtikelAdapter
                         return true;
 
                     case R.id.akunUser:
-                        Toast.makeText(ArtikelActivity.this, "Ini ke Akun", Toast.LENGTH_SHORT).show();
+                        Intent intentAkun = new Intent(ArtikelActivity.this, AkunActivity.class);
+                        intentAkun.putExtra("Nama User", namaUser);
+                        intentAkun.putExtra("Email User", emailUser);
+                        intentAkun.putExtra("NoHp User", noHpUser);
+                        intentAkun.putExtra("Username User", usernameUser);
+                        intentAkun.putExtra("Password User", passwordUser);
+                        startActivity(intentAkun);
+                        finish();
                         return true;
 
                     case R.id.workshop:

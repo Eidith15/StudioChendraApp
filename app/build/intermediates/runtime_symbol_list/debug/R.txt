@@ -1855,6 +1855,7 @@ int drawable ic_artikel_menu 0x7f0800c0
 int drawable ic_clock_black_24dp 0x7f0800c1
 int drawable ic_datepicker 0x7f0800c2
 int drawable ic_email 0x7f0800c3
+int drawable ic_email_login 0x7f080100
 int drawable ic_fullscreen 0x7f0800c4
 int drawable ic_fullscreen_exit 0x7f0800c5
 int drawable ic_fwd 0x7f0800c6
@@ -1869,6 +1870,7 @@ int drawable ic_mtrl_chip_checked_black 0x7f0800ce
 int drawable ic_mtrl_chip_checked_circle 0x7f0800cf
 int drawable ic_mtrl_chip_close_circle 0x7f0800d0
 int drawable ic_nohp 0x7f0800d1
+int drawable ic_nohp_login 0x7f080101
 int drawable ic_password 0x7f0800d2
 int drawable ic_password_login 0x7f0800d3
 int drawable ic_pause 0x7f0800d4
@@ -2241,7 +2243,6 @@ int id ivDetailPortofolio 0x7f0a0140
 int id ivDetailWorkshop 0x7f0a0141
 int id ivLoginLogo 0x7f0a0142
 int id ivRegisterLogo 0x7f0a0143
-int id iv_zoominpic 0x7f0a0144
 int id jumpToEnd 0x7f0a0145
 int id jumpToStart 0x7f0a0146
 int id labelGroup 0x7f0a0147
@@ -2652,7 +2653,6 @@ int layout item_artikel 0x7f0d0048
 int layout item_layanan 0x7f0d0049
 int layout item_portofolio 0x7f0d004a
 int layout item_workshop 0x7f0d004b
-int layout layout_zoominimage 0x7f0d004c
 int layout material_chip_input_combo 0x7f0d004d
 int layout material_clock_display 0x7f0d004e
 int layout material_clock_display_divider 0x7f0d004f

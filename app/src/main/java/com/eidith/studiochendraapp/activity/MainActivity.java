@@ -344,27 +344,46 @@ public class MainActivity extends AppCompatActivity implements
                         intentAkun.putExtra("NoHp User", noHpUser);
                         intentAkun.putExtra("Username User", usernameUser);
                         intentAkun.putExtra("Password User", passwordUser);
-                        intentAkun.putExtra("Access Code", accessCodeUser);
                         startActivity(intentAkun);
                         return true;
 
                     case R.id.workshop:
                         Intent intentWorkshop = new Intent(MainActivity.this, WorkshopActivity.class);
+                        intentWorkshop.putExtra("Nama User", namaUser);
+                        intentWorkshop.putExtra("Email User", emailUser);
+                        intentWorkshop.putExtra("NoHp User", noHpUser);
+                        intentWorkshop.putExtra("Username User", usernameUser);
+                        intentWorkshop.putExtra("Password User", passwordUser);
                         startActivity(intentWorkshop);
                         return true;
 
                     case R.id.artikelFotografi:
                         Intent intentArtikel = new Intent(MainActivity.this, ArtikelActivity.class);
+                        intentArtikel.putExtra("Nama User", namaUser);
+                        intentArtikel.putExtra("Email User", emailUser);
+                        intentArtikel.putExtra("NoHp User", noHpUser);
+                        intentArtikel.putExtra("Username User", usernameUser);
+                        intentArtikel.putExtra("Password User", passwordUser);
                         startActivity(intentArtikel);
                         return true;
 
                     case R.id.layananJasaFotografi:
                         Intent intentLayanan = new Intent(MainActivity.this, LayananActivity.class);
+                        intentLayanan.putExtra("Nama User", namaUser);
+                        intentLayanan.putExtra("Email User", emailUser);
+                        intentLayanan.putExtra("NoHp User", noHpUser);
+                        intentLayanan.putExtra("Username User", usernameUser);
+                        intentLayanan.putExtra("Password User", passwordUser);
                         startActivity(intentLayanan);
                         return true;
 
                     case R.id.fotoPortofolio:
                         Intent intentPortofolio = new Intent(MainActivity.this, PortofolioActivity.class);
+                        intentPortofolio.putExtra("Nama User", namaUser);
+                        intentPortofolio.putExtra("Email User", emailUser);
+                        intentPortofolio.putExtra("NoHp User", noHpUser);
+                        intentPortofolio.putExtra("Username User", usernameUser);
+                        intentPortofolio.putExtra("Password User", passwordUser);
                         startActivity(intentPortofolio);
                         return true;
 

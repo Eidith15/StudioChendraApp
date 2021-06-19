@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.eidith.studiochendraapp.R;
+import com.eidith.studiochendraapp.activity.akun.AkunActivity;
 import com.eidith.studiochendraapp.activity.artikel.ArtikelActivity;
 import com.eidith.studiochendraapp.activity.layanan.LayananActivity;
 import com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity;
@@ -42,6 +43,12 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private NavigationView navViewWorkshop;
 
+    private String namaUser;
+    private String emailUser;
+    private String noHpUser;
+    private String usernameUser;
+    private String passwordUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -55,6 +62,12 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
         pbarWorkshop = findViewById(R.id.pbarWorkshop);
         navViewWorkshop = findViewById(R.id.navViewWorkshop);
         drawerLayoutWorkshop = findViewById(R.id.drawableLayoutWorkshop);
+
+        namaUser = getIntent().getExtras().getString("Nama User");
+        emailUser = getIntent().getExtras().getString("Email User");
+        noHpUser = getIntent().getExtras().getString("NoHp User");
+        usernameUser = getIntent().getExtras().getString("Username User");
+        passwordUser = getIntent().getExtras().getString("Password User");
 
         //Set Recycler view Layout
         layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
@@ -73,7 +86,14 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
                         return true;
 
                     case R.id.akunUser:
-                        Toast.makeText(WorkshopActivity.this, "Ini ke Akun", Toast.LENGTH_SHORT).show();
+                        Intent intentAkun = new Intent(WorkshopActivity.this, AkunActivity.class);
+                        intentAkun.putExtra("Nama User", namaUser);
+                        intentAkun.putExtra("Email User", emailUser);
+                        intentAkun.putExtra("NoHp User", noHpUser);
+                        intentAkun.putExtra("Username User", usernameUser);
+                        intentAkun.putExtra("Password User", passwordUser);
+                        startActivity(intentAkun);
+                        finish();
                         return true;
 
                     case R.id.workshop:

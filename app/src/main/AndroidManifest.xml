@@ -34,7 +34,7 @@
             android:parentActivityName=".activity.login.LoginActivity" />
         <activity
             android:name=".activity.akun.AkunActivity"
-            android:parentActivityName=".activity.login.LoginActivity"/>
+            android:parentActivityName=".activity.workshop.WorkshopActivity"/>
         <activity
             android:name=".activity.artikel.ArtikelActivity"
             android:parentActivityName=".activity.MainActivity" />

@@ -16,6 +16,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.eidith.studiochendraapp.R;
+import com.eidith.studiochendraapp.activity.akun.AkunActivity;
 import com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity;
 import com.eidith.studiochendraapp.activity.artikel.ArtikelActivity;
 import com.eidith.studiochendraapp.activity.workshop.WorkshopActivity;
@@ -47,6 +48,12 @@ public class LayananActivity extends AppCompatActivity implements LayananAdapter
     private List<LayananModel> listLayanan = new ArrayList<>();
     private ActionBarDrawerToggle actionBarDrawerToggle;
 
+    private String namaUser;
+    private String emailUser;
+    private String noHpUser;
+    private String usernameUser;
+    private String passwordUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +66,12 @@ public class LayananActivity extends AppCompatActivity implements LayananAdapter
         rvLayanan = findViewById(R.id.rvLayanan);
         pbarLayanan = findViewById(R.id.pbarLayanan);
         navViewLayanan = findViewById(R.id.navViewLayanan);
+
+        namaUser = getIntent().getExtras().getString("Nama User");
+        emailUser = getIntent().getExtras().getString("Email User");
+        noHpUser = getIntent().getExtras().getString("NoHp User");
+        usernameUser = getIntent().getExtras().getString("Username User");
+        passwordUser = getIntent().getExtras().getString("Password User");
 
         layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvLayanan.setLayoutManager(layoutManager);
@@ -76,7 +89,14 @@ public class LayananActivity extends AppCompatActivity implements LayananAdapter
                         return true;
 
                     case R.id.akunUser:
-                        Toast.makeText(LayananActivity.this, "Ini ke Akun", Toast.LENGTH_SHORT).show();
+                        Intent intentAkun = new Intent(LayananActivity.this, AkunActivity.class);
+                        intentAkun.putExtra("Nama User", namaUser);
+                        intentAkun.putExtra("Email User", emailUser);
+                        intentAkun.putExtra("NoHp User", noHpUser);
+                        intentAkun.putExtra("Username User", usernameUser);
+                        intentAkun.putExtra("Password User", passwordUser);
+                        startActivity(intentAkun);
+                        finish();
                         return true;
 
                     case R.id.workshop:

@@ -1,7 +1,10 @@
 package com.eidith.studiochendraapp.activity.portofolio;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -11,11 +14,12 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.eidith.studiochendraapp.R;
 import com.eidith.studiochendraapp.api.APIClient;
-import com.zolad.zoominimageview.ZoomInImageView;
+import com.github.chrisbanes.photoview.PhotoView;
+
 
 public class DetailPortofolioActivity extends AppCompatActivity {
 
-    private ZoomInImageView ivDetailPortofolio;
+    private PhotoView ivDetailPortofolio;
     private TextView tvDetailJudulPortofolio, tvDetailDeskripsiPortofolio;
     private LinearLayout llDetailPortofolio;
 
@@ -40,6 +44,7 @@ public class DetailPortofolioActivity extends AppCompatActivity {
         //Set data to view
         tvDetailJudulPortofolio.setText(judulFoto);
         tvDetailDeskripsiPortofolio.setText(deskripsiFoto);
+
 
         //Glide Image to image view
         Glide.with(DetailPortofolioActivity.this)

@@ -41,6 +41,8 @@
                 android:id="@+id/etRegisterNama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_username_login"
+                android:drawablePadding="10dp"
                 android:hint="Nama"
                 android:textSize="14sp"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -55,6 +57,8 @@
                 android:id="@+id/etRegisterEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_email_login"
+                android:drawablePadding="10dp"
                 android:hint="Email"
                 android:textSize="14sp"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -69,6 +73,8 @@
                 android:id="@+id/etRegisterNohp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_nohp_login"
+                android:drawablePadding="10dp"
                 android:inputType="number"
                 android:hint="No. Handphone"
                 android:textSize="14sp"/>
@@ -84,6 +90,8 @@
                 android:id="@+id/etRegisterUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_username_login"
+                android:drawablePadding="10dp"
                 android:hint="Username"
                 android:textSize="14sp"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -98,6 +106,8 @@
                 android:id="@+id/etRegisterPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_password_login"
+                android:drawablePadding="10dp"
                 android:inputType="textPassword"
                 android:hint="Password"
                 android:textSize="14sp"/>
@@ -113,6 +123,8 @@
                 android:id="@+id/etRegisterConfirmPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_password_login"
+                android:drawablePadding="10dp"
                 android:inputType="textPassword"
                 android:hint="Confirm Password"
                 android:textSize="14sp"/>

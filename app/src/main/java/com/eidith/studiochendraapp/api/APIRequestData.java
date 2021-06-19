@@ -25,6 +25,16 @@ public interface APIRequestData {
             @Field("password_user") String passwordInput
     );
 
+    @FormUrlEncoded
+    @POST("register_user.php")
+    Call<UserModel> RegUser(
+            @Field("nama_user") String nama_user,
+            @Field("email_user") String email_user,
+            @Field("no_handphone_user") String no_handphone_user,
+            @Field("username_user") String username_user,
+            @Field("password_user") String password_user
+    );
+
     //Get data workshop
     @GET("get_workshop.php")
     Call<WorkshopModel> RetrieveDataWorkshop();
