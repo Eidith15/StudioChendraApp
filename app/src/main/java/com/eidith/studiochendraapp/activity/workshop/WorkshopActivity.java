@@ -14,9 +14,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.eidith.studiochendraapp.R;
+import com.eidith.studiochendraapp.activity.MainActivity;
 import com.eidith.studiochendraapp.activity.akun.AkunActivity;
 import com.eidith.studiochendraapp.activity.artikel.ArtikelActivity;
 import com.eidith.studiochendraapp.activity.layanan.LayananActivity;
+import com.eidith.studiochendraapp.activity.login.LoginActivity;
 import com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity;
 import com.eidith.studiochendraapp.adapter.WorkshopAdapter;
 import com.eidith.studiochendraapp.api.APIRequestData;
@@ -102,18 +104,33 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
 
                     case R.id.artikelFotografi:
                         Intent intentArtikel = new Intent(WorkshopActivity.this, ArtikelActivity.class);
+                        intentArtikel.putExtra("Nama User", namaUser);
+                        intentArtikel.putExtra("Email User", emailUser);
+                        intentArtikel.putExtra("NoHp User", noHpUser);
+                        intentArtikel.putExtra("Username User", usernameUser);
+                        intentArtikel.putExtra("Password User", passwordUser);
                         startActivity(intentArtikel);
                         finish();
                         return true;
 
                     case R.id.layananJasaFotografi:
                         Intent intentLayanan = new Intent(WorkshopActivity.this, LayananActivity.class);
+                        intentLayanan.putExtra("Nama User", namaUser);
+                        intentLayanan.putExtra("Email User", emailUser);
+                        intentLayanan.putExtra("NoHp User", noHpUser);
+                        intentLayanan.putExtra("Username User", usernameUser);
+                        intentLayanan.putExtra("Password User", passwordUser);
                         startActivity(intentLayanan);
                         finish();
                         return true;
 
                     case R.id.fotoPortofolio:
                         Intent intentPortofolio = new Intent(WorkshopActivity.this, PortofolioActivity.class);
+                        intentPortofolio.putExtra("Nama User", namaUser);
+                        intentPortofolio.putExtra("Email User", emailUser);
+                        intentPortofolio.putExtra("NoHp User", noHpUser);
+                        intentPortofolio.putExtra("Username User", usernameUser);
+                        intentPortofolio.putExtra("Password User", passwordUser);
                         startActivity(intentPortofolio);
                         finish();
                         return true;
@@ -127,7 +144,9 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
                         return true;
 
                     case R.id.logoutUser:
-                        Toast.makeText(WorkshopActivity.this, "Ini Ke Logout", Toast.LENGTH_SHORT).show();
+                        Intent intentLogin = new Intent(WorkshopActivity.this, LoginActivity.class);
+                        startActivity(intentLogin);
+                        finish();
                         return true;
 
                 }
@@ -200,7 +219,7 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
     @Override
     public void OnItemClickWorkshop(int position) {
         //Send data to DetailWorkshop Activity
-        Intent intent = new Intent(this, DetailWorkshopActivity.class);
+        Intent intent = new Intent(WorkshopActivity.this, DetailWorkshopActivity.class);
         intent.putExtra("Id Workshop", listWorkshop.get(position).getId_workshop());
         intent.putExtra("Judul Workshop", listWorkshop.get(position).getJudul_workshop());
         intent.putExtra("Deskripsi Workshop", listWorkshop.get(position).getDeskripsi_workshop());

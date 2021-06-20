@@ -16,9 +16,11 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.eidith.studiochendraapp.R;
+import com.eidith.studiochendraapp.activity.MainActivity;
 import com.eidith.studiochendraapp.activity.akun.AkunActivity;
 import com.eidith.studiochendraapp.activity.artikel.ArtikelActivity;
 import com.eidith.studiochendraapp.activity.layanan.LayananActivity;
+import com.eidith.studiochendraapp.activity.login.LoginActivity;
 import com.eidith.studiochendraapp.activity.workshop.WorkshopActivity;
 import com.eidith.studiochendraapp.adapter.PortofolioAdapter;
 import com.eidith.studiochendraapp.api.APIRequestData;
@@ -102,18 +104,33 @@ public class PortofolioActivity extends AppCompatActivity implements PortofolioA
 
                     case R.id.workshop:
                         Intent intentWorkshop = new Intent(PortofolioActivity.this, WorkshopActivity.class);
+                        intentWorkshop.putExtra("Nama User", namaUser);
+                        intentWorkshop.putExtra("Email User", emailUser);
+                        intentWorkshop.putExtra("NoHp User", noHpUser);
+                        intentWorkshop.putExtra("Username User", usernameUser);
+                        intentWorkshop.putExtra("Password User", passwordUser);
                         startActivity(intentWorkshop);
                         finish();
                         return true;
 
                     case R.id.artikelFotografi:
                         Intent intentArtikel = new Intent(PortofolioActivity.this, ArtikelActivity.class);
+                        intentArtikel.putExtra("Nama User", namaUser);
+                        intentArtikel.putExtra("Email User", emailUser);
+                        intentArtikel.putExtra("NoHp User", noHpUser);
+                        intentArtikel.putExtra("Username User", usernameUser);
+                        intentArtikel.putExtra("Password User", passwordUser);
                         startActivity(intentArtikel);
                         finish();
                         return true;
 
                     case R.id.layananJasaFotografi:
                         Intent intentLayanan = new Intent(PortofolioActivity.this, LayananActivity.class);
+                        intentLayanan.putExtra("Nama User", namaUser);
+                        intentLayanan.putExtra("Email User", emailUser);
+                        intentLayanan.putExtra("NoHp User", noHpUser);
+                        intentLayanan.putExtra("Username User", usernameUser);
+                        intentLayanan.putExtra("Password User", passwordUser);
                         startActivity(intentLayanan);
                         finish();
                         return true;
@@ -131,7 +148,9 @@ public class PortofolioActivity extends AppCompatActivity implements PortofolioA
                         return true;
 
                     case R.id.logoutUser:
-                        Toast.makeText(PortofolioActivity.this, "Ini Ke Logout", Toast.LENGTH_SHORT).show();
+                        Intent intentLogin = new Intent(PortofolioActivity.this, LoginActivity.class);
+                        startActivity(intentLogin);
+                        finish();
                         return true;
 
                 }
@@ -204,7 +223,7 @@ public class PortofolioActivity extends AppCompatActivity implements PortofolioA
     @Override
     public void OnItemClickPortofolio(int position) {
         //Send data to DetailArtikel Activity
-        Intent intent = new Intent(this, DetailPortofolioActivity.class);
+        Intent intent = new Intent(PortofolioActivity.this, DetailPortofolioActivity.class);
         intent.putExtra("Id Foto", listPortofolio.get(position).getId_portofolio());
         intent.putExtra("Judul Foto", listPortofolio.get(position).getJudul_portofolio());
         intent.putExtra("Deskripsi Foto", listPortofolio.get(position).getDeskripsi_foto());

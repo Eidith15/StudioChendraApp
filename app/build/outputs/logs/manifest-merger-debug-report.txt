@@ -155,9 +155,9 @@ ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:32
 	android:name
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:33:13-50
 activity#com.eidith.studiochendraapp.activity.akun.AkunActivity
-ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:35:9-37:79
+ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:35:9-37:66
 	android:parentActivityName
-		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:37:13-77
+		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:37:13-64
 	android:name
 		ADDED from D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:36:13-55
 activity#com.eidith.studiochendraapp.activity.artikel.ArtikelActivity

@@ -77,11 +77,11 @@
 43            android:parentActivityName="com.eidith.studiochendraapp.activity.login.LoginActivity" />
 43-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:34:13-71
 44        <activity
-44-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:35:9-37:79
+44-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:35:9-37:66
 45            android:name="com.eidith.studiochendraapp.activity.akun.AkunActivity"
 45-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:36:13-55
-46            android:parentActivityName="com.eidith.studiochendraapp.activity.workshop.WorkshopActivity" />
-46-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:37:13-77
+46            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
+46-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:37:13-64
 47        <activity
 47-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:38:9-40:67
 48            android:name="com.eidith.studiochendraapp.activity.artikel.ArtikelActivity"

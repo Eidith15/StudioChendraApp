@@ -16,8 +16,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.eidith.studiochendraapp.R;
+import com.eidith.studiochendraapp.activity.MainActivity;
 import com.eidith.studiochendraapp.activity.akun.AkunActivity;
 import com.eidith.studiochendraapp.activity.layanan.LayananActivity;
+import com.eidith.studiochendraapp.activity.login.LoginActivity;
 import com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity;
 import com.eidith.studiochendraapp.activity.workshop.WorkshopActivity;
 import com.eidith.studiochendraapp.adapter.ArtikelAdapter;
@@ -102,6 +104,11 @@ public class ArtikelActivity extends AppCompatActivity implements ArtikelAdapter
 
                     case R.id.workshop:
                         Intent intentWorkshop = new Intent(ArtikelActivity.this, WorkshopActivity.class);
+                        intentWorkshop.putExtra("Nama User", namaUser);
+                        intentWorkshop.putExtra("Email User", emailUser);
+                        intentWorkshop.putExtra("NoHp User", noHpUser);
+                        intentWorkshop.putExtra("Username User", usernameUser);
+                        intentWorkshop.putExtra("Password User", passwordUser);
                         startActivity(intentWorkshop);
                         finish();
                         return true;
@@ -112,12 +119,22 @@ public class ArtikelActivity extends AppCompatActivity implements ArtikelAdapter
 
                     case R.id.layananJasaFotografi:
                         Intent intentLayanan = new Intent(ArtikelActivity.this, LayananActivity.class);
+                        intentLayanan.putExtra("Nama User", namaUser);
+                        intentLayanan.putExtra("Email User", emailUser);
+                        intentLayanan.putExtra("NoHp User", noHpUser);
+                        intentLayanan.putExtra("Username User", usernameUser);
+                        intentLayanan.putExtra("Password User", passwordUser);
                         startActivity(intentLayanan);
                         finish();
                         return true;
 
                     case R.id.fotoPortofolio:
                         Intent intentPortofolio = new Intent(ArtikelActivity.this, PortofolioActivity.class);
+                        intentPortofolio.putExtra("Nama User", namaUser);
+                        intentPortofolio.putExtra("Email User", emailUser);
+                        intentPortofolio.putExtra("NoHp User", noHpUser);
+                        intentPortofolio.putExtra("Username User", usernameUser);
+                        intentPortofolio.putExtra("Password User", passwordUser);
                         startActivity(intentPortofolio);
                         finish();
                         return true;
@@ -131,7 +148,9 @@ public class ArtikelActivity extends AppCompatActivity implements ArtikelAdapter
                         return true;
 
                     case R.id.logoutUser:
-                        Toast.makeText(ArtikelActivity.this, "Ini Ke Logout", Toast.LENGTH_SHORT).show();
+                        Intent intentLogin = new Intent(ArtikelActivity.this, LoginActivity.class);
+                        startActivity(intentLogin);
+                        finish();
                         return true;
 
                 }

@@ -2090,6 +2090,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drawableLayoutAkun
 id drawableLayoutArtikel
 id drawableLayoutLayanan
 id drawableLayoutMain
@@ -2317,6 +2318,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id navViewAkun
 id navViewArtikel
 id navViewLayanan
 id navViewMain

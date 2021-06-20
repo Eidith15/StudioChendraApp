@@ -344,6 +344,7 @@ public class MainActivity extends AppCompatActivity implements
                         intentAkun.putExtra("NoHp User", noHpUser);
                         intentAkun.putExtra("Username User", usernameUser);
                         intentAkun.putExtra("Password User", passwordUser);
+                        intentAkun.putExtra("Access Code", accessCodeUser);
                         startActivity(intentAkun);
                         return true;
 

@@ -16,7 +16,9 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.eidith.studiochendraapp.R;
+import com.eidith.studiochendraapp.activity.MainActivity;
 import com.eidith.studiochendraapp.activity.akun.AkunActivity;
+import com.eidith.studiochendraapp.activity.login.LoginActivity;
 import com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity;
 import com.eidith.studiochendraapp.activity.artikel.ArtikelActivity;
 import com.eidith.studiochendraapp.activity.workshop.WorkshopActivity;
@@ -101,12 +103,22 @@ public class LayananActivity extends AppCompatActivity implements LayananAdapter
 
                     case R.id.workshop:
                         Intent intentWorkshop = new Intent(LayananActivity.this, WorkshopActivity.class);
+                        intentWorkshop.putExtra("Nama User", namaUser);
+                        intentWorkshop.putExtra("Email User", emailUser);
+                        intentWorkshop.putExtra("NoHp User", noHpUser);
+                        intentWorkshop.putExtra("Username User", usernameUser);
+                        intentWorkshop.putExtra("Password User", passwordUser);
                         startActivity(intentWorkshop);
                         finish();
                         return true;
 
                     case R.id.artikelFotografi:
                         Intent intentArtikel = new Intent(LayananActivity.this, ArtikelActivity.class);
+                        intentArtikel.putExtra("Nama User", namaUser);
+                        intentArtikel.putExtra("Email User", emailUser);
+                        intentArtikel.putExtra("NoHp User", noHpUser);
+                        intentArtikel.putExtra("Username User", usernameUser);
+                        intentArtikel.putExtra("Password User", passwordUser);
                         startActivity(intentArtikel);
                         finish();
                         return true;
@@ -117,6 +129,11 @@ public class LayananActivity extends AppCompatActivity implements LayananAdapter
 
                     case R.id.fotoPortofolio:
                         Intent intentPortofolio = new Intent(LayananActivity.this, PortofolioActivity.class);
+                        intentPortofolio.putExtra("Nama User", namaUser);
+                        intentPortofolio.putExtra("Email User", emailUser);
+                        intentPortofolio.putExtra("NoHp User", noHpUser);
+                        intentPortofolio.putExtra("Username User", usernameUser);
+                        intentPortofolio.putExtra("Password User", passwordUser);
                         startActivity(intentPortofolio);
                         finish();
                         return true;
@@ -130,7 +147,9 @@ public class LayananActivity extends AppCompatActivity implements LayananAdapter
                         return true;
 
                     case R.id.logoutUser:
-                        Toast.makeText(LayananActivity.this, "Ini Ke Logout", Toast.LENGTH_SHORT).show();
+                        Intent intentLogin = new Intent(LayananActivity.this, LoginActivity.class);
+                        startActivity(intentLogin);
+                        finish();
                         return true;
 
                 }
@@ -204,7 +223,7 @@ public class LayananActivity extends AppCompatActivity implements LayananAdapter
     @Override
     public void OnItemClickLayanan(int position) {
         //Send data to DetailArtikel Activity
-        Intent intent = new Intent(this, DetailLayananActivity.class);
+        Intent intent = new Intent(LayananActivity.this, DetailLayananActivity.class);
         intent.putExtra("Id Layanan", listLayanan.get(position).getId_layanan());
         intent.putExtra("Judul Layanan", listLayanan.get(position).getJudul_layanan());
         intent.putExtra("Deskripsi Layanan", listLayanan.get(position).getDeskripsi_layanan());
