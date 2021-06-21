@@ -2094,6 +2094,7 @@ int id drawableLayoutArtikel 0x7f0a00ab
 int id drawableLayoutLayanan 0x7f0a00ac
 int id drawableLayoutMain 0x7f0a00ad
 int id drawableLayoutPortofolio 0x7f0a00ae
+int id drawableLayoutRegistrasi 0x7f0a0272
 int id drawableLayoutWorkshop 0x7f0a00af
 int id dropdown_menu 0x7f0a00b0
 int id easeIn 0x7f0a00b1
@@ -2244,6 +2245,7 @@ int id ivDetailPortofolio 0x7f0a0141
 int id ivDetailWorkshop 0x7f0a0142
 int id ivLoginLogo 0x7f0a0143
 int id ivRegisterLogo 0x7f0a0144
+int id ivRegistrasiPic 0x7f0a0273
 int id jumpToEnd 0x7f0a0145
 int id jumpToStart 0x7f0a0146
 int id labelGroup 0x7f0a0147
@@ -2322,6 +2324,7 @@ int id navViewArtikel 0x7f0a018e
 int id navViewLayanan 0x7f0a018f
 int id navViewMain 0x7f0a0190
 int id navViewPortofolio 0x7f0a0191
+int id navViewRegistrasi 0x7f0a0274
 int id navViewWorkshop 0x7f0a0192
 int id nav_controller_view_tag 0x7f0a0193
 int id nav_host_fragment_container 0x7f0a0194
@@ -2351,6 +2354,7 @@ int id pbarArtikel 0x7f0a01ab
 int id pbarLayanan 0x7f0a01ac
 int id pbarMain 0x7f0a01ad
 int id pbarPotrofolio 0x7f0a01ae
+int id pbarRegistrasi 0x7f0a0275
 int id pbarWorkshop 0x7f0a01af
 int id peekHeight 0x7f0a01b0
 int id percent 0x7f0a01b1
@@ -2366,6 +2370,7 @@ int id refreshArtikel 0x7f0a01ba
 int id refreshLayanan 0x7f0a01bb
 int id refreshMain 0x7f0a01bc
 int id refreshPortofolio 0x7f0a01bd
+int id refreshRegistrasiOrder 0x7f0a0276
 int id refreshWorkshop 0x7f0a01be
 int id registrasiOrder 0x7f0a01bf
 int id registrasiOrderAdmin 0x7f0a01c0
@@ -2379,6 +2384,7 @@ int id rounded 0x7f0a01c7
 int id row_index_key 0x7f0a01c8
 int id rvArtikel 0x7f0a01c9
 int id rvLayanan 0x7f0a01ca
+int id rvListRegistrasi 0x7f0a0277
 int id rvMainArtikel 0x7f0a01cb
 int id rvMainLayanan 0x7f0a01cc
 int id rvMainPortofolio 0x7f0a01cd
@@ -2521,6 +2527,9 @@ int id tvMainLayanan 0x7f0a0255
 int id tvMainPortofolio 0x7f0a0256
 int id tvMainWorkshop 0x7f0a0257
 int id tvRegisterLogin 0x7f0a0258
+int id tvRegistrasiId 0x7f0a0278
+int id tvRegistrasiJudul 0x7f0a0279
+int id tvRegistrasiNama 0x7f0a027a
 int id tvTanggalArtikel 0x7f0a0259
 int id tvTanggalWorkshop 0x7f0a025a
 int id unchecked 0x7f0a025b
@@ -2614,6 +2623,7 @@ int layout activity_detail_layanan 0x7f0d001f
 int layout activity_detail_portofolio 0x7f0d0020
 int layout activity_detail_workshop 0x7f0d0021
 int layout activity_layanan 0x7f0d0022
+int layout activity_list_registrasi_order 0x7f0d0097
 int layout activity_login 0x7f0d0023
 int layout activity_main 0x7f0d0024
 int layout activity_portofolio 0x7f0d0025
@@ -2654,6 +2664,7 @@ int layout exo_track_selection_dialog 0x7f0d0047
 int layout item_artikel 0x7f0d0048
 int layout item_layanan 0x7f0d0049
 int layout item_portofolio 0x7f0d004a
+int layout item_registrasi_order 0x7f0d0098
 int layout item_workshop 0x7f0d004b
 int layout material_chip_input_combo 0x7f0d004c
 int layout material_clock_display 0x7f0d004d

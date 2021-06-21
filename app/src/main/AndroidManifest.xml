@@ -21,20 +21,20 @@
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".activity.login.RegisterActivity"
             android:parentActivityName=".activity.login.LoginActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".activity.MainActivity"
             android:parentActivityName=".activity.login.LoginActivity" />
         <activity
             android:name=".activity.akun.AkunActivity"
-            android:parentActivityName=".activity.MainActivity"/>
+            android:parentActivityName=".activity.MainActivity" />
         <activity
             android:name=".activity.artikel.ArtikelActivity"
             android:parentActivityName=".activity.MainActivity" />
@@ -75,6 +75,9 @@
         <activity
             android:name=".activity.portofolio.TambahPortofolioActivity"
             android:parentActivityName=".activity.portofolio.PortofolioActivity" />
+        <activity
+            android:name=".activity.order.ListRegistrasiOrderActivity"
+            android:parentActivityName=".activity.MainActivity"/>
     </application>
 
 </manifest>

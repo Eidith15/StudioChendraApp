@@ -84,6 +84,9 @@
         <activity
             android:name="com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity"
             android:parentActivityName="com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity" />
+        <activity
+            android:name="com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity"
+            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
     </application>
 
 </manifest>

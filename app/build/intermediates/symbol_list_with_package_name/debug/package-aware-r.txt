@@ -2095,6 +2095,7 @@ id drawableLayoutArtikel
 id drawableLayoutLayanan
 id drawableLayoutMain
 id drawableLayoutPortofolio
+id drawableLayoutRegistrasi
 id drawableLayoutWorkshop
 id dropdown_menu
 id easeIn
@@ -2245,6 +2246,7 @@ id ivDetailPortofolio
 id ivDetailWorkshop
 id ivLoginLogo
 id ivRegisterLogo
+id ivRegistrasiPic
 id jumpToEnd
 id jumpToStart
 id labelGroup
@@ -2323,6 +2325,7 @@ id navViewArtikel
 id navViewLayanan
 id navViewMain
 id navViewPortofolio
+id navViewRegistrasi
 id navViewWorkshop
 id nav_controller_view_tag
 id nav_host_fragment_container
@@ -2352,6 +2355,7 @@ id pbarArtikel
 id pbarLayanan
 id pbarMain
 id pbarPotrofolio
+id pbarRegistrasi
 id pbarWorkshop
 id peekHeight
 id percent
@@ -2367,6 +2371,7 @@ id refreshArtikel
 id refreshLayanan
 id refreshMain
 id refreshPortofolio
+id refreshRegistrasiOrder
 id refreshWorkshop
 id registrasiOrder
 id registrasiOrderAdmin
@@ -2380,6 +2385,7 @@ id rounded
 id row_index_key
 id rvArtikel
 id rvLayanan
+id rvListRegistrasi
 id rvMainArtikel
 id rvMainLayanan
 id rvMainPortofolio
@@ -2522,6 +2528,9 @@ id tvMainLayanan
 id tvMainPortofolio
 id tvMainWorkshop
 id tvRegisterLogin
+id tvRegistrasiId
+id tvRegistrasiJudul
+id tvRegistrasiNama
 id tvTanggalArtikel
 id tvTanggalWorkshop
 id unchecked
@@ -2615,6 +2624,7 @@ layout activity_detail_layanan
 layout activity_detail_portofolio
 layout activity_detail_workshop
 layout activity_layanan
+layout activity_list_registrasi_order
 layout activity_login
 layout activity_main
 layout activity_portofolio
@@ -2655,6 +2665,7 @@ layout exo_track_selection_dialog
 layout item_artikel
 layout item_layanan
 layout item_portofolio
+layout item_registrasi_order
 layout item_workshop
 layout material_chip_input_combo
 layout material_clock_display

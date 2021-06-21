@@ -3,6 +3,7 @@ package com.eidith.studiochendraapp.api;
 import com.eidith.studiochendraapp.model.ArtikelModel;
 import com.eidith.studiochendraapp.model.LayananModel;
 import com.eidith.studiochendraapp.model.PortofolioModel;
+import com.eidith.studiochendraapp.model.RegistrasiOrderModel;
 import com.eidith.studiochendraapp.model.UserModel;
 import com.eidith.studiochendraapp.model.WorkshopModel;
 
@@ -88,6 +89,10 @@ public interface APIRequestData {
                                          @Part("deskripsi_foto") RequestBody deskripsi_foto,
                                          @Part MultipartBody.Part gambar_foto
     );
+
+    //Get data registrasi
+    @GET("get_registrasi.php")
+    Call<RegistrasiOrderModel> RetrieveDataRegistrasiOrder();
 
 
 }

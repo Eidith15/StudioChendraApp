@@ -44,6 +44,8 @@
                 android:drawableLeft="@drawable/ic_username_login"
                 android:drawablePadding="10dp"
                 android:hint="Nama"
+                android:inputType="textPersonName"
+                android:maxLines="1"
                 android:textSize="14sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -60,6 +62,8 @@
                 android:drawableLeft="@drawable/ic_email_login"
                 android:drawablePadding="10dp"
                 android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
                 android:textSize="14sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -77,6 +81,7 @@
                 android:drawablePadding="10dp"
                 android:inputType="number"
                 android:hint="No. Handphone"
+                android:maxLines="1"
                 android:textSize="14sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -92,7 +97,9 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_username_login"
                 android:drawablePadding="10dp"
+                android:inputType="textPersonName"
                 android:hint="Username"
+                android:maxLines="1"
                 android:textSize="14sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,6 +117,7 @@
                 android:drawablePadding="10dp"
                 android:inputType="textPassword"
                 android:hint="Password"
+                android:maxLines="1"
                 android:textSize="14sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -127,6 +135,7 @@
                 android:drawablePadding="10dp"
                 android:inputType="textPassword"
                 android:hint="Confirm Password"
+                android:maxLines="1"
                 android:textSize="14sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 

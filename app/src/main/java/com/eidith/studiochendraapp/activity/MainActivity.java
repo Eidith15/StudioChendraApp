@@ -2,6 +2,7 @@ package com.eidith.studiochendraapp.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -26,6 +28,7 @@ import com.eidith.studiochendraapp.activity.layanan.DetailLayananActivity;
 import com.eidith.studiochendraapp.activity.layanan.LayananActivity;
 import com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity;
 import com.eidith.studiochendraapp.activity.login.LoginActivity;
+import com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity;
 import com.eidith.studiochendraapp.activity.portofolio.DetailPortofolioActivity;
 import com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity;
 import com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity;
@@ -153,7 +156,29 @@ public class MainActivity extends AppCompatActivity implements
                 refreshMain.setRefreshing(false);
             }
         });
+    }
 
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("Studio Chendra App");
+        builder.setMessage("Yakin Ingin Keluar?");
+        builder.setIcon(R.drawable.ic_launcher_background);
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                finishAffinity();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 
     @Override
@@ -451,7 +476,14 @@ public class MainActivity extends AppCompatActivity implements
                         return true;
 
                     case R.id.registrasiOrderAdmin:
-                        Toast.makeText(MainActivity.this, "Ini Ke Registrasi Order", Toast.LENGTH_SHORT).show();
+                        Intent intentRegistrasiOrder = new Intent(MainActivity.this, ListRegistrasiOrderActivity.class);
+                        intentRegistrasiOrder.putExtra("Nama User", namaUser);
+                        intentRegistrasiOrder.putExtra("Email User", emailUser);
+                        intentRegistrasiOrder.putExtra("NoHp User", noHpUser);
+                        intentRegistrasiOrder.putExtra("Username User", usernameUser);
+                        intentRegistrasiOrder.putExtra("Password User", passwordUser);
+                        intentRegistrasiOrder.putExtra("Access Code", accessCodeUser);
+                        startActivity(intentRegistrasiOrder);
                         return true;
 
                     case R.id.respondCustomer:

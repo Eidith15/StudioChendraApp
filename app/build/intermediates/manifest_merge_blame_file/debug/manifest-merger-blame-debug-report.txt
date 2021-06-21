@@ -24,7 +24,7 @@
 14-->[com.google.android.exoplayer:exoplayer-core:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\a34a160ef6a5d97ed288855c46902ca8\exoplayer-core-2.14.0\AndroidManifest.xml:24:22-76
 15
 16    <application
-16-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:9:5-78:19
+16-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:9:5-81:19
 17        android:name="androidx.multidex.MultiDexApplication"
 17-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:10:9-61
 18        android:allowBackup="true"
@@ -46,24 +46,24 @@
 27        android:theme="@style/Theme.StudioChendraApp" >
 27-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:17:9-54
 28        <activity
-28-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:19:9-26:20
+28-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:19:9-27:20
 29            android:name="com.eidith.studiochendraapp.activity.login.LoginActivity"
 29-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:20:13-57
 30            android:theme="@style/Theme.AppCompat.NoActionBar" >
 30-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:21:13-63
 31            <intent-filter>
-31-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:22:13-25:29
+31-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:22:13-26:29
 32                <action android:name="android.intent.action.MAIN" />
 32-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:23:17-69
 32-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:23:25-66
 33
 34                <category android:name="android.intent.category.LAUNCHER" />
-34-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:24:17-77
-34-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:24:27-74
+34-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:25:17-77
+34-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:25:27-74
 35            </intent-filter>
 36        </activity>
 37        <activity
-37-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:28:9-31:65
+37-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:28:9-31:66
 38            android:name="com.eidith.studiochendraapp.activity.login.RegisterActivity"
 38-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:29:13-60
 39            android:parentActivityName="com.eidith.studiochendraapp.activity.login.LoginActivity"
@@ -77,7 +77,7 @@
 43            android:parentActivityName="com.eidith.studiochendraapp.activity.login.LoginActivity" />
 43-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:34:13-71
 44        <activity
-44-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:35:9-37:66
+44-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:35:9-37:67
 45            android:name="com.eidith.studiochendraapp.activity.akun.AkunActivity"
 45-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:36:13-55
 46            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
@@ -162,6 +162,12 @@
 85-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:76:13-73
 86            android:parentActivityName="com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity" />
 86-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:77:13-81
-87    </application>
-88
-89</manifest>
+87        <activity
+87-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:78:9-80:66
+88            android:name="com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity"
+88-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:79:13-71
+89            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
+89-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:80:13-64
+90    </application>
+91
+92</manifest>
