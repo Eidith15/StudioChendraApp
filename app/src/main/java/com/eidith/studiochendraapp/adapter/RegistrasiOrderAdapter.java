@@ -72,11 +72,11 @@ public class RegistrasiOrderAdapter extends RecyclerView.Adapter<RegistrasiOrder
 
         @Override
         public void onClick(View v) {
-            onItemClickListener.OnItemClickWorkshop(getAdapterPosition());
+            onItemClickListener.OnitemClickRegistrasiOrder(getAdapterPosition());
         }
     }
 
     public interface OnItemClickListener {
-        void OnItemClickWorkshop(int position);
+        void OnitemClickRegistrasiOrder(int position);
     }
 }

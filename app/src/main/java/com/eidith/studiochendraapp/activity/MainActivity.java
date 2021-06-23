@@ -46,6 +46,7 @@ import com.eidith.studiochendraapp.model.LayananModel;
 import com.eidith.studiochendraapp.model.PortofolioModel;
 import com.eidith.studiochendraapp.model.UserModel;
 import com.eidith.studiochendraapp.model.WorkshopModel;
+import com.eidith.studiochendraapp.storage.SharedPrefManager;
 import com.google.android.material.navigation.NavigationView;
 
 import org.jetbrains.annotations.NotNull;
@@ -82,14 +83,10 @@ public class MainActivity extends AppCompatActivity implements
     private List<ArtikelModel> listArtikel = new ArrayList<>();
     private List<LayananModel> listLayanan = new ArrayList<>();
     private List<PortofolioModel> listPortofolio = new ArrayList<>();
+    private List<UserModel> listDataUser = new ArrayList<>();
 
     private ActionBarDrawerToggle actionBarDrawerToggle;
 
-    private String namaUser;
-    private String emailUser;
-    private String noHpUser;
-    private String usernameUser;
-    private String passwordUser;
     private int accessCodeUser;
 
     @Override
@@ -126,13 +123,8 @@ public class MainActivity extends AppCompatActivity implements
         //Set Menu on Action bar
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawableLayoutMain, R.string.open, R.string.close);
 
-        //get data user from login
-        namaUser = getIntent().getExtras().getString("Nama User");
-        emailUser = getIntent().getExtras().getString("Email User");
-        noHpUser = getIntent().getExtras().getString("NoHp User");
-        usernameUser = getIntent().getExtras().getString("Username User");
-        passwordUser = getIntent().getExtras().getString("Password User");
-        accessCodeUser = getIntent().getExtras().getInt("Access Code");
+        UserModel userModel = SharedPrefManager.getInstance(this).getUserData();
+        accessCodeUser = userModel.getAccess_code();
 
         //Condition from access code
         if (accessCodeUser == 1){
@@ -296,8 +288,6 @@ public class MainActivity extends AppCompatActivity implements
                 pbarMain.setVisibility(View.GONE);
             }
         });
-
-
     }
 
 
@@ -364,52 +354,26 @@ public class MainActivity extends AppCompatActivity implements
 
                     case R.id.akunUser:
                         Intent intentAkun = new Intent(MainActivity.this, AkunActivity.class);
-                        intentAkun.putExtra("Nama User", namaUser);
-                        intentAkun.putExtra("Email User", emailUser);
-                        intentAkun.putExtra("NoHp User", noHpUser);
-                        intentAkun.putExtra("Username User", usernameUser);
-                        intentAkun.putExtra("Password User", passwordUser);
-                        intentAkun.putExtra("Access Code", accessCodeUser);
                         startActivity(intentAkun);
                         return true;
 
                     case R.id.workshop:
                         Intent intentWorkshop = new Intent(MainActivity.this, WorkshopActivity.class);
-                        intentWorkshop.putExtra("Nama User", namaUser);
-                        intentWorkshop.putExtra("Email User", emailUser);
-                        intentWorkshop.putExtra("NoHp User", noHpUser);
-                        intentWorkshop.putExtra("Username User", usernameUser);
-                        intentWorkshop.putExtra("Password User", passwordUser);
                         startActivity(intentWorkshop);
                         return true;
 
                     case R.id.artikelFotografi:
                         Intent intentArtikel = new Intent(MainActivity.this, ArtikelActivity.class);
-                        intentArtikel.putExtra("Nama User", namaUser);
-                        intentArtikel.putExtra("Email User", emailUser);
-                        intentArtikel.putExtra("NoHp User", noHpUser);
-                        intentArtikel.putExtra("Username User", usernameUser);
-                        intentArtikel.putExtra("Password User", passwordUser);
                         startActivity(intentArtikel);
                         return true;
 
                     case R.id.layananJasaFotografi:
                         Intent intentLayanan = new Intent(MainActivity.this, LayananActivity.class);
-                        intentLayanan.putExtra("Nama User", namaUser);
-                        intentLayanan.putExtra("Email User", emailUser);
-                        intentLayanan.putExtra("NoHp User", noHpUser);
-                        intentLayanan.putExtra("Username User", usernameUser);
-                        intentLayanan.putExtra("Password User", passwordUser);
                         startActivity(intentLayanan);
                         return true;
 
                     case R.id.fotoPortofolio:
                         Intent intentPortofolio = new Intent(MainActivity.this, PortofolioActivity.class);
-                        intentPortofolio.putExtra("Nama User", namaUser);
-                        intentPortofolio.putExtra("Email User", emailUser);
-                        intentPortofolio.putExtra("NoHp User", noHpUser);
-                        intentPortofolio.putExtra("Username User", usernameUser);
-                        intentPortofolio.putExtra("Password User", passwordUser);
                         startActivity(intentPortofolio);
                         return true;
 
@@ -418,11 +382,13 @@ public class MainActivity extends AppCompatActivity implements
                         return true;
 
                     case R.id.customerService:
-                        Toast.makeText(MainActivity.this, "Ini Ke Respond Customer", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
                         return true;
 
                     case R.id.logoutUser:
+                        SharedPrefManager.getInstance(MainActivity.this).clear();
                         Intent intentLogin = new Intent(MainActivity.this, LoginActivity.class);
+                        intentLogin.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intentLogin);
                         finish();
                         return true;
@@ -446,12 +412,6 @@ public class MainActivity extends AppCompatActivity implements
 
                     case R.id.akunAdmin:
                         Intent intentAkun = new Intent(MainActivity.this, AkunActivity.class);
-                        intentAkun.putExtra("Nama User", namaUser);
-                        intentAkun.putExtra("Email User", emailUser);
-                        intentAkun.putExtra("NoHp User", noHpUser);
-                        intentAkun.putExtra("Username User", usernameUser);
-                        intentAkun.putExtra("Password User", passwordUser);
-                        intentAkun.putExtra("Access Code", accessCodeUser);
                         startActivity(intentAkun);
                         return true;
 
@@ -477,21 +437,17 @@ public class MainActivity extends AppCompatActivity implements
 
                     case R.id.registrasiOrderAdmin:
                         Intent intentRegistrasiOrder = new Intent(MainActivity.this, ListRegistrasiOrderActivity.class);
-                        intentRegistrasiOrder.putExtra("Nama User", namaUser);
-                        intentRegistrasiOrder.putExtra("Email User", emailUser);
-                        intentRegistrasiOrder.putExtra("NoHp User", noHpUser);
-                        intentRegistrasiOrder.putExtra("Username User", usernameUser);
-                        intentRegistrasiOrder.putExtra("Password User", passwordUser);
-                        intentRegistrasiOrder.putExtra("Access Code", accessCodeUser);
                         startActivity(intentRegistrasiOrder);
                         return true;
 
                     case R.id.respondCustomer:
-                        Toast.makeText(MainActivity.this, "Ini Ke Respond Customer", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
                         return true;
 
                     case R.id.logoutAdmin:
+                        SharedPrefManager.getInstance(MainActivity.this).clear();
                         Intent intentLogin = new Intent(MainActivity.this, LoginActivity.class);
+                        intentLogin.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intentLogin);
                         finish();
                         return true;

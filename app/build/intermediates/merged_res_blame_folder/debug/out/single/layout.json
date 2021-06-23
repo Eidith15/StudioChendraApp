@@ -1,27 +1,59 @@
 [
     {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_portofolio.xml",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\portofolio\\layout\\activity_portofolio.xml"
-    },
-    {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\custom_controller_exo.xml",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\custom_controller_exo.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_workshop.xml",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\workshop\\layout\\activity_workshop.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_workshop.xml",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\workshop\\layout\\item_workshop.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail_portofolio.xml",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\portofolio\\layout\\activity_detail_portofolio.xml"
-    },
-    {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_list_registrasi_order.xml",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\order\\layout\\activity_list_registrasi_order.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_layanan.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\layanan\\layout\\item_layanan.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail_workshop.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\workshop\\layout\\activity_detail_workshop.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_tambah_layanan.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\layanan\\layout\\activity_tambah_layanan.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail_registrasi_order.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\order\\layout\\activity_detail_registrasi_order.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_portofolio.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\portofolio\\layout\\item_portofolio.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_tambah_workshop.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\workshop\\layout\\activity_tambah_workshop.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_artikel.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\artikel\\layout\\activity_artikel.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail_artikel.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\artikel\\layout\\activity_detail_artikel.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_portofolio.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\portofolio\\layout\\activity_portofolio.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_workshop.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\workshop\\layout\\activity_workshop.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail_portofolio.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\portofolio\\layout\\activity_detail_portofolio.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_akun.xml",
@@ -32,20 +64,8 @@
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\artikel\\layout\\item_artikel.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_layanan.xml",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\layanan\\layout\\item_layanan.xml"
-    },
-    {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_registrasi_order.xml",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\order\\layout\\item_registrasi_order.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail_workshop.xml",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\workshop\\layout\\activity_detail_workshop.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_tambah_layanan.xml",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\layanan\\layout\\activity_tambah_layanan.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_tambah_portofolio.xml",
@@ -64,14 +84,6 @@
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\login\\layout\\activity_login.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_portofolio.xml",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\portofolio\\layout\\item_portofolio.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_tambah_workshop.xml",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\workshop\\layout\\activity_tambah_workshop.xml"
-    },
-    {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_tambah_artikel.xml",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\artikel\\layout\\activity_tambah_artikel.xml"
     },
@@ -80,15 +92,7 @@
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\layanan\\layout\\activity_layanan.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_artikel.xml",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\artikel\\layout\\activity_artikel.xml"
-    },
-    {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail_layanan.xml",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\layanan\\layout\\activity_detail_layanan.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail_artikel.xml",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\artikel\\layout\\activity_detail_artikel.xml"
     }
 ]

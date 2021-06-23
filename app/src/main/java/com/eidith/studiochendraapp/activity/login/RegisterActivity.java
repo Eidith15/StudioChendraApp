@@ -86,35 +86,35 @@ public class RegisterActivity extends AppCompatActivity {
                 } else if (!confirm_password_user.trim().equals(password_user.trim())){
                     etRegisterConfirmPassword.setError("Konfirmasi Password tidak sama");
                 } else {
-                    registrasiAkun();
+//                    registrasiAkun();
                 }
             }
         });
 
     }
 
-    public void registrasiAkun(){
-        progressDialog.show();
-
-        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
-        Call<UserModel> regUser = ardData.RegUser(nama_user, email_user, no_handphone_user, username_user, password_user);
-
-        regUser.enqueue(new Callback<UserModel>() {
-            @Override
-            public void onResponse(Call<UserModel> call, Response<UserModel> response) {
-                int kode = response.body().getCode();
-                String pesan = response.body().getMessage();
-
-                Toast.makeText(RegisterActivity.this, "Kode : "+kode+"| Pesan : "+pesan, Toast.LENGTH_SHORT).show();
-                progressDialog.dismiss();
-                finish();
-            }
-
-            @Override
-            public void onFailure(Call<UserModel> call, Throwable t) {
-                Toast.makeText(RegisterActivity.this, "Pesan : "+t, Toast.LENGTH_SHORT).show();
-                progressDialog.dismiss();
-            }
-        });
-    }
+//    public void registrasiAkun(){
+//        progressDialog.show();
+//
+//        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
+//        Call<UserModel> regUser = ardData.RegUser(nama_user, email_user, no_handphone_user, username_user, password_user);
+//
+//        regUser.enqueue(new Callback<UserModel>() {
+//            @Override
+//            public void onResponse(Call<UserModel> call, Response<UserModel> response) {
+//                int kode = response.body().getCode();
+//                String pesan = response.body().getMessage();
+//
+//                Toast.makeText(RegisterActivity.this, "Kode : "+kode+"| Pesan : "+pesan, Toast.LENGTH_SHORT).show();
+//                progressDialog.dismiss();
+//                finish();
+//            }
+//
+//            @Override
+//            public void onFailure(Call<UserModel> call, Throwable t) {
+//                Toast.makeText(RegisterActivity.this, "Pesan : "+t, Toast.LENGTH_SHORT).show();
+//                progressDialog.dismiss();
+//            }
+//        });
+//    }
 }

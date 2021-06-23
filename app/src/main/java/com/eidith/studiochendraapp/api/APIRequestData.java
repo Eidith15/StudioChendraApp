@@ -2,6 +2,7 @@ package com.eidith.studiochendraapp.api;
 
 import com.eidith.studiochendraapp.model.ArtikelModel;
 import com.eidith.studiochendraapp.model.LayananModel;
+import com.eidith.studiochendraapp.model.LoginResponse;
 import com.eidith.studiochendraapp.model.PortofolioModel;
 import com.eidith.studiochendraapp.model.RegistrasiOrderModel;
 import com.eidith.studiochendraapp.model.UserModel;
@@ -21,7 +22,7 @@ public interface APIRequestData {
 
     @FormUrlEncoded
     @POST("login_user.php")
-    Call<UserModel> AuthUser(
+    Call<LoginResponse> AuthUser(
             @Field("username_user") String usernameInput,
             @Field("password_user") String passwordInput
     );

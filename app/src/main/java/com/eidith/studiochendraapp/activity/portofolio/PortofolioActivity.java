@@ -39,22 +39,13 @@ import retrofit2.Response;
 
 public class PortofolioActivity extends AppCompatActivity implements PortofolioAdapter.OnItemClickListener {
 
-    private DrawerLayout drawableLayoutPortofolio;
     private SwipeRefreshLayout refreshPortofolio;
     private RecyclerView rvPortofolio;
     private ProgressBar pbarPotrofolio;
-    private NavigationView navViewPortofolio;
 
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     private List<PortofolioModel> listPortofolio = new ArrayList<>();
-    private ActionBarDrawerToggle actionBarDrawerToggle;
-
-    private String namaUser;
-    private String emailUser;
-    private String noHpUser;
-    private String usernameUser;
-    private String passwordUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,104 +55,12 @@ public class PortofolioActivity extends AppCompatActivity implements PortofolioA
         setTitle("Portofolio Gallery");
 
         //Assign variable
-        drawableLayoutPortofolio = findViewById(R.id.drawableLayoutPortofolio);
         refreshPortofolio = findViewById(R.id.refreshPortofolio);
         rvPortofolio = findViewById(R.id.rvPortofolio);
         pbarPotrofolio = findViewById(R.id.pbarPotrofolio);
-        navViewPortofolio = findViewById(R.id.navViewPortofolio);
-
-        namaUser = getIntent().getExtras().getString("Nama User");
-        emailUser = getIntent().getExtras().getString("Email User");
-        noHpUser = getIntent().getExtras().getString("NoHp User");
-        usernameUser = getIntent().getExtras().getString("Username User");
-        passwordUser = getIntent().getExtras().getString("Password User");
 
         layoutManager = new GridLayoutManager(this,2, GridLayoutManager.VERTICAL, false);
         rvPortofolio.setLayoutManager(layoutManager);
-
-        //Set Menu on Action bar
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawableLayoutPortofolio, R.string.open, R.string.close);
-
-        //Navigation view menu listener
-        navViewPortofolio.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.homeUser:
-                        onBackPressed();
-                        return true;
-
-                    case R.id.akunUser:
-                        Intent intentAkun = new Intent(PortofolioActivity.this, AkunActivity.class);
-                        intentAkun.putExtra("Nama User", namaUser);
-                        intentAkun.putExtra("Email User", emailUser);
-                        intentAkun.putExtra("NoHp User", noHpUser);
-                        intentAkun.putExtra("Username User", usernameUser);
-                        intentAkun.putExtra("Password User", passwordUser);
-                        startActivity(intentAkun);
-                        finish();
-                        return true;
-
-                    case R.id.workshop:
-                        Intent intentWorkshop = new Intent(PortofolioActivity.this, WorkshopActivity.class);
-                        intentWorkshop.putExtra("Nama User", namaUser);
-                        intentWorkshop.putExtra("Email User", emailUser);
-                        intentWorkshop.putExtra("NoHp User", noHpUser);
-                        intentWorkshop.putExtra("Username User", usernameUser);
-                        intentWorkshop.putExtra("Password User", passwordUser);
-                        startActivity(intentWorkshop);
-                        finish();
-                        return true;
-
-                    case R.id.artikelFotografi:
-                        Intent intentArtikel = new Intent(PortofolioActivity.this, ArtikelActivity.class);
-                        intentArtikel.putExtra("Nama User", namaUser);
-                        intentArtikel.putExtra("Email User", emailUser);
-                        intentArtikel.putExtra("NoHp User", noHpUser);
-                        intentArtikel.putExtra("Username User", usernameUser);
-                        intentArtikel.putExtra("Password User", passwordUser);
-                        startActivity(intentArtikel);
-                        finish();
-                        return true;
-
-                    case R.id.layananJasaFotografi:
-                        Intent intentLayanan = new Intent(PortofolioActivity.this, LayananActivity.class);
-                        intentLayanan.putExtra("Nama User", namaUser);
-                        intentLayanan.putExtra("Email User", emailUser);
-                        intentLayanan.putExtra("NoHp User", noHpUser);
-                        intentLayanan.putExtra("Username User", usernameUser);
-                        intentLayanan.putExtra("Password User", passwordUser);
-                        startActivity(intentLayanan);
-                        finish();
-                        return true;
-
-                    case R.id.fotoPortofolio:
-                        drawableLayoutPortofolio.closeDrawers();
-                        return true;
-
-                    case R.id.registrasiOrder:
-                        Toast.makeText(PortofolioActivity.this, "Ini Ke Registrasi Order", Toast.LENGTH_SHORT).show();
-                        return true;
-
-                    case R.id.customerService:
-                        Toast.makeText(PortofolioActivity.this, "Ini Ke Respond Customer", Toast.LENGTH_SHORT).show();
-                        return true;
-
-                    case R.id.logoutUser:
-                        Intent intentLogin = new Intent(PortofolioActivity.this, LoginActivity.class);
-                        startActivity(intentLogin);
-                        finish();
-                        return true;
-
-                }
-                return false;
-            }
-        });
-
-        //Set menu
-        drawableLayoutPortofolio.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Set refresh swipe to get data
         refreshPortofolio.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -174,21 +73,10 @@ public class PortofolioActivity extends AppCompatActivity implements PortofolioA
         });
     }
 
-    //On item selected Menu
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)){
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
     @Override
     protected void onResume() {
         super.onResume();
         retrieveData();
-        drawableLayoutPortofolio.closeDrawers();
     }
 
     public void retrieveData(){

@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardElevation="10dp"
     android:clickable="true">
 
     <ImageView
@@ -12,6 +11,8 @@
         android:layout_width="50dp"
         android:layout_height="match_parent"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/ic_username" />
 
     <LinearLayout
@@ -34,10 +35,11 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="5dp"
             android:text="Nama Customer"
-            android:textColor="@color/grey"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:maxLines="1"
-            android:ellipsize="end"/>
+            android:ellipsize="end"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/tvRegistrasiJudul"
@@ -46,11 +48,10 @@
             android:layout_marginLeft="65dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="5dp"
-
             android:text="Judul Layanan"
-            android:textColor="@color/grey"
+            android:textColor="@color/black"
             android:textSize="12sp"
-            android:maxLines="1"
+            android:maxLines="2"
             android:ellipsize="end"/>
 
         <View

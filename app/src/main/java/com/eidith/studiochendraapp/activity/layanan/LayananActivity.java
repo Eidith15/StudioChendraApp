@@ -39,22 +39,13 @@ import retrofit2.Response;
 
 public class LayananActivity extends AppCompatActivity implements LayananAdapter.OnItemClickListener{
 
-    private DrawerLayout drawableLayoutLayanan;
     private SwipeRefreshLayout refreshLayanan;
     private RecyclerView rvLayanan;
     private ProgressBar pbarLayanan;
-    private NavigationView navViewLayanan;
 
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     private List<LayananModel> listLayanan = new ArrayList<>();
-    private ActionBarDrawerToggle actionBarDrawerToggle;
-
-    private String namaUser;
-    private String emailUser;
-    private String noHpUser;
-    private String usernameUser;
-    private String passwordUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,104 +54,12 @@ public class LayananActivity extends AppCompatActivity implements LayananAdapter
 
         setTitle("Layanan Jasa Fotografi");
 
-        drawableLayoutLayanan = findViewById(R.id.drawableLayoutLayanan);
         refreshLayanan = findViewById(R.id.refreshLayanan);
         rvLayanan = findViewById(R.id.rvLayanan);
         pbarLayanan = findViewById(R.id.pbarLayanan);
-        navViewLayanan = findViewById(R.id.navViewLayanan);
-
-        namaUser = getIntent().getExtras().getString("Nama User");
-        emailUser = getIntent().getExtras().getString("Email User");
-        noHpUser = getIntent().getExtras().getString("NoHp User");
-        usernameUser = getIntent().getExtras().getString("Username User");
-        passwordUser = getIntent().getExtras().getString("Password User");
 
         layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvLayanan.setLayoutManager(layoutManager);
-
-        //Set Menu on Action bar
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawableLayoutLayanan, R.string.open, R.string.close);
-
-        //Navigation view menu listener
-        navViewLayanan.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.homeUser:
-                        onBackPressed();
-                        return true;
-
-                    case R.id.akunUser:
-                        Intent intentAkun = new Intent(LayananActivity.this, AkunActivity.class);
-                        intentAkun.putExtra("Nama User", namaUser);
-                        intentAkun.putExtra("Email User", emailUser);
-                        intentAkun.putExtra("NoHp User", noHpUser);
-                        intentAkun.putExtra("Username User", usernameUser);
-                        intentAkun.putExtra("Password User", passwordUser);
-                        startActivity(intentAkun);
-                        finish();
-                        return true;
-
-                    case R.id.workshop:
-                        Intent intentWorkshop = new Intent(LayananActivity.this, WorkshopActivity.class);
-                        intentWorkshop.putExtra("Nama User", namaUser);
-                        intentWorkshop.putExtra("Email User", emailUser);
-                        intentWorkshop.putExtra("NoHp User", noHpUser);
-                        intentWorkshop.putExtra("Username User", usernameUser);
-                        intentWorkshop.putExtra("Password User", passwordUser);
-                        startActivity(intentWorkshop);
-                        finish();
-                        return true;
-
-                    case R.id.artikelFotografi:
-                        Intent intentArtikel = new Intent(LayananActivity.this, ArtikelActivity.class);
-                        intentArtikel.putExtra("Nama User", namaUser);
-                        intentArtikel.putExtra("Email User", emailUser);
-                        intentArtikel.putExtra("NoHp User", noHpUser);
-                        intentArtikel.putExtra("Username User", usernameUser);
-                        intentArtikel.putExtra("Password User", passwordUser);
-                        startActivity(intentArtikel);
-                        finish();
-                        return true;
-
-                    case R.id.layananJasaFotografi:
-                        drawableLayoutLayanan.closeDrawers();
-                        return true;
-
-                    case R.id.fotoPortofolio:
-                        Intent intentPortofolio = new Intent(LayananActivity.this, PortofolioActivity.class);
-                        intentPortofolio.putExtra("Nama User", namaUser);
-                        intentPortofolio.putExtra("Email User", emailUser);
-                        intentPortofolio.putExtra("NoHp User", noHpUser);
-                        intentPortofolio.putExtra("Username User", usernameUser);
-                        intentPortofolio.putExtra("Password User", passwordUser);
-                        startActivity(intentPortofolio);
-                        finish();
-                        return true;
-
-                    case R.id.registrasiOrder:
-                        Toast.makeText(LayananActivity.this, "Ini Ke Registrasi Order", Toast.LENGTH_SHORT).show();
-                        return true;
-
-                    case R.id.customerService:
-                        Toast.makeText(LayananActivity.this, "Ini Ke Respond Customer", Toast.LENGTH_SHORT).show();
-                        return true;
-
-                    case R.id.logoutUser:
-                        Intent intentLogin = new Intent(LayananActivity.this, LoginActivity.class);
-                        startActivity(intentLogin);
-                        finish();
-                        return true;
-
-                }
-                return false;
-            }
-        });
-
-        //Set menu
-        drawableLayoutLayanan.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Set refresh swipe to get data
         refreshLayanan.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -173,21 +72,10 @@ public class LayananActivity extends AppCompatActivity implements LayananAdapter
         });
     }
 
-    //On item selected Menu
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)){
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
     @Override
     protected void onResume() {
         super.onResume();
         retrieveData();
-        drawableLayoutLayanan.closeDrawers();
     }
 
     public void retrieveData(){

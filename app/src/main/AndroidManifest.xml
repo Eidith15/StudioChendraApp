@@ -25,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".activity.login.RegisterActivity"
             android:parentActivityName=".activity.login.LoginActivity"
@@ -78,6 +79,9 @@
         <activity
             android:name=".activity.order.ListRegistrasiOrderActivity"
             android:parentActivityName=".activity.MainActivity"/>
+        <activity
+            android:name=".activity.order.DetailRegistrasiOrder"
+            android:parentActivityName=".activity.order.ListRegistrasiOrderActivity"/>
     </application>
 
 </manifest>

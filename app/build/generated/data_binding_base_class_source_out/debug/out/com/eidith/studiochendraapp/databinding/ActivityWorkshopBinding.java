@@ -4,28 +4,21 @@ package com.eidith.studiochendraapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewbinding.ViewBinding;
 import com.eidith.studiochendraapp.R;
-import com.google.android.material.navigation.NavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityWorkshopBinding implements ViewBinding {
   @NonNull
-  private final DrawerLayout rootView;
-
-  @NonNull
-  public final DrawerLayout drawableLayoutWorkshop;
-
-  @NonNull
-  public final NavigationView navViewWorkshop;
+  private final LinearLayout rootView;
 
   @NonNull
   public final ProgressBar pbarWorkshop;
@@ -36,13 +29,9 @@ public final class ActivityWorkshopBinding implements ViewBinding {
   @NonNull
   public final RecyclerView rvWorkshop;
 
-  private ActivityWorkshopBinding(@NonNull DrawerLayout rootView,
-      @NonNull DrawerLayout drawableLayoutWorkshop, @NonNull NavigationView navViewWorkshop,
-      @NonNull ProgressBar pbarWorkshop, @NonNull SwipeRefreshLayout refreshWorkshop,
-      @NonNull RecyclerView rvWorkshop) {
+  private ActivityWorkshopBinding(@NonNull LinearLayout rootView, @NonNull ProgressBar pbarWorkshop,
+      @NonNull SwipeRefreshLayout refreshWorkshop, @NonNull RecyclerView rvWorkshop) {
     this.rootView = rootView;
-    this.drawableLayoutWorkshop = drawableLayoutWorkshop;
-    this.navViewWorkshop = navViewWorkshop;
     this.pbarWorkshop = pbarWorkshop;
     this.refreshWorkshop = refreshWorkshop;
     this.rvWorkshop = rvWorkshop;
@@ -50,7 +39,7 @@ public final class ActivityWorkshopBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public DrawerLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -75,14 +64,6 @@ public final class ActivityWorkshopBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      DrawerLayout drawableLayoutWorkshop = (DrawerLayout) rootView;
-
-      id = R.id.navViewWorkshop;
-      NavigationView navViewWorkshop = rootView.findViewById(id);
-      if (navViewWorkshop == null) {
-        break missingId;
-      }
-
       id = R.id.pbarWorkshop;
       ProgressBar pbarWorkshop = rootView.findViewById(id);
       if (pbarWorkshop == null) {
@@ -101,8 +82,8 @@ public final class ActivityWorkshopBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityWorkshopBinding((DrawerLayout) rootView, drawableLayoutWorkshop,
-          navViewWorkshop, pbarWorkshop, refreshWorkshop, rvWorkshop);
+      return new ActivityWorkshopBinding((LinearLayout) rootView, pbarWorkshop, refreshWorkshop,
+          rvWorkshop);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

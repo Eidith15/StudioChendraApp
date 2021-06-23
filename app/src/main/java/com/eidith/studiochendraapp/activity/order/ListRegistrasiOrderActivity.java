@@ -47,119 +47,29 @@ import retrofit2.Response;
 
 public class ListRegistrasiOrderActivity extends AppCompatActivity implements RegistrasiOrderAdapter.OnItemClickListener{
 
-    private DrawerLayout drawableLayoutRegistrasi;
     private SwipeRefreshLayout refreshRegistrasiOrder;
     private RecyclerView rvListRegistrasi;
     private ProgressBar pbarRegistrasi;
-    private NavigationView navViewRegistrasi;
 
     private RecyclerView.LayoutManager layoutManager;
     private RecyclerView.Adapter adapter;
-    private ActionBarDrawerToggle actionBarDrawerToggle;
 
     private List<RegistrasiOrderModel> listRegistrasiOrder = new ArrayList<>();
-
-    private String namaUser;
-    private String emailUser;
-    private String noHpUser;
-    private String usernameUser;
-    private String passwordUser;
-    private int accessCodeAkunUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_registrasi_order);
 
-        setTitle("List Order");
+        setTitle("List Registrasi Order");
 
-        drawableLayoutRegistrasi = findViewById(R.id.drawableLayoutRegistrasi);
         refreshRegistrasiOrder = findViewById(R.id.refreshRegistrasiOrder);
         rvListRegistrasi = findViewById(R.id.rvListRegistrasi);
         pbarRegistrasi = findViewById(R.id.pbarRegistrasi);
-        navViewRegistrasi = findViewById(R.id.navViewRegistrasi);
-
-
-        namaUser = getIntent().getExtras().getString("Nama User");
-        emailUser = getIntent().getExtras().getString("Email User");
-        noHpUser = getIntent().getExtras().getString("NoHp User");
-        usernameUser = getIntent().getExtras().getString("Username User");
-        passwordUser = getIntent().getExtras().getString("Password User");
-        accessCodeAkunUser = getIntent().getExtras().getInt("Access Code");
 
         //Set Recycler view Layout
         layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvListRegistrasi.setLayoutManager(layoutManager);
-
-        //Set Menu on Action bar
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawableLayoutRegistrasi, R.string.open, R.string.close);
-
-        //Navigation view menu listener
-        navViewRegistrasi.getMenu().clear();
-        navViewRegistrasi.inflateMenu(R.menu.navigation_menu_admin);
-        navViewRegistrasi.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.homeAdmin:
-                        onBackPressed();
-                        return true;
-
-                    case R.id.akunAdmin:
-                        Intent intentAkun = new Intent(ListRegistrasiOrderActivity.this, AkunActivity.class);
-                        intentAkun.putExtra("Nama User", namaUser);
-                        intentAkun.putExtra("Email User", emailUser);
-                        intentAkun.putExtra("NoHp User", noHpUser);
-                        intentAkun.putExtra("Username User", usernameUser);
-                        intentAkun.putExtra("Password User", passwordUser);
-                        intentAkun.putExtra("Access Code", accessCodeAkunUser);
-                        startActivity(intentAkun);
-                        finish();
-                        return true;
-
-                    case R.id.tambahWorkshop:
-                        Intent intentWorkshop = new Intent(ListRegistrasiOrderActivity.this, TambahWorkshopActivity.class);
-                        startActivity(intentWorkshop);
-                        return true;
-
-                    case R.id.tambahArtikelFotografi:
-                        Intent intentArtikel = new Intent(ListRegistrasiOrderActivity.this, TambahArtikelActivity.class);
-                        startActivity(intentArtikel);
-                        return true;
-
-                    case R.id.tambahLayananJasaFotografi:
-                        Intent intentLayanan = new Intent(ListRegistrasiOrderActivity.this, TambahLayananActivity.class);
-                        startActivity(intentLayanan);
-                        return true;
-
-                    case R.id.tambahFotoPortofolio:
-                        Intent intentPortofolio = new Intent(ListRegistrasiOrderActivity.this, TambahPortofolioActivity.class);
-                        startActivity(intentPortofolio);
-                        return true;
-
-                    case R.id.registrasiOrderAdmin:
-                        drawableLayoutRegistrasi.closeDrawers();
-                        return true;
-
-                    case R.id.respondCustomer:
-                        Toast.makeText(ListRegistrasiOrderActivity.this, "Ini Ke Respond Customer", Toast.LENGTH_SHORT).show();
-                        return true;
-
-                    case R.id.logoutAdmin:
-                        Intent intentLogin = new Intent(ListRegistrasiOrderActivity.this, LoginActivity.class);
-                        startActivity(intentLogin);
-                        finish();
-                        return true;
-
-                }
-                return false;
-            }
-        });
-
-        //Set menu
-        drawableLayoutRegistrasi.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Set refresh swipe to get data
         refreshRegistrasiOrder.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -172,21 +82,10 @@ public class ListRegistrasiOrderActivity extends AppCompatActivity implements Re
         });
     }
 
-    //On item selected Menu
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)){
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
     @Override
     protected void onResume() {
         super.onResume();
         retrieveData();
-        drawableLayoutRegistrasi.closeDrawers();
     }
 
     public void retrieveData(){
@@ -202,7 +101,7 @@ public class ListRegistrasiOrderActivity extends AppCompatActivity implements Re
                 //Set data to Adapter
                 listRegistrasiOrder = response.body().getData_registrasi();
 
-                adapter = new RegistrasiOrderAdapter(ListRegistrasiOrderActivity.this, listRegistrasiOrder, ListRegistrasiOrderActivity.this::OnItemClickWorkshop);
+                adapter = new RegistrasiOrderAdapter(ListRegistrasiOrderActivity.this, listRegistrasiOrder, ListRegistrasiOrderActivity.this::OnitemClickRegistrasiOrder);
                 rvListRegistrasi.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
 
@@ -219,7 +118,7 @@ public class ListRegistrasiOrderActivity extends AppCompatActivity implements Re
     }
 
     @Override
-    public void OnItemClickWorkshop(int position) {
+    public void OnitemClickRegistrasiOrder(int position) {
         //Send data to DetailWorkshop Activity
         Intent intent = new Intent(ListRegistrasiOrderActivity.this, DetailRegistrasiOrder.class);
         intent.putExtra("Id Registrasi", listRegistrasiOrder.get(position).getId_registrasi());
@@ -227,6 +126,7 @@ public class ListRegistrasiOrderActivity extends AppCompatActivity implements Re
         intent.putExtra("Id Layanan", listRegistrasiOrder.get(position).getId_layanan());
         intent.putExtra("Judul Layanan", listRegistrasiOrder.get(position).getJudul_layanan());
         intent.putExtra("Gambar Layanan", listRegistrasiOrder.get(position).getGambar_layanan());
+        intent.putExtra("Tanggal Layanan", listRegistrasiOrder.get(position).getTanggal_layanan());
         intent.putExtra("Id User", listRegistrasiOrder.get(position).getId_user());
         intent.putExtra("Nama User", listRegistrasiOrder.get(position).getNama_user());
         intent.putExtra("Email User", listRegistrasiOrder.get(position).getEmail_user());

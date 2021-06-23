@@ -20,8 +20,10 @@ import com.eidith.studiochendraapp.activity.artikel.ArtikelActivity;
 import com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity;
 import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.api.APIClient;
+import com.eidith.studiochendraapp.model.LoginResponse;
 import com.eidith.studiochendraapp.model.PortofolioModel;
 import com.eidith.studiochendraapp.model.UserModel;
+import com.eidith.studiochendraapp.storage.SharedPrefManager;
 
 import java.lang.reflect.Array;
 import java.security.MessageDigest;
@@ -42,8 +44,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private ProgressDialog progressDialog;
 
-    private String usernameInput;
-    private String passwordInput;
+    public static String usernameInput;
+    public static String passwordInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,44 +92,44 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (SharedPrefManager.getInstance(this).isLoggedin()){
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        }
+    }
+
     private void login(String usernameInput, String passwordInput) {
         progressDialog.show();
 
         APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
-        Call<UserModel> authLogin = ardData.AuthUser(usernameInput, passwordInput);
+        Call<LoginResponse> authLogin = ardData.AuthUser(usernameInput, passwordInput);
 
-        authLogin.enqueue(new Callback<UserModel>() {
+        authLogin.enqueue(new Callback<LoginResponse>() {
             @Override
-            public void onResponse(Call<UserModel> call, Response<UserModel> response) {
-                int kode = response.body().getCode();
-                String pesan = response.body().getMessage();
-                String nama = response.body().getNama_user();
-                String email = response.body().getEmail_user();
-                String noHP = response.body().getNo_handphone_user();
-                String username = response.body().getUsername_user();
-                String password = response.body().getUsername_user();
-                int accessCode = response.body().getAccess_code();
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                LoginResponse loginResponse = response.body();
 
-                if (kode == 1){
-                    Toast.makeText(LoginActivity.this, pesan, Toast.LENGTH_SHORT).show();
-                    Intent intentSuccess = new Intent(LoginActivity.this, MainActivity.class);
-                    intentSuccess.putExtra("Nama User", nama);
-                    intentSuccess.putExtra("Email User", email);
-                    intentSuccess.putExtra("NoHp User", noHP);
-                    intentSuccess.putExtra("Username User", username);
-                    intentSuccess.putExtra("Password User", password);
-                    intentSuccess.putExtra("Access Code", accessCode);
-                    startActivity(intentSuccess);
+                if ((!loginResponse.isError())){
+                    SharedPrefManager.getInstance(LoginActivity.this).saveUser(loginResponse.getData_user().get(0));
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
                     progressDialog.dismiss();
-                    finish();
-                } else {
-                    Toast.makeText(LoginActivity.this, pesan, Toast.LENGTH_SHORT).show();
+
+                }else{
+                    Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
                 }
+
+
             }
 
             @Override
-            public void onFailure(Call<UserModel> call, Throwable t) {
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
                 Toast.makeText(LoginActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
                 progressDialog.dismiss();
             }
