@@ -1,34 +1,21 @@
 package com.eidith.studiochendraapp.activity.layanan;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.activity.MainActivity;
-import com.eidith.studiochendraapp.activity.akun.AkunActivity;
-import com.eidith.studiochendraapp.activity.login.LoginActivity;
-import com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity;
-import com.eidith.studiochendraapp.activity.artikel.ArtikelActivity;
-import com.eidith.studiochendraapp.activity.workshop.WorkshopActivity;
-import com.eidith.studiochendraapp.adapter.LayananAdapter;
+import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterLayanan;
 import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.model.LayananModel;
-import com.google.android.material.navigation.NavigationView;
-
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +24,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class LayananActivity extends AppCompatActivity implements LayananAdapter.OnItemClickListener{
+public class LayananActivity extends AppCompatActivity implements RecyclerViewAdapterLayanan.OnItemClickListener{
 
     private SwipeRefreshLayout refreshLayanan;
     private RecyclerView rvLayanan;
@@ -91,7 +78,7 @@ public class LayananActivity extends AppCompatActivity implements LayananAdapter
                 //Set data to Adapter
                 listLayanan = response.body().getData_layanan();
 
-                adapter = new LayananAdapter(LayananActivity.this, listLayanan, LayananActivity.this::OnItemClickLayanan);
+                adapter = new RecyclerViewAdapterLayanan(LayananActivity.this, listLayanan, LayananActivity.this::OnItemClickLayanan);
                 rvLayanan.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
 

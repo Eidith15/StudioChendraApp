@@ -29,7 +29,7 @@ public interface APIRequestData {
 
     @FormUrlEncoded
     @POST("register_user.php")
-    Call<UserModel> RegUser(
+    Call<LoginResponse> RegUser(
             @Field("nama_user") String nama_user,
             @Field("email_user") String email_user,
             @Field("no_handphone_user") String no_handphone_user,
@@ -92,8 +92,15 @@ public interface APIRequestData {
     );
 
     //Get data registrasi
-    @GET("get_registrasi.php")
+    @GET("get_registrasi_order.php")
     Call<RegistrasiOrderModel> RetrieveDataRegistrasiOrder();
 
+    @FormUrlEncoded
+    @POST("post_registrasi_order.php")
+    Call<RegistrasiOrderModel> CreateDataRegistrasiOrder(
+            @Field("id_user") int id_user,
+            @Field("id_layanan") int id_layanan,
+            @Field("tanggal_registrasi") String tanggal_registrasi
+    );
 
 }

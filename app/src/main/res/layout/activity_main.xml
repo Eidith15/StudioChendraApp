@@ -112,12 +112,18 @@
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-    <ProgressBar
-        android:id="@+id/pbarMain"
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:visibility="gone"/>
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/pbarMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navViewMain"
@@ -126,8 +132,7 @@
         android:layout_gravity="start"
         app:menu="@menu/navigation_menu_user"
         app:itemTextColor="@color/grey"
-        app:itemIconTint="@color/grey"
-        />
+        app:itemIconTint="@color/grey" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
 

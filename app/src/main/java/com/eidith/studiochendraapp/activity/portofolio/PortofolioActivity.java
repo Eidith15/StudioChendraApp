@@ -1,34 +1,21 @@
 package com.eidith.studiochendraapp.activity.portofolio;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.activity.MainActivity;
-import com.eidith.studiochendraapp.activity.akun.AkunActivity;
-import com.eidith.studiochendraapp.activity.artikel.ArtikelActivity;
-import com.eidith.studiochendraapp.activity.layanan.LayananActivity;
-import com.eidith.studiochendraapp.activity.login.LoginActivity;
-import com.eidith.studiochendraapp.activity.workshop.WorkshopActivity;
-import com.eidith.studiochendraapp.adapter.PortofolioAdapter;
+import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterPortofolio;
 import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.model.PortofolioModel;
-import com.google.android.material.navigation.NavigationView;
-
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +24,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class PortofolioActivity extends AppCompatActivity implements PortofolioAdapter.OnItemClickListener {
+public class PortofolioActivity extends AppCompatActivity implements RecyclerViewAdapterPortofolio.OnItemClickListener {
 
     private SwipeRefreshLayout refreshPortofolio;
     private RecyclerView rvPortofolio;
@@ -92,7 +79,7 @@ public class PortofolioActivity extends AppCompatActivity implements PortofolioA
                 //Set data to Adapter
                 listPortofolio = response.body().getData_portofolio();
 
-                adapter = new PortofolioAdapter(PortofolioActivity.this, listPortofolio, PortofolioActivity.this::OnItemClickPortofolio);
+                adapter = new RecyclerViewAdapterPortofolio(PortofolioActivity.this, listPortofolio, PortofolioActivity.this::OnItemClickPortofolio);
                 rvPortofolio.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
 

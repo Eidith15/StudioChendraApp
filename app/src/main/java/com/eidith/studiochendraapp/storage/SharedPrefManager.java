@@ -11,7 +11,7 @@ public class SharedPrefManager {
     private static SharedPrefManager instance;
     private Context context;
 
-    private  SharedPrefManager(Context context){
+    private SharedPrefManager(Context context){
         this.context = context;
     }
 
@@ -26,13 +26,13 @@ public class SharedPrefManager {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        editor.putInt("id", userModel.getId_user());
-        editor.putString("nama", userModel.getNama_user());
-        editor.putString("email", userModel.getEmail_user());
-        editor.putString("noHp", userModel.getNo_handphone_user());
-        editor.putString("username", userModel.getUsername_user());
-        editor.putString("password", userModel.getPassword_user());
-        editor.putInt("accessCode", userModel.getAccess_code());
+        editor.putInt("id_user", userModel.getId_user());
+        editor.putString("nama_user", userModel.getNama_user());
+        editor.putString("email_user", userModel.getEmail_user());
+        editor.putString("noHp_user", userModel.getNo_handphone_user());
+        editor.putString("username_user", userModel.getUsername_user());
+        editor.putString("password_user", userModel.getPassword_user());
+        editor.putInt("accessCode_user", userModel.getAccess_code());
 
         editor.apply();
 
@@ -40,7 +40,7 @@ public class SharedPrefManager {
 
     public boolean isLoggedin(){
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        if (sharedPreferences.getInt("id", -1) != -1){
+        if (sharedPreferences.getInt("id_user", -1) != -1){
             return true;
         } else {
             return false;
@@ -50,13 +50,13 @@ public class SharedPrefManager {
     public UserModel getUserData(){
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         UserModel userModel = new UserModel(
-                sharedPreferences.getInt("id", - 1),
-                sharedPreferences.getInt("accessCode", -1),
-                sharedPreferences.getString("nama", null),
-                sharedPreferences.getString("email", null),
-                sharedPreferences.getString("noHp", null),
-                sharedPreferences.getString("username", null),
-                sharedPreferences.getString("password", null)
+                sharedPreferences.getInt("id_user", -1),
+                sharedPreferences.getString("nama_user", null),
+                sharedPreferences.getString("email_user", null),
+                sharedPreferences.getString("noHp_user", null),
+                sharedPreferences.getString("username_user", null),
+                sharedPreferences.getString("password_user", null),
+                sharedPreferences.getInt("accessCode_user", -1)
         );
         return userModel;
     }

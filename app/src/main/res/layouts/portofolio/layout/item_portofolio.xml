@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     app:cardElevation="10dp"
     android:layout_margin="5dp"
+    app:cardCornerRadius="10dp"
     android:clickable="true">
 
     <GridLayout

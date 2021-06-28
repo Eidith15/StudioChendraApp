@@ -4,8 +4,8 @@ package com.eidith.studiochendraapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,7 +18,7 @@ import java.lang.String;
 
 public final class ActivityWorkshopBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final ProgressBar pbarWorkshop;
@@ -29,8 +29,9 @@ public final class ActivityWorkshopBinding implements ViewBinding {
   @NonNull
   public final RecyclerView rvWorkshop;
 
-  private ActivityWorkshopBinding(@NonNull LinearLayout rootView, @NonNull ProgressBar pbarWorkshop,
-      @NonNull SwipeRefreshLayout refreshWorkshop, @NonNull RecyclerView rvWorkshop) {
+  private ActivityWorkshopBinding(@NonNull RelativeLayout rootView,
+      @NonNull ProgressBar pbarWorkshop, @NonNull SwipeRefreshLayout refreshWorkshop,
+      @NonNull RecyclerView rvWorkshop) {
     this.rootView = rootView;
     this.pbarWorkshop = pbarWorkshop;
     this.refreshWorkshop = refreshWorkshop;
@@ -39,7 +40,7 @@ public final class ActivityWorkshopBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -82,7 +83,7 @@ public final class ActivityWorkshopBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityWorkshopBinding((LinearLayout) rootView, pbarWorkshop, refreshWorkshop,
+      return new ActivityWorkshopBinding((RelativeLayout) rootView, pbarWorkshop, refreshWorkshop,
           rvWorkshop);
     }
     String missingId = rootView.getResources().getResourceName(id);

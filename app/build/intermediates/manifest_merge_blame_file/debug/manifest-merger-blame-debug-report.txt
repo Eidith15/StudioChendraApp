@@ -24,7 +24,7 @@
 14-->[com.google.android.exoplayer:exoplayer-core:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-2\files-2.1\a34a160ef6a5d97ed288855c46902ca8\exoplayer-core-2.14.0\AndroidManifest.xml:24:22-76
 15
 16    <application
-16-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:9:5-85:19
+16-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:9:5-88:19
 17        android:name="androidx.multidex.MultiDexApplication"
 17-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:10:9-61
 18        android:allowBackup="true"
@@ -97,11 +97,11 @@
 53            android:parentActivityName="com.eidith.studiochendraapp.activity.artikel.ArtikelActivity" />
 53-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:45:13-75
 54        <activity
-54-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:46:9-48:78
+54-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:46:9-48:67
 55            android:name="com.eidith.studiochendraapp.activity.artikel.TambahArtikelActivity"
 55-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:47:13-67
-56            android:parentActivityName="com.eidith.studiochendraapp.activity.artikel.ArtikelActivity" />
-56-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:48:13-75
+56            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
+56-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:48:13-64
 57        <activity
 57-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:49:9-51:67
 58            android:name="com.eidith.studiochendraapp.activity.workshop.WorkshopActivity"
@@ -117,11 +117,11 @@
 63            android:parentActivityName="com.eidith.studiochendraapp.activity.workshop.WorkshopActivity" />
 63-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:55:13-77
 64        <activity
-64-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:56:9-58:80
+64-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:56:9-58:67
 65            android:name="com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity"
 65-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:57:13-69
-66            android:parentActivityName="com.eidith.studiochendraapp.activity.workshop.WorkshopActivity" />
-66-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:58:13-77
+66            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
+66-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:58:13-64
 67        <activity
 67-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:59:9-61:67
 68            android:name="com.eidith.studiochendraapp.activity.layanan.LayananActivity"
@@ -137,11 +137,11 @@
 73            android:parentActivityName="com.eidith.studiochendraapp.activity.layanan.LayananActivity" />
 73-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:65:13-75
 74        <activity
-74-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:66:9-68:78
+74-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:66:9-68:67
 75            android:name="com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity"
 75-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:67:13-67
-76            android:parentActivityName="com.eidith.studiochendraapp.activity.layanan.LayananActivity" />
-76-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:68:13-75
+76            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
+76-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:68:13-64
 77        <activity
 77-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:69:9-71:67
 78            android:name="com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity"
@@ -157,11 +157,11 @@
 83            android:theme="@style/Theme.AppCompat.NoActionBar" />
 83-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:75:13-63
 84        <activity
-84-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:76:9-78:84
+84-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:76:9-78:67
 85            android:name="com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity"
 85-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:77:13-73
-86            android:parentActivityName="com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity" />
-86-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:78:13-81
+86            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
+86-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:78:13-64
 87        <activity
 87-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:79:9-81:66
 88            android:name="com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity"
@@ -174,6 +174,12 @@
 91-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:83:13-65
 92            android:parentActivityName="com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity" />
 92-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:84:13-85
-93    </application>
-94
-95</manifest>
+93        <activity
+93-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:86:9-87:66
+94            android:name="com.eidith.studiochendraapp.activity.order.TambahRegistrasiOrderActivity"
+94-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:86:19-79
+95            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
+95-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:87:13-64
+96    </application>
+97
+98</manifest>

@@ -2,6 +2,7 @@ package com.eidith.studiochendraapp.activity.layanan;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.eidith.studiochendraapp.R;
+import com.eidith.studiochendraapp.activity.order.TambahRegistrasiOrderActivity;
 import com.eidith.studiochendraapp.api.APIClient;
 import com.google.android.exoplayer2.MediaItem;
 import com.google.android.exoplayer2.SimpleExoPlayer;
@@ -76,6 +78,14 @@ public class DetailLayananActivity extends AppCompatActivity {
         player.prepare();
         vvDetailLayanan.hideController();
         player.setPlayWhenReady(true);
+
+        btnRegistrasiLayanan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailLayananActivity.this, TambahRegistrasiOrderActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnFullScreen.setOnClickListener(new View.OnClickListener() {
             @Override

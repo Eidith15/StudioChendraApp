@@ -45,7 +45,7 @@
             android:parentActivityName=".activity.artikel.ArtikelActivity" />
         <activity
             android:name=".activity.artikel.TambahArtikelActivity"
-            android:parentActivityName=".activity.artikel.ArtikelActivity" />
+            android:parentActivityName=".activity.MainActivity" />
         <activity
             android:name=".activity.workshop.WorkshopActivity"
             android:parentActivityName=".activity.MainActivity" />
@@ -55,7 +55,7 @@
             android:parentActivityName=".activity.workshop.WorkshopActivity" />
         <activity
             android:name=".activity.workshop.TambahWorkshopActivity"
-            android:parentActivityName=".activity.workshop.WorkshopActivity" />
+            android:parentActivityName=".activity.MainActivity" />
         <activity
             android:name=".activity.layanan.LayananActivity"
             android:parentActivityName=".activity.MainActivity" />
@@ -65,7 +65,7 @@
             android:parentActivityName=".activity.layanan.LayananActivity" />
         <activity
             android:name=".activity.layanan.TambahLayananActivity"
-            android:parentActivityName=".activity.layanan.LayananActivity" />
+            android:parentActivityName=".activity.MainActivity" />
         <activity
             android:name=".activity.portofolio.PortofolioActivity"
             android:parentActivityName=".activity.MainActivity" />
@@ -75,13 +75,16 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".activity.portofolio.TambahPortofolioActivity"
-            android:parentActivityName=".activity.portofolio.PortofolioActivity" />
+            android:parentActivityName=".activity.MainActivity" />
         <activity
             android:name=".activity.order.ListRegistrasiOrderActivity"
             android:parentActivityName=".activity.MainActivity"/>
         <activity
             android:name=".activity.order.DetailRegistrasiOrder"
             android:parentActivityName=".activity.order.ListRegistrasiOrderActivity"/>
+
+        <activity android:name=".activity.order.TambahRegistrasiOrderActivity"
+            android:parentActivityName=".activity.MainActivity"/>
     </application>
 
 </manifest>

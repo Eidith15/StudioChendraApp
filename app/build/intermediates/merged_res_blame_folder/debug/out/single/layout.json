@@ -48,6 +48,10 @@
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\portofolio\\layout\\activity_portofolio.xml"
     },
     {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\hint_dropdown_layanan.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\order\\layout\\hint_dropdown_layanan.xml"
+    },
+    {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_workshop.xml",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\workshop\\layout\\activity_workshop.xml"
     },
@@ -68,12 +72,20 @@
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\order\\layout\\item_registrasi_order.xml"
     },
     {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dropdown_layanan.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\order\\layout\\dropdown_layanan.xml"
+    },
+    {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_tambah_portofolio.xml",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\portofolio\\layout\\activity_tambah_portofolio.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_tambah_registrasi_order.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\order\\layout\\activity_tambah_registrasi_order.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",

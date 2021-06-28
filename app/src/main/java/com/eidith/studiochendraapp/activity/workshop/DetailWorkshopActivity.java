@@ -25,7 +25,6 @@ public class DetailWorkshopActivity extends AppCompatActivity {
     private TextView tvDetailJudulWorkshop, tvDetailDeskripsiWorkshop, tvDetailTanggalWorkshop;
     private ImageView ivDetailWorkshop;
     private ImageButton btnFullScreen;
-    private Button btnRegistrasiWorkshop;
     private SimpleExoPlayer player;
     boolean fullscreen = false;
 
@@ -41,7 +40,6 @@ public class DetailWorkshopActivity extends AppCompatActivity {
         tvDetailJudulWorkshop = findViewById(R.id.tvDetailJudulWorkshop);
         tvDetailDeskripsiWorkshop = findViewById(R.id.tvDetailDeskripsiWorkshop);
         ivDetailWorkshop = findViewById(R.id.ivDetailWorkshop);
-        btnRegistrasiWorkshop = findViewById(R.id.btnRegistrasiWorkshop);
         btnFullScreen = findViewById(R.id.btnFullscreen);
         tvDetailTanggalWorkshop = findViewById(R.id.tvDetailTanggalWorkshop);
 

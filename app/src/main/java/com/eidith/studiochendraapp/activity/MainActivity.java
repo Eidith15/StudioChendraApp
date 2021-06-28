@@ -29,16 +29,17 @@ import com.eidith.studiochendraapp.activity.layanan.LayananActivity;
 import com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity;
 import com.eidith.studiochendraapp.activity.login.LoginActivity;
 import com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity;
+import com.eidith.studiochendraapp.activity.order.TambahRegistrasiOrderActivity;
 import com.eidith.studiochendraapp.activity.portofolio.DetailPortofolioActivity;
 import com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity;
 import com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity;
 import com.eidith.studiochendraapp.activity.workshop.DetailWorkshopActivity;
 import com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity;
 import com.eidith.studiochendraapp.activity.workshop.WorkshopActivity;
-import com.eidith.studiochendraapp.adapter.ArtikelAdapter;
-import com.eidith.studiochendraapp.adapter.LayananAdapter;
-import com.eidith.studiochendraapp.adapter.PortofolioAdapter;
-import com.eidith.studiochendraapp.adapter.WorkshopAdapter;
+import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterArtikel;
+import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterLayanan;
+import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterPortofolio;
+import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterWorkshop;
 import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.model.ArtikelModel;
@@ -59,10 +60,10 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements
-        WorkshopAdapter.OnItemClickListener,
-        ArtikelAdapter.OnItemClickListener,
-        LayananAdapter.OnItemClickListener,
-        PortofolioAdapter.OnItemClickListener{
+        RecyclerViewAdapterWorkshop.OnItemClickListener,
+        RecyclerViewAdapterArtikel.OnItemClickListener,
+        RecyclerViewAdapterLayanan.OnItemClickListener,
+        RecyclerViewAdapterPortofolio.OnItemClickListener{
 
     private TextView tvMainArtikel, tvMainWorkshop, tvMainLayanan, tvMainPortofolio;
     private DrawerLayout drawableLayoutMain;
@@ -209,7 +210,7 @@ public class MainActivity extends AppCompatActivity implements
                 listWorkshop = response.body().getData_workshop();
                 listWorkshop.subList(2, listWorkshop.size()).clear();
 
-                adapterWorkshop = new WorkshopAdapter(MainActivity.this, listWorkshop, MainActivity.this::OnItemClickWorkshop);
+                adapterWorkshop = new RecyclerViewAdapterWorkshop(MainActivity.this, listWorkshop, MainActivity.this::OnItemClickWorkshop);
                 rvMainWorkshop.setAdapter(adapterWorkshop);
                 adapterWorkshop.notifyDataSetChanged();
 
@@ -230,7 +231,7 @@ public class MainActivity extends AppCompatActivity implements
                 listArtikel = response.body().getData_artikel();
                 listArtikel.subList(4, listArtikel.size()).clear();
 
-                adapterArtikel = new ArtikelAdapter(MainActivity.this, listArtikel, MainActivity.this::OnItemClickArtikel);
+                adapterArtikel = new RecyclerViewAdapterArtikel(MainActivity.this, listArtikel, MainActivity.this::OnItemClickArtikel);
                 rvMainArtikel.setAdapter(adapterArtikel);
                 adapterArtikel.notifyDataSetChanged();
             }
@@ -250,7 +251,7 @@ public class MainActivity extends AppCompatActivity implements
                 listLayanan = response.body().getData_layanan();
                 listLayanan.subList(2, listLayanan.size()).clear();
 
-                adapterLayanan = new LayananAdapter(MainActivity.this, listLayanan, MainActivity.this::OnItemClickLayanan);
+                adapterLayanan = new RecyclerViewAdapterLayanan(MainActivity.this, listLayanan, MainActivity.this::OnItemClickLayanan);
                 rvMainLayanan.setAdapter(adapterLayanan);
                 adapterLayanan.notifyDataSetChanged();
             }
@@ -270,7 +271,7 @@ public class MainActivity extends AppCompatActivity implements
                 listPortofolio = response.body().getData_portofolio();
                 listPortofolio.subList(4, listPortofolio.size()).clear();
 
-                adapterPortofolio = new PortofolioAdapter(MainActivity.this, listPortofolio, MainActivity.this::OnItemClickPortofolio);
+                adapterPortofolio = new RecyclerViewAdapterPortofolio(MainActivity.this, listPortofolio, MainActivity.this::OnItemClickPortofolio);
                 rvMainPortofolio.setAdapter(adapterPortofolio);
                 adapterPortofolio.notifyDataSetChanged();
 
@@ -378,7 +379,8 @@ public class MainActivity extends AppCompatActivity implements
                         return true;
 
                     case R.id.registrasiOrder:
-                        Toast.makeText(MainActivity.this, "Ini Ke Registrasi Order", Toast.LENGTH_SHORT).show();
+                        Intent intentRegistrasiOrder = new Intent(MainActivity.this, TambahRegistrasiOrderActivity.class);
+                        startActivity(intentRegistrasiOrder);
                         return true;
 
                     case R.id.customerService:
@@ -386,13 +388,30 @@ public class MainActivity extends AppCompatActivity implements
                         return true;
 
                     case R.id.logoutUser:
-                        SharedPrefManager.getInstance(MainActivity.this).clear();
-                        Intent intentLogin = new Intent(MainActivity.this, LoginActivity.class);
-                        intentLogin.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(intentLogin);
-                        finish();
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                        builder.setTitle("Studio Chendra App");
+                        builder.setMessage("Yakin Ingin Keluar?");
+                        builder.setIcon(R.drawable.ic_launcher_background);
+                        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                                SharedPrefManager.getInstance(MainActivity.this).clear();
+                                Intent intentLogin = new Intent(MainActivity.this, LoginActivity.class);
+                                intentLogin.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                startActivity(intentLogin);
+                                finish();
+                            }
+                        });
+                        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                        AlertDialog alertDialog = builder.create();
+                        alertDialog.show();
                         return true;
-
                 }
                 return false;
             }
@@ -445,13 +464,30 @@ public class MainActivity extends AppCompatActivity implements
                         return true;
 
                     case R.id.logoutAdmin:
-                        SharedPrefManager.getInstance(MainActivity.this).clear();
-                        Intent intentLogin = new Intent(MainActivity.this, LoginActivity.class);
-                        intentLogin.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(intentLogin);
-                        finish();
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                        builder.setTitle("Studio Chendra App");
+                        builder.setMessage("Yakin Ingin Logout?");
+                        builder.setIcon(R.drawable.ic_launcher_background);
+                        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                                SharedPrefManager.getInstance(MainActivity.this).clear();
+                                Intent intentLogin = new Intent(MainActivity.this, LoginActivity.class);
+                                intentLogin.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                startActivity(intentLogin);
+                                finish();
+                            }
+                        });
+                        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                        AlertDialog alertDialog = builder.create();
+                        alertDialog.show();
                         return true;
-
                 }
                 return false;
             }

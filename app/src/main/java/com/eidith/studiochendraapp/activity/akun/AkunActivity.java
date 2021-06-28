@@ -1,41 +1,26 @@
 package com.eidith.studiochendraapp.activity.akun;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.activity.MainActivity;
-import com.eidith.studiochendraapp.activity.artikel.ArtikelActivity;
-import com.eidith.studiochendraapp.activity.artikel.TambahArtikelActivity;
-import com.eidith.studiochendraapp.activity.layanan.LayananActivity;
-import com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity;
 import com.eidith.studiochendraapp.activity.login.LoginActivity;
-import com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity;
-import com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity;
-import com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity;
-import com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity;
-import com.eidith.studiochendraapp.activity.workshop.WorkshopActivity;
 import com.eidith.studiochendraapp.model.UserModel;
 import com.eidith.studiochendraapp.storage.SharedPrefManager;
-import com.google.android.material.navigation.NavigationView;
-
-import org.jetbrains.annotations.NotNull;
 
 public class AkunActivity extends AppCompatActivity {
 
+    private SwipeRefreshLayout refreshAkun;
     private TextView tvAkunUsername, tvAkunPasword, tvAkunNama, tvAkunEmail, tvAkunNoHp;
-    private Button btnAkunLogout;
+    private ProgressBar pbarAkun;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +34,9 @@ public class AkunActivity extends AppCompatActivity {
         tvAkunNama = findViewById(R.id.tvAkunNama);
         tvAkunEmail = findViewById(R.id.tvAkunEmail);
         tvAkunNoHp = findViewById(R.id.tvAkunNoHp);
-        btnAkunLogout = findViewById(R.id.btnAkunLogout);
+        Button btnAkunLogout = findViewById(R.id.btnAkunLogout);
+        refreshAkun = findViewById(R.id.refreshAkun);
+        pbarAkun = findViewById(R.id.pbarAkun);
 
         UserModel userModel = SharedPrefManager.getInstance(this).getUserData();
 
@@ -59,17 +46,42 @@ public class AkunActivity extends AppCompatActivity {
         tvAkunEmail.setText(userModel.getEmail_user());
         tvAkunNoHp.setText(userModel.getNo_handphone_user());
 
-        //Set Menu on Action bar
-
-        btnAkunLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        btnAkunLogout.setOnClickListener(v -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(AkunActivity.this);
+            builder.setTitle("Akun");
+            builder.setMessage("Yakin ingin logout?");
+            builder.setIcon(R.drawable.ic_alert);
+            builder.setPositiveButton("Yes", (dialog, which) -> {
+                dialog.dismiss();
                 SharedPrefManager.getInstance(AkunActivity.this).clear();
                 Intent intent = new Intent(AkunActivity.this, LoginActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();
-            }
+            });
+            builder.setNegativeButton("No", (dialog, which) -> dialog.dismiss());
+            AlertDialog alertDialog = builder.create();
+            alertDialog.show();
         });
+
+        refreshAkun.setOnRefreshListener(() -> {
+
+            refreshAkun.setRefreshing(true);
+            pbarAkun.setVisibility(View.VISIBLE);
+
+            UserModel userModel1 = SharedPrefManager.getInstance(AkunActivity.this).getUserData();
+
+            tvAkunUsername.setText(userModel1.getUsername_user());
+            tvAkunPasword.setText(userModel1.getUsername_user());
+            tvAkunNama.setText(userModel1.getNama_user());
+            tvAkunEmail.setText(userModel1.getEmail_user());
+            tvAkunNoHp.setText(userModel1.getNo_handphone_user());
+
+            pbarAkun.setVisibility(View.GONE);
+            refreshAkun.setRefreshing(false);
+
+        });
+
     }
+
 }

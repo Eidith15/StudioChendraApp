@@ -53,7 +53,7 @@
             android:parentActivityName="com.eidith.studiochendraapp.activity.artikel.ArtikelActivity" />
         <activity
             android:name="com.eidith.studiochendraapp.activity.artikel.TambahArtikelActivity"
-            android:parentActivityName="com.eidith.studiochendraapp.activity.artikel.ArtikelActivity" />
+            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
         <activity
             android:name="com.eidith.studiochendraapp.activity.workshop.WorkshopActivity"
             android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
@@ -63,7 +63,7 @@
             android:parentActivityName="com.eidith.studiochendraapp.activity.workshop.WorkshopActivity" />
         <activity
             android:name="com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity"
-            android:parentActivityName="com.eidith.studiochendraapp.activity.workshop.WorkshopActivity" />
+            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
         <activity
             android:name="com.eidith.studiochendraapp.activity.layanan.LayananActivity"
             android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
@@ -73,7 +73,7 @@
             android:parentActivityName="com.eidith.studiochendraapp.activity.layanan.LayananActivity" />
         <activity
             android:name="com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity"
-            android:parentActivityName="com.eidith.studiochendraapp.activity.layanan.LayananActivity" />
+            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
         <activity
             android:name="com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity"
             android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
@@ -83,13 +83,16 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name="com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity"
-            android:parentActivityName="com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity" />
+            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
         <activity
             android:name="com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity"
             android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
         <activity
             android:name="com.eidith.studiochendraapp.activity.order.DetailRegistrasiOrder"
             android:parentActivityName="com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity" />
+        <activity
+            android:name="com.eidith.studiochendraapp.activity.order.TambahRegistrasiOrderActivity"
+            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
     </application>
 
 </manifest>

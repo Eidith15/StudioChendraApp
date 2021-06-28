@@ -1852,6 +1852,7 @@ drawable exo_styled_controls_vr
 drawable ic_account_menu
 drawable ic_add_photo
 drawable ic_add_video
+drawable ic_alert
 drawable ic_artikel_menu
 drawable ic_clock_black_24dp
 drawable ic_datepicker
@@ -2019,7 +2020,6 @@ id btnFullscreen
 id btnLogin
 id btnRegister
 id btnRegistrasiLayanan
-id btnRegistrasiWorkshop
 id btnSelectImageArtikel
 id btnSelectImageLayanan
 id btnSelectImagePortofolio
@@ -2030,6 +2030,7 @@ id btnSelectVideoWorkshop
 id btnTambahArtikel
 id btnTambahFotoPortofolio
 id btnTambahLayanan
+id btnTambahRegistrasiOrder
 id btnTambahWorkshop
 id buttonPanel
 id cache_measures
@@ -2240,6 +2241,7 @@ id ivDetailLayanan
 id ivDetailPortofolio
 id ivDetailRegistrasiLayanan
 id ivDetailWorkshop
+id ivDropdownLayanan
 id ivLoginLogo
 id ivRegisterLogo
 id ivRegistrasiPic
@@ -2341,11 +2343,13 @@ id parent_matrix
 id password_toggle
 id path
 id pathRelative
+id pbarAkun
 id pbarArtikel
 id pbarLayanan
 id pbarMain
 id pbarPotrofolio
 id pbarRegistrasi
+id pbarTambahRegistrasiOrder
 id pbarWorkshop
 id peekHeight
 id percent
@@ -2357,6 +2361,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id refreshAkun
 id refreshArtikel
 id refreshLayanan
 id refreshMain
@@ -2382,6 +2387,7 @@ id rvMainPortofolio
 id rvMainWorkshop
 id rvPortofolio
 id rvWorkshop
+id sDropdownListLayanan
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2518,15 +2524,21 @@ id tvDetailTanggalLayanan
 id tvDetailTanggalRegistrasi
 id tvDetailTanggalRegistrasiLayanan
 id tvDetailTanggalWorkshop
+id tvDropdownIdLayanan
 id tvLoginRegister
 id tvMainArtikel
 id tvMainLayanan
 id tvMainPortofolio
 id tvMainWorkshop
+id tvPilihLayanan
 id tvRegisterLogin
 id tvRegistrasiId
 id tvRegistrasiJudul
 id tvRegistrasiNama
+id tvTambahNamaRegistrasi
+id tvTambahNoTelpRegistrasi
+id tvTambahRegistrasiIdUser
+id tvTambahTanggalRegistrasi
 id tvTanggalArtikel
 id tvTanggalWorkshop
 id unchecked
@@ -2629,6 +2641,7 @@ layout activity_register
 layout activity_tambah_artikel
 layout activity_tambah_layanan
 layout activity_tambah_portofolio
+layout activity_tambah_registrasi_order
 layout activity_tambah_workshop
 layout activity_workshop
 layout custom_controller_exo
@@ -2648,6 +2661,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dropdown_layanan
 layout exo_list_divider
 layout exo_player_control_view
 layout exo_player_view
@@ -2918,6 +2932,7 @@ style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
 style Animation_MaterialComponents_BottomSheetDialog
+style AppTheme_PopupOverlay
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog

@@ -45,6 +45,7 @@
                 android:drawablePadding="10dp"
                 android:hint="Nama"
                 android:inputType="textPersonName"
+                android:digits="0123456789*,qwertzuiopasdfghjklyxcvbnm"
                 android:maxLines="1"
                 android:textSize="14sp"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -98,6 +99,7 @@
                 android:drawableLeft="@drawable/ic_username_login"
                 android:drawablePadding="10dp"
                 android:inputType="textPersonName"
+                android:digits="0123456789*,qwertzuiopasdfghjklyxcvbnm"
                 android:hint="Username"
                 android:maxLines="1"
                 android:textSize="14sp"/>

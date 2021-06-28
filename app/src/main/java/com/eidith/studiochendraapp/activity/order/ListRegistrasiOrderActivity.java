@@ -1,42 +1,21 @@
 package com.eidith.studiochendraapp.activity.order;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.activity.MainActivity;
-import com.eidith.studiochendraapp.activity.akun.AkunActivity;
-import com.eidith.studiochendraapp.activity.artikel.ArtikelActivity;
-import com.eidith.studiochendraapp.activity.artikel.TambahArtikelActivity;
-import com.eidith.studiochendraapp.activity.layanan.LayananActivity;
-import com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity;
-import com.eidith.studiochendraapp.activity.login.LoginActivity;
-import com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity;
-import com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity;
-import com.eidith.studiochendraapp.activity.workshop.DetailWorkshopActivity;
-import com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity;
-import com.eidith.studiochendraapp.activity.workshop.WorkshopActivity;
-import com.eidith.studiochendraapp.adapter.RegistrasiOrderAdapter;
-import com.eidith.studiochendraapp.adapter.WorkshopAdapter;
+import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterRegistrasiOrder;
 import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.model.RegistrasiOrderModel;
-import com.eidith.studiochendraapp.model.WorkshopModel;
-import com.google.android.material.navigation.NavigationView;
-
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +24,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ListRegistrasiOrderActivity extends AppCompatActivity implements RegistrasiOrderAdapter.OnItemClickListener{
+public class ListRegistrasiOrderActivity extends AppCompatActivity implements RecyclerViewAdapterRegistrasiOrder.OnItemClickListener{
 
     private SwipeRefreshLayout refreshRegistrasiOrder;
     private RecyclerView rvListRegistrasi;
@@ -101,7 +80,7 @@ public class ListRegistrasiOrderActivity extends AppCompatActivity implements Re
                 //Set data to Adapter
                 listRegistrasiOrder = response.body().getData_registrasi();
 
-                adapter = new RegistrasiOrderAdapter(ListRegistrasiOrderActivity.this, listRegistrasiOrder, ListRegistrasiOrderActivity.this::OnitemClickRegistrasiOrder);
+                adapter = new RecyclerViewAdapterRegistrasiOrder(ListRegistrasiOrderActivity.this, listRegistrasiOrder, ListRegistrasiOrderActivity.this::OnitemClickRegistrasiOrder);
                 rvListRegistrasi.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
 

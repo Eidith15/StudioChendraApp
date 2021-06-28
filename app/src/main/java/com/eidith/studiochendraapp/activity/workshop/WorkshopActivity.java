@@ -2,30 +2,20 @@ package com.eidith.studiochendraapp.activity.workshop;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.activity.MainActivity;
-import com.eidith.studiochendraapp.activity.akun.AkunActivity;
-import com.eidith.studiochendraapp.activity.artikel.ArtikelActivity;
-import com.eidith.studiochendraapp.activity.layanan.LayananActivity;
-import com.eidith.studiochendraapp.activity.login.LoginActivity;
-import com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity;
-import com.eidith.studiochendraapp.adapter.WorkshopAdapter;
+import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterWorkshop;
 import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.model.WorkshopModel;
-import com.google.android.material.navigation.NavigationView;
-import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,7 +23,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapter.OnItemClickListener {
+public class WorkshopActivity extends AppCompatActivity implements RecyclerViewAdapterWorkshop.OnItemClickListener {
 
     private RecyclerView rvWorkshop;
     private RecyclerView.Adapter adapter;
@@ -90,7 +80,7 @@ public class WorkshopActivity extends AppCompatActivity implements WorkshopAdapt
                 //Set data to Adapter
                 listWorkshop = response.body().getData_workshop();
 
-                adapter = new WorkshopAdapter(WorkshopActivity.this, listWorkshop, WorkshopActivity.this::OnItemClickWorkshop);
+                adapter = new RecyclerViewAdapterWorkshop(WorkshopActivity.this, listWorkshop, WorkshopActivity.this::OnItemClickWorkshop);
                 rvWorkshop.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
 
