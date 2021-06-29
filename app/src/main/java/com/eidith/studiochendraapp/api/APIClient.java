@@ -6,9 +6,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class APIClient {
 
 
-    public static final String baseURL = "http://10.0.2.2/studiochendra/";
-    public static final String imageURL = "http://10.0.2.2/studiochendra/gambar/";
-    public static final String videoURL = "http://10.0.2.2/studiochendra/video/";
+    public static final String baseURL = "http://10.0.2.2/StudioChendraWebService/";
+    public static final String imageURL = "http://10.0.2.2/StudioChendraWebService/gambar/";
+    public static final String videoURL = "http://10.0.2.2/StudioChendraWebService/video/";
     private static Retrofit retrofit;
 
     //Connect retrofit to server to get Json and convert using Gson
