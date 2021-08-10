@@ -2,9 +2,7 @@ package com.eidith.studiochendraapp.activity.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,20 +14,13 @@ import android.widget.Toast;
 
 import com.eidith.studiochendraapp.R;
 import com.eidith.studiochendraapp.activity.MainActivity;
-import com.eidith.studiochendraapp.activity.artikel.ArtikelActivity;
-import com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity;
 import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.model.LoginResponse;
-import com.eidith.studiochendraapp.model.PortofolioModel;
-import com.eidith.studiochendraapp.model.UserModel;
 import com.eidith.studiochendraapp.storage.SharedPrefManager;
 
-import java.lang.reflect.Array;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -105,7 +96,12 @@ public class LoginActivity extends AppCompatActivity {
     private void login(String usernameInput, String passwordInput) {
         progressDialog.show();
 
-        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
+        //Auth Login with Gson
+//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+//        Call<LoginResponse> authLogin = ardData.AuthUser(usernameInput, passwordInput);
+
+        //Auth Login with Moshi
+        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
         Call<LoginResponse> authLogin = ardData.AuthUser(usernameInput, passwordInput);
 
         authLogin.enqueue(new Callback<LoginResponse>() {

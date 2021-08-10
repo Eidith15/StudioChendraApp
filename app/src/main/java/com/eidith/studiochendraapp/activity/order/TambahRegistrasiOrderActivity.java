@@ -15,8 +15,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.activity.login.RegisterActivity;
-import com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity;
 import com.eidith.studiochendraapp.adapter.SpinnerAdapterLayanan;
 import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.api.APIRequestData;
@@ -107,8 +105,12 @@ public class TambahRegistrasiOrderActivity extends AppCompatActivity {
     public void retrieveDataLayanan(){
         pbarTambahRegistrasiOrder.setVisibility(View.VISIBLE);
 
-        //Conncet to server to parse Json and get data
-        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
+        //Conncet to server to parse Json and get data with gson
+//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+//        Call<LayananModel> tampilData = ardData.RetrieveDataLayanan();
+
+        //Conncet to server to parse Json and get data with moshi
+        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
         Call<LayananModel> tampilData = ardData.RetrieveDataLayanan();
 
         tampilData.enqueue(new Callback<LayananModel>() {
@@ -146,7 +148,12 @@ public class TambahRegistrasiOrderActivity extends AppCompatActivity {
     public void UploadData(){
         pbarTambahRegistrasiOrder.setVisibility(View.VISIBLE);
 
-        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
+        //Upload data with gson
+//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+//        Call<RegistrasiOrderModel> createData = ardData.CreateDataRegistrasiOrder(idUser, idLayanan, tanggalRegistrasi);
+
+        //Upload data with moshi
+        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
         Call<RegistrasiOrderModel> createData = ardData.CreateDataRegistrasiOrder(idUser, idLayanan, tanggalRegistrasi);
 
         createData.enqueue(new Callback<RegistrasiOrderModel>() {

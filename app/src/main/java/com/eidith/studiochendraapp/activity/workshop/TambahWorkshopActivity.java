@@ -220,8 +220,12 @@ public class TambahWorkshopActivity extends AppCompatActivity {
         RequestBody video = RequestBody.create(MediaType.parse("video/*"), fileVideo);
         MultipartBody.Part videopart = MultipartBody.Part.createFormData("video_workshop", fileVideo.getName(), video);
 
-        //Execute createData to json method
-        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
+        //Execute createData to json method with gson
+//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+//        Call<WorkshopModel> createData = ardData.CreateDataWorkshop(judul, deskripsi, tanggal, imagepart, videopart);
+
+        //Execute createData to json method with moshi
+        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
         Call<WorkshopModel> createData = ardData.CreateDataWorkshop(judul, deskripsi, tanggal, imagepart, videopart);
 
         createData.enqueue(new Callback<WorkshopModel>() {

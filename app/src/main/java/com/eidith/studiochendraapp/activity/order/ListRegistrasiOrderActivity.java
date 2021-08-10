@@ -70,8 +70,12 @@ public class ListRegistrasiOrderActivity extends AppCompatActivity implements Re
     public void retrieveData(){
         pbarRegistrasi.setVisibility(View.VISIBLE);
 
-        //Conncet to server to parse Json and get data
-        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
+        //Conncet to server to parse Json and get data with Gson
+//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+//        Call<RegistrasiOrderModel> tampilData = ardData.RetrieveDataRegistrasiOrder();
+
+        //Conncet to server to parse Json and get data with Moshi
+        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
         Call<RegistrasiOrderModel> tampilData = ardData.RetrieveDataRegistrasiOrder();
 
         tampilData.enqueue(new Callback<RegistrasiOrderModel>() {

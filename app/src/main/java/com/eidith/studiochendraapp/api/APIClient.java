@@ -2,6 +2,8 @@ package com.eidith.studiochendraapp.api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.moshi.MoshiConverterFactory;
+
 
 public class APIClient {
 
@@ -12,11 +14,21 @@ public class APIClient {
     private static Retrofit retrofit;
 
     //Connect retrofit to server to get Json and convert using Gson
-    public static Retrofit connectRetrofit(){
+    public static Retrofit connectRetrofitGson(){
         if (retrofit == null){
             retrofit = new Retrofit.Builder()
                     .baseUrl(baseURL)
                     .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+        }
+        return retrofit;
+    }
+
+    public static Retrofit connectRetrofitMoshi(){
+        if (retrofit == null){
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(baseURL)
+                    .addConverterFactory(MoshiConverterFactory.create())
                     .build();
         }
         return retrofit;

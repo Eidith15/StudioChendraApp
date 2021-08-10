@@ -4,7 +4,7 @@
             "outputFile": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "D:\\AndroidStudio\\Gradle\\caches\\transforms-2\\files-2.1\\f9db3af1d4b21c0f8eaed47c1558f861\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
+                    "source": "D:\\AndroidStudio\\Gradle\\caches\\transforms-3\\4f7fde6443b19e6ece3941e32d79f216\\transformed\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "D:\\AndroidStudio\\Gradle\\caches\\transforms-2\\files-2.1\\42f2d6c247c849d30a22257bc85bdda9\\core-1.3.2\\res\\values-v16\\values-v16.xml",
+                    "source": "D:\\AndroidStudio\\Gradle\\caches\\transforms-3\\6c8d3287b9705d1ed94ab26b2938e3ee\\transformed\\core-1.3.2\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

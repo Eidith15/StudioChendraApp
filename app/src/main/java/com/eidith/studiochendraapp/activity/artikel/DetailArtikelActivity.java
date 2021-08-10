@@ -62,7 +62,7 @@ public class DetailArtikelActivity extends AppCompatActivity {
                 .apply(new RequestOptions().override(800, 400))
                 .into(ivDetailArtikel);
 
-        //Create exo Player fof playing video
+        //Create exo Player for playing video
         MediaItem mediaItem = MediaItem.fromUri(APIClient.videoURL+videoArtikel);
         player = new SimpleExoPlayer.Builder(this).build();
 

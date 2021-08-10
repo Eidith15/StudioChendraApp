@@ -68,8 +68,12 @@ public class LayananActivity extends AppCompatActivity implements RecyclerViewAd
     public void retrieveData(){
         pbarLayanan.setVisibility(View.VISIBLE);
 
-        //Conncet to server to parse Json and get data
-        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
+//        //Conncet to server to parse Json and get data with Gson
+//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+//        Call<LayananModel> tampilData = ardData.RetrieveDataLayanan();
+
+        //Conncet to server to parse Json and get data with Moshi
+        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
         Call<LayananModel> tampilData = ardData.RetrieveDataLayanan();
 
         tampilData.enqueue(new Callback<LayananModel>() {

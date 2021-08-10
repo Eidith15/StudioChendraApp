@@ -195,8 +195,11 @@ public class MainActivity extends AppCompatActivity implements
     public void retrieveData(){
         pbarMain.setVisibility(View.VISIBLE);
 
-        //Conncet to server to parse Json and get data
-        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
+        //Conncet to server to parse Json and get data with gson
+//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+
+        //Conncet to server to parse Json and get data with moshi
+        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
 
         Call<WorkshopModel> tampilDataWorkshop = ardData.RetrieveDataWorkshop();
         Call<ArtikelModel> tampilDataArtikel = ardData.RetrieveDataArtikel();

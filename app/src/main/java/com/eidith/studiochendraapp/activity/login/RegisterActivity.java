@@ -13,11 +13,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.activity.MainActivity;
 import com.eidith.studiochendraapp.api.APIClient;
 import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.model.LoginResponse;
-import com.eidith.studiochendraapp.model.UserModel;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -97,7 +95,12 @@ public class RegisterActivity extends AppCompatActivity {
     public void registrasiAkun(){
         progressDialog.show();
 
-        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
+        //Register User with Gson
+//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+//        Call<LoginResponse> regUser = ardData.RegUser(nama_user, email_user, no_handphone_user, username_user, password_user);
+
+        //Register User with Moshi
+        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
         Call<LoginResponse> regUser = ardData.RegUser(nama_user, email_user, no_handphone_user, username_user, password_user);
 
         regUser.enqueue(new Callback<LoginResponse>() {

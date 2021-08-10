@@ -16,12 +16,12 @@
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\layanan\\layout\\item_layanan.xml"
     },
     {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail_workshop.xml",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\workshop\\layout\\activity_detail_workshop.xml"
-    },
-    {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_tambah_layanan.xml",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\layanan\\layout\\activity_tambah_layanan.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail_workshop.xml",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\workshop\\layout\\activity_detail_workshop.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail_registrasi_order.xml",
@@ -46,10 +46,6 @@
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_portofolio.xml",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\portofolio\\layout\\activity_portofolio.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\hint_dropdown_layanan.xml",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\layouts\\order\\layout\\hint_dropdown_layanan.xml"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_workshop.xml",

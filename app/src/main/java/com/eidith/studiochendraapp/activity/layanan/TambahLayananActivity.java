@@ -219,8 +219,12 @@ public class TambahLayananActivity extends AppCompatActivity {
         RequestBody video = RequestBody.create(MediaType.parse("video/*"), fileVideo);
         MultipartBody.Part videopart = MultipartBody.Part.createFormData("video_layanan", fileVideo.getName(), video);
 
-        //Execute createData to json method
-        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
+        //Execute createData to json method with gson
+//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+//        Call<LayananModel> createData = ardData.CreateDataLayanan(judul, deskripsi, tanggal, imagepart, videopart);
+
+        //Execute createData to json method with moshi
+        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
         Call<LayananModel> createData = ardData.CreateDataLayanan(judul, deskripsi, tanggal, imagepart, videopart);
 
         createData.enqueue(new Callback<LayananModel>() {

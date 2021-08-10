@@ -161,8 +161,12 @@ public class TambahPortofolioActivity extends AppCompatActivity {
         RequestBody gambar = RequestBody.create(MediaType.parse("image/*"), fileImage);
         MultipartBody.Part imagepart = MultipartBody.Part.createFormData("gambar_foto", fileImage.getName(), gambar);
 
-        //Execute createData to json method
-        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
+        //Execute createData to json method with gson
+//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+//        Call<PortofolioModel> createData = ardData.CreateDataPortofolio(judul, deskripsi, imagepart);
+
+        //Execute createData to json method with moshi
+        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
         Call<PortofolioModel> createData = ardData.CreateDataPortofolio(judul, deskripsi, imagepart);
 
         createData.enqueue(new Callback<PortofolioModel>() {

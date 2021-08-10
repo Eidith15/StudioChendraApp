@@ -70,8 +70,12 @@ public class WorkshopActivity extends AppCompatActivity implements RecyclerViewA
     public void retrieveData(){
         pbarWorkshop.setVisibility(View.VISIBLE);
 
-        //Conncet to server to parse Json and get data
-        APIRequestData ardData = APIClient.connectRetrofit().create(APIRequestData.class);
+        //Conncet to server to parse Json and get data with gson
+//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+//        Call<WorkshopModel> tampilData = ardData.RetrieveDataWorkshop();
+
+        //Conncet to server to parse Json and get data with moshi
+        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
         Call<WorkshopModel> tampilData = ardData.RetrieveDataWorkshop();
 
         tampilData.enqueue(new Callback<WorkshopModel>() {
