@@ -6,8 +6,10 @@
         <entry key="..\:/AndroidStudio/StudioChendraApp/app/src/main/res/layouts/akun/layout/activity_akun.xml" value="0.10553278688524591" />
         <entry key="..\:/AndroidStudio/StudioChendraApp/app/src/main/res/layouts/artikel/layout/activity_tambah_artikel.xml" value="0.10553278688524591" />
         <entry key="..\:/AndroidStudio/StudioChendraApp/app/src/main/res/layouts/layanan/layout/activity_tambah_layanan.xml" value="0.10553278688524591" />
+        <entry key="..\:/AndroidStudio/StudioChendraApp/app/src/main/res/layouts/layanan/layout/item_layanan.xml" value="0.12023270846800259" />
         <entry key="..\:/AndroidStudio/StudioChendraApp/app/src/main/res/layouts/login/layout/activity_login.xml" value="0.10553278688524591" />
         <entry key="..\:/AndroidStudio/StudioChendraApp/app/src/main/res/layouts/login/layout/activity_register.xml" value="0.10553278688524591" />
+        <entry key="..\:/AndroidStudio/StudioChendraApp/app/src/main/res/layouts/order/layout/dropdown_layanan.xml" value="0.12023270846800259" />
       </map>
     </option>
   </component>

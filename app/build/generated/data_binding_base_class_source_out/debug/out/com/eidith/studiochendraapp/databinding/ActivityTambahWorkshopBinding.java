@@ -10,6 +10,7 @@ import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.eidith.studiochendraapp.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -78,37 +79,37 @@ public final class ActivityTambahWorkshopBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnDatePickerWorkshop;
-      Button btnDatePickerWorkshop = rootView.findViewById(id);
+      Button btnDatePickerWorkshop = ViewBindings.findChildViewById(rootView, id);
       if (btnDatePickerWorkshop == null) {
         break missingId;
       }
 
       id = R.id.btnSelectImageWorkshop;
-      Button btnSelectImageWorkshop = rootView.findViewById(id);
+      Button btnSelectImageWorkshop = ViewBindings.findChildViewById(rootView, id);
       if (btnSelectImageWorkshop == null) {
         break missingId;
       }
 
       id = R.id.btnSelectVideoWorkshop;
-      Button btnSelectVideoWorkshop = rootView.findViewById(id);
+      Button btnSelectVideoWorkshop = ViewBindings.findChildViewById(rootView, id);
       if (btnSelectVideoWorkshop == null) {
         break missingId;
       }
 
       id = R.id.btnTambahWorkshop;
-      Button btnTambahWorkshop = rootView.findViewById(id);
+      Button btnTambahWorkshop = ViewBindings.findChildViewById(rootView, id);
       if (btnTambahWorkshop == null) {
         break missingId;
       }
 
       id = R.id.etDeskripsiWorkshop;
-      EditText etDeskripsiWorkshop = rootView.findViewById(id);
+      EditText etDeskripsiWorkshop = ViewBindings.findChildViewById(rootView, id);
       if (etDeskripsiWorkshop == null) {
         break missingId;
       }
 
       id = R.id.etJudulWorkshop;
-      EditText etJudulWorkshop = rootView.findViewById(id);
+      EditText etJudulWorkshop = ViewBindings.findChildViewById(rootView, id);
       if (etJudulWorkshop == null) {
         break missingId;
       }

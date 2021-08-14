@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.eidith.studiochendraapp.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -69,25 +70,25 @@ public final class ItemWorkshopBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.imgGambarWorkshop;
-      ImageView imgGambarWorkshop = rootView.findViewById(id);
+      ImageView imgGambarWorkshop = ViewBindings.findChildViewById(rootView, id);
       if (imgGambarWorkshop == null) {
         break missingId;
       }
 
       id = R.id.textIdWorkshop;
-      TextView textIdWorkshop = rootView.findViewById(id);
+      TextView textIdWorkshop = ViewBindings.findChildViewById(rootView, id);
       if (textIdWorkshop == null) {
         break missingId;
       }
 
       id = R.id.textJudulWorkshop;
-      TextView textJudulWorkshop = rootView.findViewById(id);
+      TextView textJudulWorkshop = ViewBindings.findChildViewById(rootView, id);
       if (textJudulWorkshop == null) {
         break missingId;
       }
 
       id = R.id.tvTanggalWorkshop;
-      TextView tvTanggalWorkshop = rootView.findViewById(id);
+      TextView tvTanggalWorkshop = ViewBindings.findChildViewById(rootView, id);
       if (tvTanggalWorkshop == null) {
         break missingId;
       }

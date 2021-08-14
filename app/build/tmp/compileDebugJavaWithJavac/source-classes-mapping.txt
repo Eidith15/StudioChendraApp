@@ -5,16 +5,8 @@ com/eidith/studiochendraapp/model/RegistrasiOrderModel.java
 com/eidith/studiochendraapp/activity/portofolio/DetailPortofolioActivity.java
  com.eidith.studiochendraapp.activity.portofolio.DetailPortofolioActivity
  com.eidith.studiochendraapp.activity.portofolio.DetailPortofolioActivity$1
-com/eidith/studiochendraapp/activity/workshop/TambahWorkshopActivity.java
- com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity
- com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity$1
- com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity$2
- com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity$3
- com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity$4
- com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity$5
- com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity$5$1
- com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity$5$2
- com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity$6
+com/eidith/studiochendraapp/databinding/ActivityDetailWorkshopBinding.java
+ com.eidith.studiochendraapp.databinding.ActivityDetailWorkshopBinding
 com/eidith/studiochendraapp/databinding/ActivityTambahRegistrasiOrderBinding.java
  com.eidith.studiochendraapp.databinding.ActivityTambahRegistrasiOrderBinding
 com/eidith/studiochendraapp/databinding/ActivityTambahLayananBinding.java
@@ -31,52 +23,36 @@ com/eidith/studiochendraapp/databinding/ItemRegistrasiOrderBinding.java
  com.eidith.studiochendraapp.databinding.ItemRegistrasiOrderBinding
 com/eidith/studiochendraapp/databinding/ActivityDetailPortofolioBinding.java
  com.eidith.studiochendraapp.databinding.ActivityDetailPortofolioBinding
-com/eidith/studiochendraapp/activity/layanan/TambahLayananActivity.java
- com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity
- com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity$1
- com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity$2
- com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity$3
- com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity$4
- com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity$5
- com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity$5$1
- com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity$5$2
- com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity$6
-com/eidith/studiochendraapp/activity/login/LoginActivity.java
- com.eidith.studiochendraapp.activity.login.LoginActivity
- com.eidith.studiochendraapp.activity.login.LoginActivity$1
- com.eidith.studiochendraapp.activity.login.LoginActivity$2
- com.eidith.studiochendraapp.activity.login.LoginActivity$3
-com/eidith/studiochendraapp/activity/akun/AkunActivity.java
- com.eidith.studiochendraapp.activity.akun.AkunActivity
-com/eidith/studiochendraapp/model/WorkshopModel.java
- com.eidith.studiochendraapp.model.WorkshopModel
+com/eidith/studiochendraapp/databinding/ItemLayananBinding.java
+ com.eidith.studiochendraapp.databinding.ItemLayananBinding
+com/eidith/studiochendraapp/databinding/ActivityDetailArtikelBinding.java
+ com.eidith.studiochendraapp.databinding.ActivityDetailArtikelBinding
+com/eidith/studiochendraapp/databinding/ActivityTambahWorkshopBinding.java
+ com.eidith.studiochendraapp.databinding.ActivityTambahWorkshopBinding
 com/eidith/studiochendraapp/model/PortofolioModel.java
  com.eidith.studiochendraapp.model.PortofolioModel
+com/eidith/studiochendraapp/model/WorkshopModel.java
+ com.eidith.studiochendraapp.model.WorkshopModel
 com/eidith/studiochendraapp/databinding/ActivityDetailRegistrasiOrderBinding.java
  com.eidith.studiochendraapp.databinding.ActivityDetailRegistrasiOrderBinding
 com/eidith/studiochendraapp/model/LoginResponse.java
  com.eidith.studiochendraapp.model.LoginResponse
-com/eidith/studiochendraapp/model/ArtikelModel.java
- com.eidith.studiochendraapp.model.ArtikelModel
-com/eidith/studiochendraapp/model/UserModel.java
- com.eidith.studiochendraapp.model.UserModel
-com/eidith/studiochendraapp/databinding/ActivityLayananBinding.java
- com.eidith.studiochendraapp.databinding.ActivityLayananBinding
-com/eidith/studiochendraapp/databinding/ActivityLoginBinding.java
- com.eidith.studiochendraapp.databinding.ActivityLoginBinding
 com/eidith/studiochendraapp/databinding/ActivityRegisterBinding.java
  com.eidith.studiochendraapp.databinding.ActivityRegisterBinding
+com/eidith/studiochendraapp/databinding/ActivityLoginBinding.java
+ com.eidith.studiochendraapp.databinding.ActivityLoginBinding
+com/eidith/studiochendraapp/databinding/ActivityLayananBinding.java
+ com.eidith.studiochendraapp.databinding.ActivityLayananBinding
+com/eidith/studiochendraapp/model/UserModel.java
+ com.eidith.studiochendraapp.model.UserModel
+com/eidith/studiochendraapp/model/ArtikelModel.java
+ com.eidith.studiochendraapp.model.ArtikelModel
 com/eidith/studiochendraapp/databinding/DropdownLayananBinding.java
  com.eidith.studiochendraapp.databinding.DropdownLayananBinding
-com/eidith/studiochendraapp/activity/portofolio/TambahPortofolioActivity.java
- com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity
- com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity$1
- com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity$2
- com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity$2$1
- com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity$2$2
- com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity$3
 com/eidith/studiochendraapp/storage/SharedPrefManager.java
  com.eidith.studiochendraapp.storage.SharedPrefManager
+com/eidith/studiochendraapp/activity/order/DetailRegistrasiOrder.java
+ com.eidith.studiochendraapp.activity.order.DetailRegistrasiOrder
 com/eidith/studiochendraapp/databinding/ActivityTambahArtikelBinding.java
  com.eidith.studiochendraapp.databinding.ActivityTambahArtikelBinding
 com/eidith/studiochendraapp/databinding/ItemPortofolioBinding.java
@@ -96,6 +72,67 @@ com/eidith/studiochendraapp/adapter/RecyclerViewAdapterPortofolio.java
  com.eidith.studiochendraapp.adapter.RecyclerViewAdapterPortofolio$ViewHolder
 com/eidith/studiochendraapp/databinding/ActivityWorkshopBinding.java
  com.eidith.studiochendraapp.databinding.ActivityWorkshopBinding
+com/eidith/studiochendraapp/adapter/RecyclerViewAdapterLayanan.java
+ com.eidith.studiochendraapp.adapter.RecyclerViewAdapterLayanan
+ com.eidith.studiochendraapp.adapter.RecyclerViewAdapterLayanan$OnItemClickListener
+ com.eidith.studiochendraapp.adapter.RecyclerViewAdapterLayanan$ViewHolder
+com/eidith/studiochendraapp/databinding/ItemWorkshopBinding.java
+ com.eidith.studiochendraapp.databinding.ItemWorkshopBinding
+com/eidith/studiochendraapp/databinding/ActivityDetailLayananBinding.java
+ com.eidith.studiochendraapp.databinding.ActivityDetailLayananBinding
+com/eidith/studiochendraapp/databinding/ActivityListRegistrasiOrderBinding.java
+ com.eidith.studiochendraapp.databinding.ActivityListRegistrasiOrderBinding
+com/eidith/studiochendraapp/BuildConfig.java
+ com.eidith.studiochendraapp.BuildConfig
+com/eidith/studiochendraapp/databinding/ActivityMainBinding.java
+ com.eidith.studiochendraapp.databinding.ActivityMainBinding
+com/eidith/studiochendraapp/adapter/RecyclerViewAdapterArtikel.java
+ com.eidith.studiochendraapp.adapter.RecyclerViewAdapterArtikel
+ com.eidith.studiochendraapp.adapter.RecyclerViewAdapterArtikel$OnItemClickListener
+ com.eidith.studiochendraapp.adapter.RecyclerViewAdapterArtikel$ViewHolder
+com/eidith/studiochendraapp/databinding/ActivityTambahPortofolioBinding.java
+ com.eidith.studiochendraapp.databinding.ActivityTambahPortofolioBinding
+com/eidith/studiochendraapp/adapter/RecyclerViewAdapterRegistrasiOrder.java
+ com.eidith.studiochendraapp.adapter.RecyclerViewAdapterRegistrasiOrder
+ com.eidith.studiochendraapp.adapter.RecyclerViewAdapterRegistrasiOrder$OnItemClickListener
+ com.eidith.studiochendraapp.adapter.RecyclerViewAdapterRegistrasiOrder$ViewHolder
+com/eidith/studiochendraapp/model/LayananModel.java
+ com.eidith.studiochendraapp.model.LayananModel
+com/eidith/studiochendraapp/api/APIClient.java
+ com.eidith.studiochendraapp.api.APIClient
+com/eidith/studiochendraapp/databinding/ActivityArtikelBinding.java
+ com.eidith.studiochendraapp.databinding.ActivityArtikelBinding
+com/eidith/studiochendraapp/activity/layanan/TambahLayananActivity.java
+ com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity
+ com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity$1
+ com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity$2
+ com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity$3
+ com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity$4
+ com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity$5
+ com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity$5$1
+ com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity$5$2
+ com.eidith.studiochendraapp.activity.layanan.TambahLayananActivity$6
+com/eidith/studiochendraapp/activity/login/LoginActivity.java
+ com.eidith.studiochendraapp.activity.login.LoginActivity
+ com.eidith.studiochendraapp.activity.login.LoginActivity$1
+ com.eidith.studiochendraapp.activity.login.LoginActivity$2
+ com.eidith.studiochendraapp.activity.login.LoginActivity$3
+com/eidith/studiochendraapp/activity/workshop/TambahWorkshopActivity.java
+ com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity
+ com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity$1
+ com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity$2
+ com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity$3
+ com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity$4
+ com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity$5
+ com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity$5$1
+ com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity$5$2
+ com.eidith.studiochendraapp.activity.workshop.TambahWorkshopActivity$6
+com/eidith/studiochendraapp/activity/akun/AkunActivity.java
+ com.eidith.studiochendraapp.activity.akun.AkunActivity
+com/eidith/studiochendraapp/activity/order/ListRegistrasiOrderActivity.java
+ com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity
+ com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity$1
+ com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity$2
 com/eidith/studiochendraapp/activity/login/RegisterActivity.java
  com.eidith.studiochendraapp.activity.login.RegisterActivity
  com.eidith.studiochendraapp.activity.login.RegisterActivity$1
@@ -120,16 +157,25 @@ com/eidith/studiochendraapp/activity/artikel/ArtikelActivity.java
  com.eidith.studiochendraapp.activity.artikel.ArtikelActivity
  com.eidith.studiochendraapp.activity.artikel.ArtikelActivity$1
  com.eidith.studiochendraapp.activity.artikel.ArtikelActivity$2
+com/eidith/studiochendraapp/activity/portofolio/TambahPortofolioActivity.java
+ com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity
+ com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity$1
+ com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity$2
+ com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity$2$1
+ com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity$2$2
+ com.eidith.studiochendraapp.activity.portofolio.TambahPortofolioActivity$3
 com/eidith/studiochendraapp/activity/layanan/DetailLayananActivity.java
  com.eidith.studiochendraapp.activity.layanan.DetailLayananActivity
  com.eidith.studiochendraapp.activity.layanan.DetailLayananActivity$1
  com.eidith.studiochendraapp.activity.layanan.DetailLayananActivity$2
-com/eidith/studiochendraapp/BuildConfig.java
- com.eidith.studiochendraapp.BuildConfig
 com/eidith/studiochendraapp/activity/workshop/WorkshopActivity.java
  com.eidith.studiochendraapp.activity.workshop.WorkshopActivity
  com.eidith.studiochendraapp.activity.workshop.WorkshopActivity$1
  com.eidith.studiochendraapp.activity.workshop.WorkshopActivity$2
+com/eidith/studiochendraapp/activity/portofolio/PortofolioActivity.java
+ com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity
+ com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity$1
+ com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity$2
 com/eidith/studiochendraapp/activity/order/TambahRegistrasiOrderActivity.java
  com.eidith.studiochendraapp.activity.order.TambahRegistrasiOrderActivity
  com.eidith.studiochendraapp.activity.order.TambahRegistrasiOrderActivity$1
@@ -138,56 +184,10 @@ com/eidith/studiochendraapp/activity/order/TambahRegistrasiOrderActivity.java
  com.eidith.studiochendraapp.activity.order.TambahRegistrasiOrderActivity$2
  com.eidith.studiochendraapp.activity.order.TambahRegistrasiOrderActivity$2$1
  com.eidith.studiochendraapp.activity.order.TambahRegistrasiOrderActivity$3
-com/eidith/studiochendraapp/activity/portofolio/PortofolioActivity.java
- com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity
- com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity$1
- com.eidith.studiochendraapp.activity.portofolio.PortofolioActivity$2
 com/eidith/studiochendraapp/activity/layanan/LayananActivity.java
  com.eidith.studiochendraapp.activity.layanan.LayananActivity
  com.eidith.studiochendraapp.activity.layanan.LayananActivity$1
  com.eidith.studiochendraapp.activity.layanan.LayananActivity$2
-com/eidith/studiochendraapp/model/LayananModel.java
- com.eidith.studiochendraapp.model.LayananModel
-com/eidith/studiochendraapp/api/APIClient.java
- com.eidith.studiochendraapp.api.APIClient
-com/eidith/studiochendraapp/databinding/ActivityArtikelBinding.java
- com.eidith.studiochendraapp.databinding.ActivityArtikelBinding
-com/eidith/studiochendraapp/databinding/ItemLayananBinding.java
- com.eidith.studiochendraapp.databinding.ItemLayananBinding
-com/eidith/studiochendraapp/databinding/ActivityDetailArtikelBinding.java
- com.eidith.studiochendraapp.databinding.ActivityDetailArtikelBinding
-com/eidith/studiochendraapp/activity/order/ListRegistrasiOrderActivity.java
- com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity
- com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity$1
- com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity$2
-com/eidith/studiochendraapp/adapter/RecyclerViewAdapterArtikel.java
- com.eidith.studiochendraapp.adapter.RecyclerViewAdapterArtikel
- com.eidith.studiochendraapp.adapter.RecyclerViewAdapterArtikel$OnItemClickListener
- com.eidith.studiochendraapp.adapter.RecyclerViewAdapterArtikel$ViewHolder
-com/eidith/studiochendraapp/databinding/ActivityTambahPortofolioBinding.java
- com.eidith.studiochendraapp.databinding.ActivityTambahPortofolioBinding
-com/eidith/studiochendraapp/databinding/ActivityMainBinding.java
- com.eidith.studiochendraapp.databinding.ActivityMainBinding
-com/eidith/studiochendraapp/activity/order/DetailRegistrasiOrder.java
- com.eidith.studiochendraapp.activity.order.DetailRegistrasiOrder
-com/eidith/studiochendraapp/databinding/ActivityListRegistrasiOrderBinding.java
- com.eidith.studiochendraapp.databinding.ActivityListRegistrasiOrderBinding
-com/eidith/studiochendraapp/databinding/ActivityDetailLayananBinding.java
- com.eidith.studiochendraapp.databinding.ActivityDetailLayananBinding
-com/eidith/studiochendraapp/adapter/RecyclerViewAdapterLayanan.java
- com.eidith.studiochendraapp.adapter.RecyclerViewAdapterLayanan
- com.eidith.studiochendraapp.adapter.RecyclerViewAdapterLayanan$OnItemClickListener
- com.eidith.studiochendraapp.adapter.RecyclerViewAdapterLayanan$ViewHolder
-com/eidith/studiochendraapp/databinding/ItemWorkshopBinding.java
- com.eidith.studiochendraapp.databinding.ItemWorkshopBinding
-com/eidith/studiochendraapp/adapter/RecyclerViewAdapterRegistrasiOrder.java
- com.eidith.studiochendraapp.adapter.RecyclerViewAdapterRegistrasiOrder
- com.eidith.studiochendraapp.adapter.RecyclerViewAdapterRegistrasiOrder$OnItemClickListener
- com.eidith.studiochendraapp.adapter.RecyclerViewAdapterRegistrasiOrder$ViewHolder
-com/eidith/studiochendraapp/databinding/ActivityTambahWorkshopBinding.java
- com.eidith.studiochendraapp.databinding.ActivityTambahWorkshopBinding
-com/eidith/studiochendraapp/databinding/ActivityDetailWorkshopBinding.java
- com.eidith.studiochendraapp.databinding.ActivityDetailWorkshopBinding
 com/eidith/studiochendraapp/activity/artikel/DetailArtikelActivity.java
  com.eidith.studiochendraapp.activity.artikel.DetailArtikelActivity
  com.eidith.studiochendraapp.activity.artikel.DetailArtikelActivity$1

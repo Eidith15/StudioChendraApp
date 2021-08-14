@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.eidith.studiochendraapp.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -66,19 +67,19 @@ public final class ActivityWorkshopBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.pbarWorkshop;
-      ProgressBar pbarWorkshop = rootView.findViewById(id);
+      ProgressBar pbarWorkshop = ViewBindings.findChildViewById(rootView, id);
       if (pbarWorkshop == null) {
         break missingId;
       }
 
       id = R.id.refreshWorkshop;
-      SwipeRefreshLayout refreshWorkshop = rootView.findViewById(id);
+      SwipeRefreshLayout refreshWorkshop = ViewBindings.findChildViewById(rootView, id);
       if (refreshWorkshop == null) {
         break missingId;
       }
 
       id = R.id.rvWorkshop;
-      RecyclerView rvWorkshop = rootView.findViewById(id);
+      RecyclerView rvWorkshop = ViewBindings.findChildViewById(rootView, id);
       if (rvWorkshop == null) {
         break missingId;
       }
