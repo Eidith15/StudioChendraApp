@@ -1,15 +1,17 @@
 package com.eidith.studiochendraapp.activity.order;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.eidith.studiochendraapp.R;
 import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterRegistrasiOrder;
@@ -24,7 +26,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ListRegistrasiOrderActivity extends AppCompatActivity implements RecyclerViewAdapterRegistrasiOrder.OnItemClickListener{
+public class ListRegistrasiOrderActivity extends AppCompatActivity implements RecyclerViewAdapterRegistrasiOrder.OnItemClickListener {
+
+    private static final String LOG_TAG = "ListRegistrasiOrderActivity";
 
     private SwipeRefreshLayout refreshRegistrasiOrder;
     private RecyclerView rvListRegistrasi;
@@ -52,31 +56,37 @@ public class ListRegistrasiOrderActivity extends AppCompatActivity implements Re
 
         //Set refresh swipe to get data
         refreshRegistrasiOrder.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @SuppressLint("LongLogTag")
             @Override
             public void onRefresh() {
                 refreshRegistrasiOrder.setRefreshing(true);
+                Log.v(LOG_TAG, "Start Retrieve Data");
                 retrieveData();
+                Log.v(LOG_TAG, "Finish Retrieve Data");
                 refreshRegistrasiOrder.setRefreshing(false);
             }
         });
     }
 
+    @SuppressLint("LongLogTag")
     @Override
     protected void onResume() {
         super.onResume();
+        Log.v(LOG_TAG, "Start Retrieve Data");
         retrieveData();
+        Log.v(LOG_TAG, "Finish Retrieve Data");
     }
 
-    public void retrieveData(){
+    public void retrieveData() {
         pbarRegistrasi.setVisibility(View.VISIBLE);
 
         //Conncet to server to parse Json and get data with Gson
-//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
-//        Call<RegistrasiOrderModel> tampilData = ardData.RetrieveDataRegistrasiOrder();
+        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+        Call<RegistrasiOrderModel> tampilData = ardData.RetrieveDataRegistrasiOrder();
 
         //Conncet to server to parse Json and get data with Moshi
-        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
-        Call<RegistrasiOrderModel> tampilData = ardData.RetrieveDataRegistrasiOrder();
+//        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
+//        Call<RegistrasiOrderModel> tampilData = ardData.RetrieveDataRegistrasiOrder();
 
         tampilData.enqueue(new Callback<RegistrasiOrderModel>() {
             @Override
@@ -93,7 +103,7 @@ public class ListRegistrasiOrderActivity extends AppCompatActivity implements Re
 
             @Override
             public void onFailure(Call<RegistrasiOrderModel> call, Throwable t) {
-                Toast.makeText(ListRegistrasiOrderActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ListRegistrasiOrderActivity.this, "Gagal Menghubungi Server : " + t.getMessage(), Toast.LENGTH_SHORT).show();
 
                 pbarRegistrasi.setVisibility(View.GONE);
             }

@@ -1,8 +1,5 @@
 package com.eidith.studiochendraapp.activity.artikel;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -15,15 +12,19 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.api.APIClient;
+import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.model.ArtikelModel;
 
 import java.io.File;
@@ -38,10 +39,12 @@ import retrofit2.Response;
 
 public class TambahArtikelActivity extends AppCompatActivity {
 
+    private static final String LOG_TAG = "TambahArtikelActivity";
+
     private static final int IMG_REQUEST_CODE = 0;
     private static final int VID_REQUEST_CODE = 1;
     private static final int REQUEST_EXTERNAL_STORAGE = 2;
-    private static String[] PERMISSIONS_STORAGE = {
+    private static final String[] PERMISSIONS_STORAGE = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
@@ -81,8 +84,8 @@ public class TambahArtikelActivity extends AppCompatActivity {
         dateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                int selectedmonth = month+1;
-                String date = year+"-"+selectedmonth+"-"+dayOfMonth;
+                int selectedmonth = month + 1;
+                String date = year + "-" + selectedmonth + "-" + dayOfMonth;
                 btnDatePickerArtikel.setText(date);
                 btnDatePickerArtikel.setError(null);
             }
@@ -96,12 +99,11 @@ public class TambahArtikelActivity extends AppCompatActivity {
         });
 
 
-
         btnSelectImageArtikel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Select Image
-                Intent galleryIntent = new Intent (Intent.ACTION_PICK,
+                Intent galleryIntent = new Intent(Intent.ACTION_PICK,
                         MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(galleryIntent, IMG_REQUEST_CODE);
             }
@@ -111,7 +113,7 @@ public class TambahArtikelActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Select Video
-                Intent galleryIntent = new Intent (Intent.ACTION_PICK,
+                Intent galleryIntent = new Intent(Intent.ACTION_PICK,
                         MediaStore.Video.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(galleryIntent, VID_REQUEST_CODE);
             }
@@ -128,15 +130,15 @@ public class TambahArtikelActivity extends AppCompatActivity {
                 tanggal_artikel = btnDatePickerArtikel.getText().toString();
 
                 //Checking Null
-                if (judul_artikel.trim().equals("")){
+                if (judul_artikel.trim().equals("")) {
                     etJudulArtikel.setError("Harap Masukan Judul");
-                } else if (deskripsi_artikel.trim().equals("")){
+                } else if (deskripsi_artikel.trim().equals("")) {
                     etDeskripsiArtikel.setError("Harap Masukan Deskripsi");
-                } else if (tanggal_artikel.trim().equals("Pilih Tanggal")){
+                } else if (tanggal_artikel.trim().equals("Pilih Tanggal")) {
                     btnDatePickerArtikel.setError("Harap Masukan Tanggal");
-                } else if (gambar_artikel.trim().equals("Tambah Gambar")){
+                } else if (gambar_artikel.trim().equals("Tambah Gambar")) {
                     btnSelectImageArtikel.setError("Harap Pilih Gambar");
-                } else if (video_artikel.trim().equals("Tambah Video")){
+                } else if (video_artikel.trim().equals("Tambah Video")) {
                     btnSelectVideoArtikel.setError("Harap Pilih Video");
                 } else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(TambahArtikelActivity.this);
@@ -147,7 +149,9 @@ public class TambahArtikelActivity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
+                            Log.v(LOG_TAG, "Start Upload Data");
                             UploadData();
+                            Log.v(LOG_TAG, "Finish Upload Data");
                         }
                     });
                     builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -204,7 +208,7 @@ public class TambahArtikelActivity extends AppCompatActivity {
         }
     }
 
-    private void UploadData(){
+    private void UploadData() {
         progressDialog.show();
 
         //Set path image to file type
@@ -221,26 +225,26 @@ public class TambahArtikelActivity extends AppCompatActivity {
         MultipartBody.Part videopart = MultipartBody.Part.createFormData("video_artikel", fileVideo.getName(), video);
 
         //Execute createData to json method with gson
-//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
-//        Call<ArtikelModel> createData = ardData.CreateDataArtikel(judul, deskripsi, tanggal, imagepart, videopart);
+        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+        Call<ArtikelModel> createData = ardData.CreateDataArtikel(judul, deskripsi, tanggal, imagepart, videopart);
 
         //Execute createData to json method with moshi
-        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
-        Call<ArtikelModel> createData = ardData.CreateDataArtikel(judul, deskripsi, tanggal, imagepart, videopart);
+//        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
+//        Call<ArtikelModel> createData = ardData.CreateDataArtikel(judul, deskripsi, tanggal, imagepart, videopart);
 
         createData.enqueue(new Callback<ArtikelModel>() {
             @Override
             public void onResponse(Call<ArtikelModel> call, Response<ArtikelModel> response) {
                 int kode = response.body().getCode();
                 String pesan = response.body().getMessage();
-                Toast.makeText(TambahArtikelActivity.this, "Kode : "+kode+" | Pesan : "+pesan, Toast.LENGTH_SHORT).show();
+                Toast.makeText(TambahArtikelActivity.this, "Kode : " + kode + " | Pesan : " + pesan, Toast.LENGTH_SHORT).show();
                 progressDialog.dismiss();
                 finish();
             }
 
             @Override
             public void onFailure(Call<ArtikelModel> call, Throwable t) {
-                Toast.makeText(TambahArtikelActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(TambahArtikelActivity.this, "Gagal Menghubungi Server : " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -258,7 +262,7 @@ public class TambahArtikelActivity extends AppCompatActivity {
         }
     }
 
-    private void showDatePickerDialog(){
+    private void showDatePickerDialog() {
         DatePickerDialog datePickerDialog = new DatePickerDialog(
                 TambahArtikelActivity.this,
                 dateSetListener,

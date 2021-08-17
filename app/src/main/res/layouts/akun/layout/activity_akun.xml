@@ -1,150 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".activity.akun.AkunActivity">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/refreshAkun"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="5dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp">
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="5dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Akun"/>
-
-
-        <TextView
-            android:id="@+id/tvAkunUsername"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Username"
-            android:drawableLeft="@drawable/ic_username"
-            android:textColor="@color/grey"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            android:layout_gravity="start"
-            android:drawablePadding="10dp"
-            />
+            android:orientation="vertical">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/grey"/>
-
-        <TextView
-            android:id="@+id/tvAkunPasword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Password"
-            android:drawableLeft="@drawable/ic_password"
-            android:textColor="@color/grey"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            android:layout_gravity="start"
-            android:inputType="textPassword"
-            android:drawablePadding="10dp"
-            />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Akun" />
 
 
-        <TextView
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Data Diri"/>
+            <TextView
+                android:id="@+id/tvAkunUsername"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:drawableLeft="@drawable/ic_username"
+                android:drawablePadding="10dp"
+                android:text="Username"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/tvAkunPasword"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:drawableLeft="@drawable/ic_password"
+                android:drawablePadding="10dp"
+                android:inputType="textPassword"
+                android:text="Password"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
 
 
-        <TextView
-            android:id="@+id/tvAkunNama"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nama"
-            android:drawableLeft="@drawable/ic_username"
-            android:textColor="@color/grey"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            android:layout_gravity="start"
-            android:drawablePadding="10dp"
-            />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/grey"/>
-
-        <TextView
-            android:id="@+id/tvAkunEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email"
-            android:drawableLeft="@drawable/ic_email"
-            android:textColor="@color/grey"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            android:layout_gravity="start"
-            android:drawablePadding="10dp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/grey"/>
-
-        <TextView
-            android:id="@+id/tvAkunNoHp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No. Handphone"
-            android:drawableLeft="@drawable/ic_nohp"
-            android:textColor="@color/grey"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            android:layout_gravity="start"
-            android:drawablePadding="10dp"
-            />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Data Diri" />
 
 
-        <Button
-            android:id="@+id/btnAkunLogout"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="LOGOUT"
-            android:textColor="@color/white"
-            />
+            <TextView
+                android:id="@+id/tvAkunNama"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:drawableLeft="@drawable/ic_username"
+                android:drawablePadding="10dp"
+                android:text="Nama"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="15sp" />
 
-    </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/tvAkunEmail"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:text="Email"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/tvAkunNoHp"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:drawableLeft="@drawable/ic_nohp"
+                android:drawablePadding="10dp"
+                android:text="No. Handphone"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+
+            <Button
+                android:id="@+id/btnAkunLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="LOGOUT"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
@@ -152,7 +146,7 @@
         android:id="@+id/pbarAkun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
 
 </RelativeLayout>

@@ -7,7 +7,7 @@ public class PortofolioModel {
     private int id_portofolio;
     private String judul_portofolio, deskripsi_foto, gambar_foto;
 
-    private int  code;
+    private int code;
     private String message;
     private List<PortofolioModel> data_portofolio;
 

@@ -1,20 +1,21 @@
 package com.eidith.studiochendraapp.activity.layanan;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.Toast;
-
 import com.eidith.studiochendraapp.R;
 import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterLayanan;
-import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.api.APIClient;
+import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.model.LayananModel;
 
 import java.util.ArrayList;
@@ -24,7 +25,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class LayananActivity extends AppCompatActivity implements RecyclerViewAdapterLayanan.OnItemClickListener{
+public class LayananActivity extends AppCompatActivity implements RecyclerViewAdapterLayanan.OnItemClickListener {
+
+    private static final String LOG_TAG = "LayananActivity";
 
     private SwipeRefreshLayout refreshLayanan;
     private RecyclerView rvLayanan;
@@ -53,7 +56,9 @@ public class LayananActivity extends AppCompatActivity implements RecyclerViewAd
             @Override
             public void onRefresh() {
                 refreshLayanan.setRefreshing(true);
+                Log.v(LOG_TAG, "Start Retrieve Data");
                 retrieveData();
+                Log.v(LOG_TAG, "Finish Retrieve Data");
                 refreshLayanan.setRefreshing(false);
             }
         });
@@ -62,19 +67,21 @@ public class LayananActivity extends AppCompatActivity implements RecyclerViewAd
     @Override
     protected void onResume() {
         super.onResume();
+        Log.v(LOG_TAG, "Start Retrieve Data");
         retrieveData();
+        Log.v(LOG_TAG, "Finish Retrieve Data");
     }
 
-    public void retrieveData(){
+    public void retrieveData() {
         pbarLayanan.setVisibility(View.VISIBLE);
 
 //        //Conncet to server to parse Json and get data with Gson
-//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
-//        Call<LayananModel> tampilData = ardData.RetrieveDataLayanan();
+        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+        Call<LayananModel> tampilData = ardData.RetrieveDataLayanan();
 
         //Conncet to server to parse Json and get data with Moshi
-        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
-        Call<LayananModel> tampilData = ardData.RetrieveDataLayanan();
+//        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
+//        Call<LayananModel> tampilData = ardData.RetrieveDataLayanan();
 
         tampilData.enqueue(new Callback<LayananModel>() {
             @Override
@@ -91,7 +98,7 @@ public class LayananActivity extends AppCompatActivity implements RecyclerViewAd
 
             @Override
             public void onFailure(Call<LayananModel> call, Throwable t) {
-                Toast.makeText(LayananActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(LayananActivity.this, "Gagal Menghubungi Server : " + t.getMessage(), Toast.LENGTH_SHORT).show();
 
                 pbarLayanan.setVisibility(View.GONE);
             }

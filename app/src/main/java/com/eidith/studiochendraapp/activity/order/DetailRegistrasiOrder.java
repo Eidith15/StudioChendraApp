@@ -55,7 +55,7 @@ public class DetailRegistrasiOrder extends AppCompatActivity {
 
         tvDetailIdRegistrasi.setText(id_registrasi);
         Glide.with(DetailRegistrasiOrder.this)
-                .load(APIClient.imageURL+gambar_layanan)
+                .load(APIClient.imageURL + gambar_layanan)
                 .apply(new RequestOptions().override(800, 400))
                 .into(ivDetailRegistrasiLayanan);
         tvDetailRegistrasiJudulLayanan.setText(judul_layanan);

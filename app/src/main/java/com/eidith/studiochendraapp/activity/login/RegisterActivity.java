@@ -70,19 +70,19 @@ public class RegisterActivity extends AppCompatActivity {
                 password_user = etRegisterPassword.getText().toString();
                 confirm_password_user = etRegisterConfirmPassword.getText().toString();
 
-                if (nama_user.trim().equals("")){
+                if (nama_user.trim().equals("")) {
                     etRegisterNama.setError("Harap Masukan Nama");
-                } else if (email_user.trim().equals("") || email_user.contains(" ")){
+                } else if (email_user.trim().equals("") || email_user.contains(" ")) {
                     etRegisterEmail.setError("Harap Masukan Email/Ada spasi");
-                } else if (no_handphone_user.trim().equals("") || no_handphone_user.contains(" ")){
+                } else if (no_handphone_user.trim().equals("") || no_handphone_user.contains(" ")) {
                     etRegisterNohp.setError("Harap Masukan No HP");
-                } else if (username_user.trim().equals("") || username_user.contains(" ")){
+                } else if (username_user.trim().equals("") || username_user.contains(" ")) {
                     etRegisterUsername.setError("Harap Masukan Username/Ada spasi");
-                } else if (password_user.trim().equals("") || password_user.contains(" ")){
+                } else if (password_user.trim().equals("") || password_user.contains(" ")) {
                     etRegisterPassword.setError("Harap Masukan Password/Ada spasi");
-                } else if (confirm_password_user.trim().equals("") || confirm_password_user.contains(" ")){
+                } else if (confirm_password_user.trim().equals("") || confirm_password_user.contains(" ")) {
                     etRegisterConfirmPassword.setError("Harap Masukan Konfirmasi Password");
-                } else if (!confirm_password_user.trim().equals(password_user.trim())){
+                } else if (!confirm_password_user.trim().equals(password_user.trim())) {
                     etRegisterConfirmPassword.setError("Konfirmasi Password tidak sama");
                 } else {
                     registrasiAkun();
@@ -92,7 +92,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-    public void registrasiAkun(){
+    public void registrasiAkun() {
         progressDialog.show();
 
         //Register User with Gson
@@ -117,7 +117,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
-                Toast.makeText(RegisterActivity.this, "Pesan : "+t, Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this, "Pesan : " + t, Toast.LENGTH_SHORT).show();
                 progressDialog.dismiss();
             }
         });

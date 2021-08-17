@@ -9,20 +9,20 @@ public class SharedPrefManager {
 
     private static final String SHARED_PREF_NAME = "shared_pref";
     private static SharedPrefManager instance;
-    private Context context;
+    private final Context context;
 
-    private SharedPrefManager(Context context){
+    private SharedPrefManager(Context context) {
         this.context = context;
     }
 
-    public static synchronized SharedPrefManager getInstance(Context context){
-        if(instance == null){
+    public static synchronized SharedPrefManager getInstance(Context context) {
+        if (instance == null) {
             instance = new SharedPrefManager(context);
         }
         return instance;
     }
 
-    public void saveUser(UserModel userModel){
+    public void saveUser(UserModel userModel) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
@@ -38,16 +38,12 @@ public class SharedPrefManager {
 
     }
 
-    public boolean isLoggedin(){
+    public boolean isLoggedin() {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        if (sharedPreferences.getInt("id_user", -1) != -1){
-            return true;
-        } else {
-            return false;
-        }
+        return sharedPreferences.getInt("id_user", -1) != -1;
     }
 
-    public UserModel getUserData(){
+    public UserModel getUserData() {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         UserModel userModel = new UserModel(
                 sharedPreferences.getInt("id_user", -1),
@@ -61,7 +57,7 @@ public class SharedPrefManager {
         return userModel;
     }
 
-    public void clear(){
+    public void clear() {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();

@@ -7,7 +7,7 @@ public class ArtikelModel {
     private int id_artikel;
     private String judul_artikel, deskripsi_artikel, gambar_artikel, video_artikel, tanggal_artikel;
 
-    private int  code;
+    private int code;
     private String message;
     private List<ArtikelModel> data_artikel;
 

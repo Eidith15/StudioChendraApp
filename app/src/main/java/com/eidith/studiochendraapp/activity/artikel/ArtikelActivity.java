@@ -2,6 +2,7 @@ package com.eidith.studiochendraapp.activity.artikel;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -13,8 +14,8 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.eidith.studiochendraapp.R;
 import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterArtikel;
-import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.api.APIClient;
+import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.model.ArtikelModel;
 
 import java.util.ArrayList;
@@ -25,6 +26,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ArtikelActivity extends AppCompatActivity implements RecyclerViewAdapterArtikel.OnItemClickListener {
+
+    private static final String LOG_TAG = "ArtikelActivity";
 
     private SwipeRefreshLayout refreshArtikel;
     private RecyclerView rvArtikel;
@@ -46,7 +49,7 @@ public class ArtikelActivity extends AppCompatActivity implements RecyclerViewAd
         rvArtikel = findViewById(R.id.rvArtikel);
         pbarArtikel = findViewById(R.id.pbarArtikel);
 
-        layoutManager = new GridLayoutManager(this,2, GridLayoutManager.VERTICAL, false);
+        layoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
         rvArtikel.setLayoutManager(layoutManager);
 
         //Set refresh swipe to get data
@@ -54,7 +57,9 @@ public class ArtikelActivity extends AppCompatActivity implements RecyclerViewAd
             @Override
             public void onRefresh() {
                 refreshArtikel.setRefreshing(true);
+                Log.v(LOG_TAG, "Start Retrieve Data");
                 retrieveData();
+                Log.v(LOG_TAG, "Finish Retrieve Data");
                 refreshArtikel.setRefreshing(false);
             }
         });
@@ -63,19 +68,21 @@ public class ArtikelActivity extends AppCompatActivity implements RecyclerViewAd
     @Override
     protected void onResume() {
         super.onResume();
+        Log.v(LOG_TAG, "Start Retrieve Data");
         retrieveData();
+        Log.v(LOG_TAG, "Finish Retrieve Data");
     }
 
-    public void retrieveData(){
+    public void retrieveData() {
         pbarArtikel.setVisibility(View.VISIBLE);
 
         //Conncet to server to parse Json convert and get data with retrofit Gson
-//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
-//        Call<ArtikelModel> tampilData = ardData.RetrieveDataArtikel();
+        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+        Call<ArtikelModel> tampilData = ardData.RetrieveDataArtikel();
 
         //Conncet to server to parse Json convert and get data with retrofit Moshi
-        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
-        Call<ArtikelModel> tampilData = ardData.RetrieveDataArtikel();
+//        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
+//        Call<ArtikelModel> tampilData = ardData.RetrieveDataArtikel();
 
         tampilData.enqueue(new Callback<ArtikelModel>() {
             @Override
@@ -92,7 +99,7 @@ public class ArtikelActivity extends AppCompatActivity implements RecyclerViewAd
 
             @Override
             public void onFailure(Call<ArtikelModel> call, Throwable t) {
-                Toast.makeText(ArtikelActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ArtikelActivity.this, "Gagal Menghubungi Server : " + t.getMessage(), Toast.LENGTH_SHORT).show();
                 pbarArtikel.setVisibility(View.GONE);
             }
         });

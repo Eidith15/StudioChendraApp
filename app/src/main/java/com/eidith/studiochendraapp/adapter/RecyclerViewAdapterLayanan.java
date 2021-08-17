@@ -20,11 +20,11 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class RecyclerViewAdapterLayanan extends  RecyclerView.Adapter<RecyclerViewAdapterLayanan.ViewHolder>{
+public class RecyclerViewAdapterLayanan extends RecyclerView.Adapter<RecyclerViewAdapterLayanan.ViewHolder> {
 
-    private Context context;
-    private List<LayananModel> listLayanan;
-    private RecyclerViewAdapterLayanan.OnItemClickListener mOnItemClickListener;
+    private final Context context;
+    private final List<LayananModel> listLayanan;
+    private final RecyclerViewAdapterLayanan.OnItemClickListener mOnItemClickListener;
 
     public RecyclerViewAdapterLayanan(Context context, List<LayananModel> listLayanan, RecyclerViewAdapterLayanan.OnItemClickListener mOnItemClickListener) {
         //Assign default value
@@ -61,7 +61,11 @@ public class RecyclerViewAdapterLayanan extends  RecyclerView.Adapter<RecyclerVi
         return listLayanan.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public interface OnItemClickListener {
+        void OnItemClickLayanan(int position);
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView tvIdLayanan;
         ImageView imgGambarLayanan;
 
@@ -81,10 +85,6 @@ public class RecyclerViewAdapterLayanan extends  RecyclerView.Adapter<RecyclerVi
         public void onClick(View v) {
             onItemClickListener.OnItemClickLayanan(getAdapterPosition());
         }
-    }
-
-    public interface OnItemClickListener {
-        void OnItemClickLayanan(int position);
     }
 
 }

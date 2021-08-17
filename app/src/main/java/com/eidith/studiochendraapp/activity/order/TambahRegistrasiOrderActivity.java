@@ -1,8 +1,10 @@
 package com.eidith.studiochendraapp.activity.order;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -10,7 +12,6 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -34,16 +35,18 @@ import retrofit2.Response;
 
 public class TambahRegistrasiOrderActivity extends AppCompatActivity {
 
-    private Spinner sDropdownListLayanan;
-    private TextView tvTambahRegistrasiIdUser,
-            tvTambahNamaRegistrasi, tvTambahNoTelpRegistrasi, tvTambahTanggalRegistrasi, tvPilihLayanan;
-    private Button btnTambahRegistrasiOrder;
-    private ProgressBar pbarTambahRegistrasiOrder;
+    private static final String LOG_TAG = "TambahRegistrasiOrderActivity";
+
 
     List<LayananModel> listLayanan = new ArrayList<>();
     int idLayanan;
     int idUser;
     String tanggalRegistrasi;
+    private Spinner sDropdownListLayanan;
+    private TextView tvTambahRegistrasiIdUser,
+            tvTambahNamaRegistrasi, tvTambahNoTelpRegistrasi, tvTambahTanggalRegistrasi, tvPilihLayanan;
+    private Button btnTambahRegistrasiOrder;
+    private ProgressBar pbarTambahRegistrasiOrder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,18 +86,21 @@ public class TambahRegistrasiOrderActivity extends AppCompatActivity {
                 builder.setMessage("Yakin ingin melakukan registrasi?");
                 builder.setIcon(R.drawable.ic_alert);
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @SuppressLint("LongLogTag")
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
+                        Log.v(LOG_TAG, "Start Upload Data");
                         UploadData();
+                        Log.v(LOG_TAG, "Finish Upload Data");
                         finish();
                     }
                 });
                 builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
+                        dialog.dismiss();
+                    }
                 });
                 AlertDialog alertDialog = builder.create();
                 alertDialog.show();
@@ -102,16 +108,16 @@ public class TambahRegistrasiOrderActivity extends AppCompatActivity {
         });
     }
 
-    public void retrieveDataLayanan(){
+    public void retrieveDataLayanan() {
         pbarTambahRegistrasiOrder.setVisibility(View.VISIBLE);
 
         //Conncet to server to parse Json and get data with gson
-//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
-//        Call<LayananModel> tampilData = ardData.RetrieveDataLayanan();
+        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+        Call<LayananModel> tampilData = ardData.RetrieveDataLayanan();
 
         //Conncet to server to parse Json and get data with moshi
-        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
-        Call<LayananModel> tampilData = ardData.RetrieveDataLayanan();
+//        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
+//        Call<LayananModel> tampilData = ardData.RetrieveDataLayanan();
 
         tampilData.enqueue(new Callback<LayananModel>() {
             @Override
@@ -139,13 +145,13 @@ public class TambahRegistrasiOrderActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<LayananModel> call, Throwable t) {
-                Toast.makeText(TambahRegistrasiOrderActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(TambahRegistrasiOrderActivity.this, "Gagal Menghubungi Server : " + t.getMessage(), Toast.LENGTH_SHORT).show();
                 pbarTambahRegistrasiOrder.setVisibility(View.GONE);
             }
         });
     }
 
-    public void UploadData(){
+    public void UploadData() {
         pbarTambahRegistrasiOrder.setVisibility(View.VISIBLE);
 
         //Upload data with gson
@@ -166,7 +172,7 @@ public class TambahRegistrasiOrderActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<RegistrasiOrderModel> call, Throwable t) {
-                Toast.makeText(TambahRegistrasiOrderActivity.this, "Pesan : "+t, Toast.LENGTH_SHORT).show();
+                Toast.makeText(TambahRegistrasiOrderActivity.this, "Pesan : " + t, Toast.LENGTH_SHORT).show();
                 pbarTambahRegistrasiOrder.setVisibility(View.GONE);
             }
         });

@@ -5,9 +5,9 @@ import java.util.List;
 public class LayananModel {
 
     private int id_layanan;
-    private String judul_layanan, deskripsi_layanan, gambar_layanan, video_layanan,tanggal_layanan;
+    private String judul_layanan, deskripsi_layanan, gambar_layanan, video_layanan, tanggal_layanan;
 
-    private int  code;
+    private int code;
     private String message;
     private List<LayananModel> data_layanan;
 

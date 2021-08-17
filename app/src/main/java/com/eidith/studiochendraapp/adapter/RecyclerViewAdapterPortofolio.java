@@ -20,11 +20,11 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class RecyclerViewAdapterPortofolio extends RecyclerView.Adapter<RecyclerViewAdapterPortofolio.ViewHolder>{
+public class RecyclerViewAdapterPortofolio extends RecyclerView.Adapter<RecyclerViewAdapterPortofolio.ViewHolder> {
 
-    private Context context;
-    private List<PortofolioModel> listPortofolio;
-    private RecyclerViewAdapterPortofolio.OnItemClickListener mOnItemClickListener;
+    private final Context context;
+    private final List<PortofolioModel> listPortofolio;
+    private final RecyclerViewAdapterPortofolio.OnItemClickListener mOnItemClickListener;
 
     public RecyclerViewAdapterPortofolio(Context context, List<PortofolioModel> listPortofolio, RecyclerViewAdapterPortofolio.OnItemClickListener mOnItemClickListener) {
         //Assign default value
@@ -61,7 +61,11 @@ public class RecyclerViewAdapterPortofolio extends RecyclerView.Adapter<Recycler
         return listPortofolio.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public interface OnItemClickListener {
+        void OnItemClickPortofolio(int position);
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView tvIdPortofolio;
         ImageView imgGambarPortofolio;
 
@@ -81,10 +85,6 @@ public class RecyclerViewAdapterPortofolio extends RecyclerView.Adapter<Recycler
         public void onClick(View v) {
             onItemClickListener.OnItemClickPortofolio(getAdapterPosition());
         }
-    }
-
-    public interface OnItemClickListener {
-        void OnItemClickPortofolio(int position);
     }
 
 }

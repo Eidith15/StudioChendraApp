@@ -20,11 +20,11 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class RecyclerViewAdapterArtikel extends RecyclerView.Adapter<RecyclerViewAdapterArtikel.ViewHolder>{
+public class RecyclerViewAdapterArtikel extends RecyclerView.Adapter<RecyclerViewAdapterArtikel.ViewHolder> {
 
-    private Context context;
-    private List<ArtikelModel> listArtikel;
-    private OnItemClickListener mOnItemClickListener;
+    private final Context context;
+    private final List<ArtikelModel> listArtikel;
+    private final OnItemClickListener mOnItemClickListener;
 
     public RecyclerViewAdapterArtikel(Context context, List<ArtikelModel> listArtikel, OnItemClickListener mOnItemClickListener) {
         //Assign default value
@@ -63,7 +63,11 @@ public class RecyclerViewAdapterArtikel extends RecyclerView.Adapter<RecyclerVie
         return listArtikel.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public interface OnItemClickListener {
+        void OnItemClickArtikel(int position);
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView tvIdArtikel, tvJudulArtikel;
         ImageView imgGambarArtikel;
         TextView tvTanggalArtikel;
@@ -86,10 +90,6 @@ public class RecyclerViewAdapterArtikel extends RecyclerView.Adapter<RecyclerVie
         public void onClick(View v) {
             onItemClickListener.OnItemClickArtikel(getAdapterPosition());
         }
-    }
-
-    public interface OnItemClickListener {
-        void OnItemClickArtikel(int position);
     }
 
 }

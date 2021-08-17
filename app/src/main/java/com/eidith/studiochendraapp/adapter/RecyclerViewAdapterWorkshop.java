@@ -20,11 +20,11 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class RecyclerViewAdapterWorkshop extends RecyclerView.Adapter<RecyclerViewAdapterWorkshop.ViewHolder>{
+public class RecyclerViewAdapterWorkshop extends RecyclerView.Adapter<RecyclerViewAdapterWorkshop.ViewHolder> {
 
-    private Context context;
-    private List<WorkshopModel> listWorkshop;
-    private OnItemClickListener mOnItemClickListener;
+    private final Context context;
+    private final List<WorkshopModel> listWorkshop;
+    private final OnItemClickListener mOnItemClickListener;
 
     public RecyclerViewAdapterWorkshop(Context context, List<WorkshopModel> listWorkshop, OnItemClickListener mOnItemClickListener) {
         //Assign default value
@@ -63,7 +63,11 @@ public class RecyclerViewAdapterWorkshop extends RecyclerView.Adapter<RecyclerVi
         return listWorkshop.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public interface OnItemClickListener {
+        void OnItemClickWorkshop(int position);
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView tvIdWorkshop, tvJudulWorkshop;
         ImageView imgGambarWorkshop;
         TextView tvTanggalWorkshop;
@@ -86,10 +90,6 @@ public class RecyclerViewAdapterWorkshop extends RecyclerView.Adapter<RecyclerVi
         public void onClick(View v) {
             onItemClickListener.OnItemClickWorkshop(getAdapterPosition());
         }
-    }
-
-    public interface OnItemClickListener {
-        void OnItemClickWorkshop(int position);
     }
 
 }

@@ -7,7 +7,7 @@ public class WorkshopModel {
     private String judul_workshop, deskripsi_workshop, gambar_workshop, video_workshop;
     private String tanggal_workshop;
 
-    private int  code;
+    private int code;
     private String message;
     private List<WorkshopModel> data_workshop;
 

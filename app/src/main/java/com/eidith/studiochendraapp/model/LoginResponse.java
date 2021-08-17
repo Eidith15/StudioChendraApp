@@ -4,9 +4,9 @@ import java.util.List;
 
 public class LoginResponse {
 
-    private boolean error;
-    private String message;
-    private List<UserModel> data_user;
+    private final boolean error;
+    private final String message;
+    private final List<UserModel> data_user;
 
 
     public LoginResponse(boolean error, String message, List<UserModel> data_user) {

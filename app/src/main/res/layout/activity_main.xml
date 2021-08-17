@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawableLayoutMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MainActivity"
-    android:id="@+id/drawableLayoutMain">
+    tools:context=".activity.MainActivity">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/refreshMain"
@@ -26,35 +25,35 @@
                     android:id="@+id/tvMainArtikel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="5dp"
-                    android:textSize="12sp"
                     android:text="Artikel Fotografi"
-                    android:visibility="gone"/>
+                    android:textSize="12sp"
+                    android:visibility="gone" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvMainArtikel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:orientation="vertical"
-                    android:nestedScrollingEnabled="false"
                     tools:listitem="@layout/item_artikel" />
 
                 <TextView
                     android:id="@+id/tvMainWorkshop"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="5dp"
-                    android:textSize="12sp"
                     android:text="Workshop"
-                    android:visibility="gone"/>
+                    android:textSize="12sp"
+                    android:visibility="gone" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvMainWorkshop"
@@ -62,48 +61,48 @@
                     android:layout_height="wrap_content"
                     android:nestedScrollingEnabled="false"
                     tools:ignore="MissingConstraints"
-                    tools:listitem="@layout/item_workshop"/>
+                    tools:listitem="@layout/item_workshop" />
 
                 <TextView
                     android:id="@+id/tvMainLayanan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="5dp"
-                    android:textSize="12sp"
                     android:text="Layanan Jasa Fotografi"
-                    android:visibility="gone"/>
+                    android:textSize="12sp"
+                    android:visibility="gone" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvMainLayanan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:ignore="MissingConstraints"
                     android:nestedScrollingEnabled="false"
+                    tools:ignore="MissingConstraints"
                     tools:listitem="@layout/item_layanan" />
 
                 <TextView
                     android:id="@+id/tvMainPortofolio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="5dp"
-                    android:textSize="12sp"
                     android:text="Gallery"
-                    android:visibility="gone"/>
+                    android:textSize="12sp"
+                    android:visibility="gone" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvMainPortofolio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     tools:ignore="MissingConstraints"
-                    android:nestedScrollingEnabled="false"
                     tools:listitem="@layout/item_portofolio" />
 
             </LinearLayout>
@@ -121,7 +120,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:visibility="visible"/>
+            android:visibility="visible" />
 
     </RelativeLayout>
 
@@ -130,9 +129,9 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/navigation_menu_user"
+        app:itemIconTint="@color/grey"
         app:itemTextColor="@color/grey"
-        app:itemIconTint="@color/grey" />
+        app:menu="@menu/navigation_menu_user" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
 

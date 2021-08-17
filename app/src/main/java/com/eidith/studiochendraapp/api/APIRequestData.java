@@ -58,10 +58,10 @@ public interface APIRequestData {
     @Multipart
     @POST("post_artikel.php")
     Call<ArtikelModel> CreateDataArtikel(@Part("judul_artikel") RequestBody judul_artikel,
-                                           @Part("deskripsi_artikel") RequestBody deskripsi_artikel,
-                                           @Part("tanggal_artikel") RequestBody tanggal_artikel,
-                                           @Part MultipartBody.Part gambar_artikel,
-                                           @Part MultipartBody.Part video_artikel
+                                         @Part("deskripsi_artikel") RequestBody deskripsi_artikel,
+                                         @Part("tanggal_artikel") RequestBody tanggal_artikel,
+                                         @Part MultipartBody.Part gambar_artikel,
+                                         @Part MultipartBody.Part video_artikel
     );
 
     //Get data layanan
@@ -86,8 +86,8 @@ public interface APIRequestData {
     @Multipart
     @POST("post_portofolio.php")
     Call<PortofolioModel> CreateDataPortofolio(@Part("judul_portofolio") RequestBody judu_portofolio,
-                                         @Part("deskripsi_foto") RequestBody deskripsi_foto,
-                                         @Part MultipartBody.Part gambar_foto
+                                               @Part("deskripsi_foto") RequestBody deskripsi_foto,
+                                               @Part MultipartBody.Part gambar_foto
     );
 
     //Get data registrasi

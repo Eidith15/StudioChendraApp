@@ -1,5 +1,14 @@
 package com.eidith.studiochendraapp.activity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -9,15 +18,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.eidith.studiochendraapp.R;
 import com.eidith.studiochendraapp.activity.akun.AkunActivity;
@@ -40,8 +40,8 @@ import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterArtikel;
 import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterLayanan;
 import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterPortofolio;
 import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterWorkshop;
-import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.api.APIClient;
+import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.model.ArtikelModel;
 import com.eidith.studiochendraapp.model.LayananModel;
 import com.eidith.studiochendraapp.model.PortofolioModel;
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements
         RecyclerViewAdapterWorkshop.OnItemClickListener,
         RecyclerViewAdapterArtikel.OnItemClickListener,
         RecyclerViewAdapterLayanan.OnItemClickListener,
-        RecyclerViewAdapterPortofolio.OnItemClickListener{
+        RecyclerViewAdapterPortofolio.OnItemClickListener {
 
     private TextView tvMainArtikel, tvMainWorkshop, tvMainLayanan, tvMainPortofolio;
     private DrawerLayout drawableLayoutMain;
@@ -112,9 +112,9 @@ public class MainActivity extends AppCompatActivity implements
         navViewMain = findViewById(R.id.navViewMain);
 
         layoutManagerWorkshop = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        layoutManagerArtikel = new GridLayoutManager(this,2, GridLayoutManager.VERTICAL, false);
+        layoutManagerArtikel = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
         layoutManagerLayanan = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        layoutManagerPortofolio = new GridLayoutManager(this,2,GridLayoutManager.VERTICAL, false);
+        layoutManagerPortofolio = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
 
         rvMainWorkshop.setLayoutManager(layoutManagerWorkshop);
         rvMainArtikel.setLayoutManager(layoutManagerArtikel);
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements
         accessCodeUser = userModel.getAccess_code();
 
         //Condition from access code
-        if (accessCodeUser == 1){
+        if (accessCodeUser == 1) {
             navigationViewAdmin();
         } else {
             navigationViewUser();
@@ -185,14 +185,14 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)){
+        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
 
-    public void retrieveData(){
+    public void retrieveData() {
         pbarMain.setVisibility(View.VISIBLE);
 
         //Conncet to server to parse Json and get data with gson
@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity implements
 
             @Override
             public void onFailure(Call<WorkshopModel> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Gagal Menghubungi Server : " + t.getMessage(), Toast.LENGTH_SHORT).show();
 
                 pbarMain.setVisibility(View.GONE);
             }
@@ -241,7 +241,7 @@ public class MainActivity extends AppCompatActivity implements
 
             @Override
             public void onFailure(Call<ArtikelModel> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Gagal Menghubungi Server : " + t.getMessage(), Toast.LENGTH_SHORT).show();
 
                 pbarMain.setVisibility(View.GONE);
             }
@@ -261,7 +261,7 @@ public class MainActivity extends AppCompatActivity implements
 
             @Override
             public void onFailure(Call<LayananModel> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Gagal Menghubungi Server : " + t.getMessage(), Toast.LENGTH_SHORT).show();
 
                 pbarMain.setVisibility(View.GONE);
             }
@@ -287,7 +287,7 @@ public class MainActivity extends AppCompatActivity implements
 
             @Override
             public void onFailure(Call<PortofolioModel> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Gagal Menghubungi Server : " + t.getMessage(), Toast.LENGTH_SHORT).show();
 
                 pbarMain.setVisibility(View.GONE);
             }
@@ -345,13 +345,13 @@ public class MainActivity extends AppCompatActivity implements
         startActivity(intent);
     }
 
-    private void navigationViewUser(){
+    private void navigationViewUser() {
         navViewMain.getMenu().clear();
         navViewMain.inflateMenu(R.menu.navigation_menu_user);
         navViewMain.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.homeUser:
                         drawableLayoutMain.closeDrawers();
                         return true;
@@ -421,13 +421,13 @@ public class MainActivity extends AppCompatActivity implements
         });
     }
 
-    private void navigationViewAdmin(){
+    private void navigationViewAdmin() {
         navViewMain.getMenu().clear();
         navViewMain.inflateMenu(R.menu.navigation_menu_admin);
         navViewMain.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.homeAdmin:
                         drawableLayoutMain.closeDrawers();
                         return true;

@@ -1,14 +1,11 @@
 package com.eidith.studiochendraapp.activity.portofolio;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -22,7 +19,6 @@ public class DetailPortofolioActivity extends AppCompatActivity {
     private PhotoView ivDetailPortofolio;
     private TextView tvDetailJudulPortofolio, tvDetailDeskripsiPortofolio;
     private LinearLayout llDetailPortofolio;
-
 
 
     @Override
@@ -48,14 +44,14 @@ public class DetailPortofolioActivity extends AppCompatActivity {
 
         //Glide Image to image view
         Glide.with(DetailPortofolioActivity.this)
-                .load(APIClient.imageURL+gambarFoto)
+                .load(APIClient.imageURL + gambarFoto)
                 .apply(new RequestOptions().override(800, 400))
                 .into(ivDetailPortofolio);
 
         llDetailPortofolio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tvDetailJudulPortofolio.getMaxLines() == 2 && tvDetailDeskripsiPortofolio.getMaxLines() == 3 ){
+                if (tvDetailJudulPortofolio.getMaxLines() == 2 && tvDetailDeskripsiPortofolio.getMaxLines() == 3) {
                     tvDetailJudulPortofolio.setMaxLines(Integer.MAX_VALUE);
                     tvDetailDeskripsiPortofolio.setMaxLines(Integer.MAX_VALUE);
                 } else {
@@ -65,7 +61,6 @@ public class DetailPortofolioActivity extends AppCompatActivity {
 
             }
         });
-
 
 
     }

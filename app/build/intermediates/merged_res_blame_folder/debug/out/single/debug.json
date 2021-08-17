@@ -16,20 +16,20 @@
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_nohp.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_nohp.png.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_nohp.png"
-    },
-    {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_add_photo.png.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_add_photo.png"
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_nohp.png.flat",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_nohp.png"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_fullscreen.png.flat",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_fullscreen.png"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ic_add_photo.png.flat",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_add_photo.png"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_workshop.xml.flat",
@@ -76,16 +76,16 @@
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_password.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_home.png.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_home.png"
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_fullscreen.png.flat",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_fullscreen.png"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_respond_customer_menu.png.flat",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_respond_customer_menu.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_fullscreen.png.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_fullscreen.png"
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_home.png.flat",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_home.png"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_portofolio.xml.flat",
@@ -104,12 +104,12 @@
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_fullscreen_exit.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_rew.png.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_rew.png"
-    },
-    {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_workshop_menu.png.flat",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_workshop_menu.png"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_rew.png.flat",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_rew.png"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
@@ -248,12 +248,12 @@
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_play.png"
     },
     {
-        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_play.png.flat",
-        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_play.png"
-    },
-    {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_fwd.png.flat",
         "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_fwd.png"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_play.png.flat",
+        "source": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_play.png"
     },
     {
         "merged": "D:\\AndroidStudio\\StudioChendraApp\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_layanan.xml.flat",

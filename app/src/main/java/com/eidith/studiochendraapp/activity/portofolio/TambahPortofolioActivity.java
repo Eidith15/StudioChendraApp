@@ -1,9 +1,7 @@
 package com.eidith.studiochendraapp.activity.portofolio;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -14,14 +12,18 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
 import com.eidith.studiochendraapp.R;
-import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.api.APIClient;
+import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.model.PortofolioModel;
 
 import java.io.File;
@@ -34,6 +36,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class TambahPortofolioActivity extends AppCompatActivity {
+
+    private static final String LOG_TAG = "TambahPortofolioActivity";
 
     private static final int IMG_REQUEST_CODE = 0;
     private static final int REQUEST_EXTERNAL_STORAGE = 2;
@@ -75,7 +79,7 @@ public class TambahPortofolioActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Select Image
-                Intent galleryIntent = new Intent (Intent.ACTION_PICK,
+                Intent galleryIntent = new Intent(Intent.ACTION_PICK,
                         MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(galleryIntent, IMG_REQUEST_CODE);
             }
@@ -90,22 +94,25 @@ public class TambahPortofolioActivity extends AppCompatActivity {
                 gambar_foto = btnSelectImagePortofolio.getText().toString();
 
                 //Checking Null
-                if (judul_portofolio.trim().equals("")){
+                if (judul_portofolio.trim().equals("")) {
                     etJudulPortofolio.setError("Harap Masukan Judul");
-                } else if (deskripsi_foto.trim().equals("")){
+                } else if (deskripsi_foto.trim().equals("")) {
                     etDeskripsiFotoPortofolio.setError("Harap Masukan Deskripsi");
-                } else if (gambar_foto.trim().equals("Tambah Gambar")){
+                } else if (gambar_foto.trim().equals("Tambah Gambar")) {
                     btnSelectImagePortofolio.setError("Harap Pilih Gambar");
-                }  else {
+                } else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(TambahPortofolioActivity.this);
                     builder.setTitle("Tambah Data Foto Portofolio");
                     builder.setMessage("Yakin Menambah data?");
                     builder.setIcon(R.drawable.ic_launcher_background);
                     builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @SuppressLint("LongLogTag")
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
+                            Log.v(LOG_TAG, "Start Upload Data");
                             UploadData();
+                            Log.v(LOG_TAG, "Finish Upload Data");
                         }
                     });
                     builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -149,7 +156,7 @@ public class TambahPortofolioActivity extends AppCompatActivity {
         }
     }
 
-    private void UploadData(){
+    private void UploadData() {
         progressDialog.show();
 
         //Set path image to file type
@@ -162,26 +169,26 @@ public class TambahPortofolioActivity extends AppCompatActivity {
         MultipartBody.Part imagepart = MultipartBody.Part.createFormData("gambar_foto", fileImage.getName(), gambar);
 
         //Execute createData to json method with gson
-//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
-//        Call<PortofolioModel> createData = ardData.CreateDataPortofolio(judul, deskripsi, imagepart);
+        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+        Call<PortofolioModel> createData = ardData.CreateDataPortofolio(judul, deskripsi, imagepart);
 
         //Execute createData to json method with moshi
-        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
-        Call<PortofolioModel> createData = ardData.CreateDataPortofolio(judul, deskripsi, imagepart);
+//        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
+//        Call<PortofolioModel> createData = ardData.CreateDataPortofolio(judul, deskripsi, imagepart);
 
         createData.enqueue(new Callback<PortofolioModel>() {
             @Override
             public void onResponse(Call<PortofolioModel> call, Response<PortofolioModel> response) {
                 int kode = response.body().getCode();
                 String pesan = response.body().getMessage();
-                Toast.makeText(TambahPortofolioActivity.this, "Kode : "+kode+" | Pesan : "+pesan, Toast.LENGTH_SHORT).show();
+                Toast.makeText(TambahPortofolioActivity.this, "Kode : " + kode + " | Pesan : " + pesan, Toast.LENGTH_SHORT).show();
                 progressDialog.dismiss();
                 finish();
             }
 
             @Override
             public void onFailure(Call<PortofolioModel> call, Throwable t) {
-                Toast.makeText(TambahPortofolioActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(TambahPortofolioActivity.this, "Gagal Menghubungi Server : " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

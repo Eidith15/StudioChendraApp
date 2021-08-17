@@ -24,7 +24,7 @@
 14-->[com.google.android.exoplayer:exoplayer-core:2.14.0] D:\AndroidStudio\Gradle\caches\transforms-3\c573782e43533e5ca3094868063c0cb6\transformed\exoplayer-core-2.14.0\AndroidManifest.xml:24:22-76
 15
 16    <application
-16-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:9:5-88:19
+16-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:9:5-89:19
 17        android:name="androidx.multidex.MultiDexApplication"
 17-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:10:9-61
 18        android:allowBackup="true"
@@ -163,23 +163,23 @@
 86            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
 86-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:78:13-64
 87        <activity
-87-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:79:9-81:66
+87-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:79:9-81:67
 88            android:name="com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity"
 88-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:80:13-71
 89            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
 89-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:81:13-64
 90        <activity
-90-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:82:9-84:87
+90-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:82:9-84:88
 91            android:name="com.eidith.studiochendraapp.activity.order.DetailRegistrasiOrder"
 91-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:83:13-65
 92            android:parentActivityName="com.eidith.studiochendraapp.activity.order.ListRegistrasiOrderActivity" />
 92-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:84:13-85
 93        <activity
-93-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:86:9-87:66
+93-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:86:9-88:67
 94            android:name="com.eidith.studiochendraapp.activity.order.TambahRegistrasiOrderActivity"
-94-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:86:19-79
+94-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:87:13-73
 95            android:parentActivityName="com.eidith.studiochendraapp.activity.MainActivity" />
-95-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:87:13-64
+95-->D:\AndroidStudio\StudioChendraApp\app\src\main\AndroidManifest.xml:88:13-64
 96    </application>
 97
 98</manifest>

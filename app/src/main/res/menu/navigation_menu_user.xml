@@ -1,57 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:id="@+id/gnav" android:checkableBehavior="single">
-        <item android:id="@+id/homeUser"
-            android:title="Home"
-            android:icon="@drawable/ic_home"/>
+    <group
+        android:id="@+id/gnav"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeUser"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
     </group>
 
-    <group android:id="@+id/gnav1" android:checkableBehavior="single">
-        <item android:id="@+id/akunUser"
-            android:title="Akun"
-            android:icon="@drawable/ic_account_menu"/>
+    <group
+        android:id="@+id/gnav1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/akunUser"
+            android:icon="@drawable/ic_account_menu"
+            android:title="Akun" />
     </group>
 
-    <group android:id="@+id/gnav2" android:checkableBehavior="single">
-        <item android:id="@+id/workshop"
-            android:title="Workshop"
-            android:icon="@drawable/ic_workshop_menu" />
+    <group
+        android:id="@+id/gnav2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/workshop"
+            android:icon="@drawable/ic_workshop_menu"
+            android:title="Workshop" />
     </group>
 
-    <group android:id="@+id/gnav3" android:checkableBehavior="single">
-        <item android:id="@+id/artikelFotografi"
-            android:title="Artikel Fotografi"
-            android:icon="@drawable/ic_artikel_menu"/>
+    <group
+        android:id="@+id/gnav3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/artikelFotografi"
+            android:icon="@drawable/ic_artikel_menu"
+            android:title="Artikel Fotografi" />
     </group>
 
-    <group android:id="@+id/gnav4" android:checkableBehavior="single">
-        <item android:id="@+id/layananJasaFotografi"
-            android:title="Layanan Jasa Fotografi"
-            android:icon="@drawable/ic_layanan_menu"/>
+    <group
+        android:id="@+id/gnav4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/layananJasaFotografi"
+            android:icon="@drawable/ic_layanan_menu"
+            android:title="Layanan Jasa Fotografi" />
     </group>
 
-    <group android:id="@+id/gnav5" android:checkableBehavior="single">
-        <item android:id="@+id/fotoPortofolio"
-            android:title="Portofolio Gallery"
-            android:icon="@drawable/ic_portofolio_menu"/>
+    <group
+        android:id="@+id/gnav5"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/fotoPortofolio"
+            android:icon="@drawable/ic_portofolio_menu"
+            android:title="Portofolio Gallery" />
     </group>
 
-    <group android:id="@+id/gnav6" android:checkableBehavior="single">
-        <item android:id="@+id/registrasiOrder"
-            android:title="Registrasi Order"
-            android:icon="@drawable/ic_registrasi_menu"/>
+    <group
+        android:id="@+id/gnav6"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/registrasiOrder"
+            android:icon="@drawable/ic_registrasi_menu"
+            android:title="Registrasi Order" />
     </group>
 
-    <group android:id="@+id/gnav7" android:checkableBehavior="single">
-        <item android:id="@+id/customerService"
-            android:title="Chat Customer Service"
-            android:icon="@drawable/ic_respond_customer_menu"/>
+    <group
+        android:id="@+id/gnav7"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/customerService"
+            android:icon="@drawable/ic_respond_customer_menu"
+            android:title="Chat Customer Service" />
     </group>
 
-    <group android:id="@+id/gnav8" android:checkableBehavior="single">
-        <item android:id="@+id/logoutUser"
-            android:title="Logout"
-            android:icon="@drawable/ic_logout_menu" />
+    <group
+        android:id="@+id/gnav8"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/logoutUser"
+            android:icon="@drawable/ic_logout_menu"
+            android:title="Logout" />
     </group>
 </menu>

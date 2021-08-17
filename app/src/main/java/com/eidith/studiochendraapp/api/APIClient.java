@@ -14,8 +14,8 @@ public class APIClient {
     private static Retrofit retrofit;
 
     //Connect retrofit to server to get Json and convert using Gson
-    public static Retrofit connectRetrofitGson(){
-        if (retrofit == null){
+    public static Retrofit connectRetrofitGson() {
+        if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl(baseURL)
                     .addConverterFactory(GsonConverterFactory.create())
@@ -24,8 +24,8 @@ public class APIClient {
         return retrofit;
     }
 
-    public static Retrofit connectRetrofitMoshi(){
-        if (retrofit == null){
+    public static Retrofit connectRetrofitMoshi() {
+        if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl(baseURL)
                     .addConverterFactory(MoshiConverterFactory.create())

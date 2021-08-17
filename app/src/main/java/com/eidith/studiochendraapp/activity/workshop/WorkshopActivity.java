@@ -2,6 +2,7 @@ package com.eidith.studiochendraapp.activity.workshop;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -10,10 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.eidith.studiochendraapp.R;
 import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterWorkshop;
-import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.api.APIClient;
+import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.model.WorkshopModel;
 
 import java.util.ArrayList;
@@ -25,6 +27,8 @@ import retrofit2.Response;
 
 public class WorkshopActivity extends AppCompatActivity implements RecyclerViewAdapterWorkshop.OnItemClickListener {
 
+    private static final String LOG_TAG = "WorkshopActivity";
+
     private RecyclerView rvWorkshop;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
@@ -34,7 +38,7 @@ public class WorkshopActivity extends AppCompatActivity implements RecyclerViewA
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workshop);
 
@@ -54,7 +58,9 @@ public class WorkshopActivity extends AppCompatActivity implements RecyclerViewA
             @Override
             public void onRefresh() {
                 refreshWorkshop.setRefreshing(true);
+                Log.v(LOG_TAG, "Start Retrieve Data");
                 retrieveData();
+                Log.v(LOG_TAG, "Finish Retrieve Data");
                 refreshWorkshop.setRefreshing(false);
             }
         });
@@ -64,19 +70,21 @@ public class WorkshopActivity extends AppCompatActivity implements RecyclerViewA
     @Override
     protected void onResume() {
         super.onResume();
+        Log.v(LOG_TAG, "Start Retrieve Data");
         retrieveData();
+        Log.v(LOG_TAG, "Finish Retrieve Data");
     }
 
-    public void retrieveData(){
+    public void retrieveData() {
         pbarWorkshop.setVisibility(View.VISIBLE);
 
         //Conncet to server to parse Json and get data with gson
-//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
-//        Call<WorkshopModel> tampilData = ardData.RetrieveDataWorkshop();
+        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+        Call<WorkshopModel> tampilData = ardData.RetrieveDataWorkshop();
 
         //Conncet to server to parse Json and get data with moshi
-        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
-        Call<WorkshopModel> tampilData = ardData.RetrieveDataWorkshop();
+//        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
+//        Call<WorkshopModel> tampilData = ardData.RetrieveDataWorkshop();
 
         tampilData.enqueue(new Callback<WorkshopModel>() {
             @Override
@@ -93,7 +101,7 @@ public class WorkshopActivity extends AppCompatActivity implements RecyclerViewA
 
             @Override
             public void onFailure(Call<WorkshopModel> call, Throwable t) {
-                Toast.makeText(WorkshopActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(WorkshopActivity.this, "Gagal Menghubungi Server : " + t.getMessage(), Toast.LENGTH_SHORT).show();
 
                 pbarWorkshop.setVisibility(View.GONE);
             }
@@ -112,5 +120,7 @@ public class WorkshopActivity extends AppCompatActivity implements RecyclerViewA
         intent.putExtra("Tanggal Workshop", listWorkshop.get(position).getTanggal_workshop());
         startActivity(intent);
     }
+
+
 
 }

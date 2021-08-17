@@ -10,52 +10,52 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="id Registrasi"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardElevation="10dp"
+        android:layout_margin="20dp"
         android:orientation="vertical"
-        android:layout_margin="20dp">
+        app:cardElevation="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/ivDetailRegistrasiLayanan"
-            android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:scaleType="centerCrop"
-            android:background="@color/black" />
+            <ImageView
+                android:id="@+id/ivDetailRegistrasiLayanan"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@color/black"
+                android:scaleType="fitCenter" />
 
-        <TextView
-            android:id="@+id/tvDetailTanggalRegistrasiLayanan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="00-00-00"
-            android:maxLines="2"
-            android:textSize="12sp"
-            android:ellipsize="end"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            <TextView
+                android:id="@+id/tvDetailTanggalRegistrasiLayanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="00-00-00"
+                android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/tvDetailRegistrasiJudulLayanan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Judul Layanan"
-            android:maxLines="2"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:ellipsize="end"/>
+            <TextView
+                android:id="@+id/tvDetailRegistrasiJudulLayanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Judul Layanan"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -64,75 +64,75 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:layout_marginTop="15dp"
-        android:orientation="vertical"
-        android:layout_margin="20dp">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nama Customer :"
             android:maxLines="2"
+            android:text="Nama Customer :"
             android:textSize="15sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvDetailRegistrasiNama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nama Customer"
-            android:maxLines="2"
-            android:textSize="15sp"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:maxLines="2"
+            android:text="Nama Customer"
+            android:textSize="15sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No. Telpon Customer : "
-            android:maxLines="2"
-            android:textSize="15sp"
             android:layout_marginTop="10dp"
-            android:textStyle="bold"/>
+            android:maxLines="2"
+            android:text="No. Telpon Customer : "
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvDetailRegistrasiNoHp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No. Telpon Customer"
-            android:maxLines="2"
-            android:textSize="15sp"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:maxLines="2"
+            android:text="No. Telpon Customer"
+            android:textSize="15sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tanggal Registrasi : "
-            android:maxLines="2"
-            android:textSize="15sp"
             android:layout_marginTop="10dp"
-            android:textStyle="bold"/>
+            android:maxLines="2"
+            android:text="Tanggal Registrasi : "
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvDetailTanggalRegistrasi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tanggal Registrasi"
-            android:maxLines="2"
-            android:textSize="15sp"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:maxLines="2"
+            android:text="Tanggal Registrasi"
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/btnDetailRegistrasiCall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hubungi Customer"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:text="Hubungi Customer" />
     </LinearLayout>
 
 </LinearLayout>

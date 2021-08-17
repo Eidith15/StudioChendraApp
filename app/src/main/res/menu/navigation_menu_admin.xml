@@ -2,54 +2,81 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <group android:id="@+id/gnav" android:checkableBehavior="single">
-        <item android:id="@+id/homeAdmin"
-            android:title="Home"
-            android:icon="@drawable/ic_home" />
+    <group
+        android:id="@+id/gnav"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeAdmin"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
     </group>
 
-    <group android:id="@+id/g1nav" android:checkableBehavior="single">
-        <item android:id="@+id/akunAdmin"
-            android:title="Akun"
-            android:icon="@drawable/ic_account_menu" />
+    <group
+        android:id="@+id/g1nav"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/akunAdmin"
+            android:icon="@drawable/ic_account_menu"
+            android:title="Akun" />
     </group>
 
-    <group android:id="@+id/g2nav" android:checkableBehavior="single">
-        <item android:id="@+id/tambahWorkshop"
+    <group
+        android:id="@+id/g2nav"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/tambahWorkshop"
+            android:icon="@drawable/ic_workshop_menu"
             android:title="Tambah Data Workshop"
-            app:showAsAction="never"
-            android:icon="@drawable/ic_workshop_menu"/>
+            app:showAsAction="never" />
     </group>
 
-    <group android:id="@+id/g4nav" android:checkableBehavior="single">
-        <item android:id="@+id/tambahArtikelFotografi"
-            android:title="Tambah Data Artikel Fotografi"
-            android:icon="@drawable/ic_artikel_menu"/>
+    <group
+        android:id="@+id/g4nav"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/tambahArtikelFotografi"
+            android:icon="@drawable/ic_artikel_menu"
+            android:title="Tambah Data Artikel Fotografi" />
     </group>
-    <group android:id="@+id/g5nav" android:checkableBehavior="single">
-        <item android:id="@+id/tambahLayananJasaFotografi"
-            android:title="Tambah Data Layanan Jasa Fotografi"
-            android:icon="@drawable/ic_layanan_menu"/>
+    <group
+        android:id="@+id/g5nav"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/tambahLayananJasaFotografi"
+            android:icon="@drawable/ic_layanan_menu"
+            android:title="Tambah Data Layanan Jasa Fotografi" />
     </group>
-    <group android:id="@+id/g6nav" android:checkableBehavior="single">
-        <item android:id="@+id/tambahFotoPortofolio"
-            android:title="Tambah Data Foto Portofolio Gallery"
-            android:icon="@drawable/ic_portofolio_menu"/>
+    <group
+        android:id="@+id/g6nav"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/tambahFotoPortofolio"
+            android:icon="@drawable/ic_portofolio_menu"
+            android:title="Tambah Data Foto Portofolio Gallery" />
     </group>
-    <group android:id="@+id/g7nav" android:checkableBehavior="single">
-        <item android:id="@+id/registrasiOrderAdmin"
-            android:title="List Registrasi Order"
-            android:icon="@drawable/ic_registrasi_menu"/>
+    <group
+        android:id="@+id/g7nav"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/registrasiOrderAdmin"
+            android:icon="@drawable/ic_registrasi_menu"
+            android:title="List Registrasi Order" />
     </group>
-    <group android:id="@+id/g8nav" android:checkableBehavior="single">
-        <item android:id="@+id/respondCustomer"
-            android:title="Respond Customer"
-            android:icon="@drawable/ic_respond_customer_menu"/>
+    <group
+        android:id="@+id/g8nav"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/respondCustomer"
+            android:icon="@drawable/ic_respond_customer_menu"
+            android:title="Respond Customer" />
     </group>
-    <group android:id="@+id/g9nav" android:checkableBehavior="single">
-        <item android:id="@+id/logoutAdmin"
-            android:title="Logout"
-            android:icon="@drawable/ic_logout_menu"/>
+    <group
+        android:id="@+id/g9nav"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/logoutAdmin"
+            android:icon="@drawable/ic_logout_menu"
+            android:title="Logout" />
     </group>
 
 </menu>

@@ -3,83 +3,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".activity.login.LoginActivity"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
-    android:gravity="center_vertical">
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".activity.login.LoginActivity">
 
     <ImageView
         android:id="@+id/ivLoginLogo"
         android:layout_width="150dp"
         android:layout_height="100dp"
+        android:layout_gravity="center"
         android:layout_marginBottom="20dp"
-        android:src="@mipmap/ic_launcher"
-        android:layout_gravity="center"/>
+        android:src="@mipmap/ic_launcher" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/corner_radius_login"
         android:layout_gravity="center_vertical"
+        android:background="@drawable/corner_radius_login"
         android:backgroundTint="@color/grey"
+        android:orientation="vertical"
         android:paddingTop="30dp">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/smoke_white"
+            android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp">
+            android:textColorHint="@color/smoke_white">
+
             <EditText
                 android:id="@+id/etLoginUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_username_login"
-                android:drawablePadding="10dp"
-                android:hint="Username"
                 android:digits="0123456789,
                 a b c d e f g h i j k l m n o p q r s t u v w x y z
                 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
-                android:textSize="14sp"/>
+                android:drawableLeft="@drawable/ic_username_login"
+                android:drawablePadding="10dp"
+                android:hint="Username"
+                android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/smoke_white"
+            android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp">
+            android:textColorHint="@color/smoke_white">
+
             <EditText
                 android:id="@+id/etLoginPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_password_login"
                 android:drawablePadding="10dp"
-                android:inputType="textPassword"
                 android:hint="Password"
-                android:textSize="14sp"/>
+                android:inputType="textPassword"
+                android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
-            android:textSize="14sp"
-            android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Login"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tvLoginRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:text="Tidak Punya Akun? \n Daftar Akun"
             android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:text="Tidak Punya Akun? \n Daftar Akun"
             android:textColor="@color/smoke_white"
-            android:gravity="center_horizontal" />
+            android:textSize="14sp" />
     </LinearLayout>
 </LinearLayout>

@@ -3,6 +3,7 @@ package com.eidith.studiochendraapp.activity.artikel;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -20,14 +21,12 @@ import com.google.android.exoplayer2.ui.PlayerView;
 
 public class DetailArtikelActivity extends AppCompatActivity {
 
+    boolean fullscreen = false;
     private PlayerView vvDetailArtikel;
     private TextView tvDetailTanggalArtikel, tvDetailJudulArtikel, tvDetailDeskripsiArtikel;
     private ImageView ivDetailArtikel;
-
     private ImageButton btnFullScreen;
     private SimpleExoPlayer player;
-    boolean fullscreen = false;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,12 +57,12 @@ public class DetailArtikelActivity extends AppCompatActivity {
 
         //Glide Image to image view
         Glide.with(DetailArtikelActivity.this)
-                .load(APIClient.imageURL+gambarArtikel)
+                .load(APIClient.imageURL + gambarArtikel)
                 .apply(new RequestOptions().override(800, 400))
                 .into(ivDetailArtikel);
 
         //Create exo Player for playing video
-        MediaItem mediaItem = MediaItem.fromUri(APIClient.videoURL+videoArtikel);
+        MediaItem mediaItem = MediaItem.fromUri(APIClient.videoURL + videoArtikel);
         player = new SimpleExoPlayer.Builder(this).build();
 
         vvDetailArtikel.setShowBuffering(PlayerView.SHOW_BUFFERING_ALWAYS);
@@ -79,32 +78,32 @@ public class DetailArtikelActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Check
-                if(fullscreen) {
+                if (fullscreen) {
                     //set exit full screen on click
                     btnFullScreen.setImageDrawable(getResources().getDrawable(R.drawable.ic_fullscreen));
                     getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
-                    if(getSupportActionBar() != null){
+                    if (getSupportActionBar() != null) {
                         getSupportActionBar().show();
                     }
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) vvDetailArtikel.getLayoutParams();
-                    params.width = params.MATCH_PARENT;
-                    params.height = (int) ( 200 * getApplicationContext().getResources().getDisplayMetrics().density);
+                    params.width = ViewGroup.LayoutParams.MATCH_PARENT;
+                    params.height = (int) (200 * getApplicationContext().getResources().getDisplayMetrics().density);
                     vvDetailArtikel.setLayoutParams(params);
                     fullscreen = false;
-                }else{
+                } else {
                     //Set full screen on click
                     btnFullScreen.setImageDrawable(getResources().getDrawable(R.drawable.ic_fullscreen_exit));
                     getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN
-                            |View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                            |View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
-                    if(getSupportActionBar() != null){
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+                    if (getSupportActionBar() != null) {
                         getSupportActionBar().hide();
                     }
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
                     LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) vvDetailArtikel.getLayoutParams();
-                    params.width = params.MATCH_PARENT;
-                    params.height = params.MATCH_PARENT;
+                    params.width = ViewGroup.LayoutParams.MATCH_PARENT;
+                    params.height = ViewGroup.LayoutParams.MATCH_PARENT;
                     vvDetailArtikel.setLayoutParams(params);
                     fullscreen = true;
                 }

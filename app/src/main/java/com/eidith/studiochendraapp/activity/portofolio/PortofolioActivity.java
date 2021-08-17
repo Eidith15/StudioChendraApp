@@ -1,20 +1,21 @@
 package com.eidith.studiochendraapp.activity.portofolio;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.Toast;
-
 import com.eidith.studiochendraapp.R;
 import com.eidith.studiochendraapp.adapter.RecyclerViewAdapterPortofolio;
-import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.api.APIClient;
+import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.model.PortofolioModel;
 
 import java.util.ArrayList;
@@ -25,6 +26,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class PortofolioActivity extends AppCompatActivity implements RecyclerViewAdapterPortofolio.OnItemClickListener {
+
+    private static final String LOG_TAG = "PortofolioActivity";
 
     private SwipeRefreshLayout refreshPortofolio;
     private RecyclerView rvPortofolio;
@@ -46,7 +49,7 @@ public class PortofolioActivity extends AppCompatActivity implements RecyclerVie
         rvPortofolio = findViewById(R.id.rvPortofolio);
         pbarPotrofolio = findViewById(R.id.pbarPotrofolio);
 
-        layoutManager = new GridLayoutManager(this,2, GridLayoutManager.VERTICAL, false);
+        layoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
         rvPortofolio.setLayoutManager(layoutManager);
 
         //Set refresh swipe to get data
@@ -54,7 +57,9 @@ public class PortofolioActivity extends AppCompatActivity implements RecyclerVie
             @Override
             public void onRefresh() {
                 refreshPortofolio.setRefreshing(true);
+                Log.v(LOG_TAG, "Start Retrieve Data");
                 retrieveData();
+                Log.v(LOG_TAG, "Finish Retrieve Data");
                 refreshPortofolio.setRefreshing(false);
             }
         });
@@ -63,19 +68,21 @@ public class PortofolioActivity extends AppCompatActivity implements RecyclerVie
     @Override
     protected void onResume() {
         super.onResume();
+        Log.v(LOG_TAG, "Start Retrieve Data");
         retrieveData();
+        Log.v(LOG_TAG, "Finish Retrieve Data");
     }
 
-    public void retrieveData(){
+    public void retrieveData() {
         pbarPotrofolio.setVisibility(View.VISIBLE);
 
         //Conncet to server to parse Json and get data with gson
-//        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
-//        Call<PortofolioModel> tampilData = ardData.RetrieveDataPortofolio();
+        APIRequestData ardData = APIClient.connectRetrofitGson().create(APIRequestData.class);
+        Call<PortofolioModel> tampilData = ardData.RetrieveDataPortofolio();
 
         //Conncet to server to parse Json and get data with moshi
-        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
-        Call<PortofolioModel> tampilData = ardData.RetrieveDataPortofolio();
+//        APIRequestData ardData = APIClient.connectRetrofitMoshi().create(APIRequestData.class);
+//        Call<PortofolioModel> tampilData = ardData.RetrieveDataPortofolio();
 
         tampilData.enqueue(new Callback<PortofolioModel>() {
             @Override
@@ -92,7 +99,7 @@ public class PortofolioActivity extends AppCompatActivity implements RecyclerVie
 
             @Override
             public void onFailure(Call<PortofolioModel> call, Throwable t) {
-                Toast.makeText(PortofolioActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(PortofolioActivity.this, "Gagal Menghubungi Server : " + t.getMessage(), Toast.LENGTH_SHORT).show();
 
                 pbarPotrofolio.setVisibility(View.GONE);
             }

@@ -1,7 +1,5 @@
 package com.eidith.studiochendraapp.activity.login;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,10 +10,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.eidith.studiochendraapp.R;
 import com.eidith.studiochendraapp.activity.MainActivity;
-import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.api.APIClient;
+import com.eidith.studiochendraapp.api.APIRequestData;
 import com.eidith.studiochendraapp.model.LoginResponse;
 import com.eidith.studiochendraapp.storage.SharedPrefManager;
 
@@ -28,15 +28,13 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
+    public static String usernameInput;
+    public static String passwordInput;
     private EditText etLoginUsername, etLoginPassword;
     private TextView tvLoginRegister;
     private ImageView ivLoginLogo;
     private Button btnLogin;
-
     private ProgressDialog progressDialog;
-
-    public static String usernameInput;
-    public static String passwordInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,11 +57,11 @@ public class LoginActivity extends AppCompatActivity {
                 usernameInput = etLoginUsername.getText().toString();
                 passwordInput = etLoginPassword.getText().toString();
 
-                if(usernameInput.trim().equals("")){
+                if (usernameInput.trim().equals("")) {
                     etLoginUsername.setError("Harap Masukan Username / Email");
-                }else if(passwordInput.trim().equals("")){
+                } else if (passwordInput.trim().equals("")) {
                     etLoginPassword.setError("Harap Masukan Password");
-                }else{
+                } else {
                     try {
                         hashConvert(passwordInput);
                     } catch (NoSuchAlgorithmException e) {
@@ -86,7 +84,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        if (SharedPrefManager.getInstance(this).isLoggedin()){
+        if (SharedPrefManager.getInstance(this).isLoggedin()) {
             Intent intent = new Intent(this, MainActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
@@ -109,14 +107,14 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 LoginResponse loginResponse = response.body();
 
-                if ((!loginResponse.isError())){
+                if ((!loginResponse.isError())) {
                     SharedPrefManager.getInstance(LoginActivity.this).saveUser(loginResponse.getData_user().get(0));
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     progressDialog.dismiss();
 
-                }else{
+                } else {
                     Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
                 }
@@ -126,14 +124,14 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
-                Toast.makeText(LoginActivity.this, "Gagal Menghubungi Server : "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Gagal Menghubungi Server : " + t.getMessage(), Toast.LENGTH_SHORT).show();
                 progressDialog.dismiss();
             }
         });
     }
 
     private void hashConvert(String passwordInput) throws NoSuchAlgorithmException {
-        this.passwordInput = passwordInput;
+        LoginActivity.passwordInput = passwordInput;
         MessageDigest md = MessageDigest.getInstance("SHA-512");
         byte[] digest = md.digest(passwordInput.getBytes());
         StringBuilder sb = new StringBuilder();

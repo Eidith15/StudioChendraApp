@@ -78,13 +78,14 @@
             android:parentActivityName=".activity.MainActivity" />
         <activity
             android:name=".activity.order.ListRegistrasiOrderActivity"
-            android:parentActivityName=".activity.MainActivity"/>
+            android:parentActivityName=".activity.MainActivity" />
         <activity
             android:name=".activity.order.DetailRegistrasiOrder"
-            android:parentActivityName=".activity.order.ListRegistrasiOrderActivity"/>
+            android:parentActivityName=".activity.order.ListRegistrasiOrderActivity" />
 
-        <activity android:name=".activity.order.TambahRegistrasiOrderActivity"
-            android:parentActivityName=".activity.MainActivity"/>
+        <activity
+            android:name=".activity.order.TambahRegistrasiOrderActivity"
+            android:parentActivityName=".activity.MainActivity" />
     </application>
 
 </manifest>

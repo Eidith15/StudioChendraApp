@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:cardElevation="10dp"
     android:layout_margin="5dp"
+    android:clickable="true"
     app:cardCornerRadius="10dp"
-    android:clickable="true">
+    app:cardElevation="10dp">
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -20,14 +19,14 @@
             android:layout_height="wrap_content"
             android:text="id"
             android:textSize="15sp"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/imgGambarPortofolio"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:background="@color/black" />
+            android:background="@color/black"
+            android:scaleType="fitCenter" />
 
     </GridLayout>
 

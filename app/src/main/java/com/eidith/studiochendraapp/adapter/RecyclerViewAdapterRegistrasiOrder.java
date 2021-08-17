@@ -19,9 +19,9 @@ import java.util.List;
 
 public class RecyclerViewAdapterRegistrasiOrder extends RecyclerView.Adapter<RecyclerViewAdapterRegistrasiOrder.ViewHolder> {
 
-    private Context context;
-    private List<RegistrasiOrderModel> listRegistrasiOrder;
-    private RecyclerViewAdapterRegistrasiOrder.OnItemClickListener mOnItemClickListener;
+    private final Context context;
+    private final List<RegistrasiOrderModel> listRegistrasiOrder;
+    private final RecyclerViewAdapterRegistrasiOrder.OnItemClickListener mOnItemClickListener;
 
     public RecyclerViewAdapterRegistrasiOrder(Context context, List<RegistrasiOrderModel> listRegistrasiOrder, OnItemClickListener mOnItemClickListener) {
         this.context = context;
@@ -51,7 +51,11 @@ public class RecyclerViewAdapterRegistrasiOrder extends RecyclerView.Adapter<Rec
         return listRegistrasiOrder.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public interface OnItemClickListener {
+        void OnitemClickRegistrasiOrder(int position);
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView tvRegistrasiId, tvRegistrasiNama, tvRegistrasiJudul;
         ImageView ivRegistrasiPic;
 
@@ -74,9 +78,5 @@ public class RecyclerViewAdapterRegistrasiOrder extends RecyclerView.Adapter<Rec
         public void onClick(View v) {
             onItemClickListener.OnitemClickRegistrasiOrder(getAdapterPosition());
         }
-    }
-
-    public interface OnItemClickListener {
-        void OnitemClickRegistrasiOrder(int position);
     }
 }
